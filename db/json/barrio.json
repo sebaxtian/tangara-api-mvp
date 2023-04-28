@@ -1,0 +1,3026 @@
+[
+    {
+        "codigo": "0101",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 1,
+        "id_comuna": 1,
+        "nombre": "Terrón Colorado",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0102",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 2,
+        "id_comuna": 1,
+        "nombre": "Vista Hermosa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0196",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 3,
+        "id_comuna": 1,
+        "nombre": "Sector Patio Bonito",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0199",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 4,
+        "id_comuna": 1,
+        "nombre": "Aguacatal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0201",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 5,
+        "id_comuna": 2,
+        "nombre": "Santa Rita",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0202",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 6,
+        "id_comuna": 2,
+        "nombre": "Santa Teresita",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0203",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 7,
+        "id_comuna": 2,
+        "nombre": "Arboledas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0204",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 8,
+        "id_comuna": 2,
+        "nombre": "Normandía",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0205",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 9,
+        "id_comuna": 2,
+        "nombre": "Juanambú",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0206",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 10,
+        "id_comuna": 2,
+        "nombre": "Centenario",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0207",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 11,
+        "id_comuna": 2,
+        "nombre": "Granada",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0208",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 12,
+        "id_comuna": 2,
+        "nombre": "Versalles",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0209",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 13,
+        "id_comuna": 2,
+        "nombre": "San Vicente",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0210",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 14,
+        "id_comuna": 2,
+        "nombre": "Santa Mónica",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0211",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 15,
+        "id_comuna": 2,
+        "nombre": "Prados del Norte",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0212",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 16,
+        "id_comuna": 2,
+        "nombre": "La Flora",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0213",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 17,
+        "id_comuna": 2,
+        "nombre": "La Campiña",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0214",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 18,
+        "id_comuna": 2,
+        "nombre": "La Paz",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0215",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 19,
+        "id_comuna": 2,
+        "nombre": "El Bosque",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0216",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 20,
+        "id_comuna": 2,
+        "nombre": "Menga",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0217",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 21,
+        "id_comuna": 2,
+        "nombre": "Ciudad Los Alamos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0218",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 22,
+        "id_comuna": 2,
+        "nombre": "Chipichape",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0219",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 23,
+        "id_comuna": 2,
+        "nombre": "Brisas de los Alamos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0293",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 24,
+        "id_comuna": 2,
+        "nombre": "Urbanización La Merced",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0294",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 25,
+        "id_comuna": 2,
+        "nombre": "Vipasa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0295",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 26,
+        "id_comuna": 2,
+        "nombre": "Urbanización La Flora",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0296",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 27,
+        "id_comuna": 2,
+        "nombre": "Altos de Menga",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0297",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 28,
+        "id_comuna": 2,
+        "nombre": "Sector Altos Normandía",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0298",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 29,
+        "id_comuna": 2,
+        "nombre": "Senderos de la Flora",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0301",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 30,
+        "id_comuna": 3,
+        "nombre": "El Nacional",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0302",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 31,
+        "id_comuna": 3,
+        "nombre": "El Peñón",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0303",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 32,
+        "id_comuna": 3,
+        "nombre": "San Antonio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0304",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 33,
+        "id_comuna": 3,
+        "nombre": "San Cayetano",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0305",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 34,
+        "id_comuna": 3,
+        "nombre": "Los Libertadores",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0306",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 35,
+        "id_comuna": 3,
+        "nombre": "San Juan Bosco",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0307",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 36,
+        "id_comuna": 3,
+        "nombre": "Santa Rosa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0308",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 37,
+        "id_comuna": 3,
+        "nombre": "La Merced",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0309",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 38,
+        "id_comuna": 3,
+        "nombre": "San Pascual",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0310",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 39,
+        "id_comuna": 3,
+        "nombre": "El Calvario",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0311",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 40,
+        "id_comuna": 3,
+        "nombre": "San Pedro",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0312",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 41,
+        "id_comuna": 3,
+        "nombre": "San Nicolas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0313",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 42,
+        "id_comuna": 3,
+        "nombre": "El Hoyo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0314",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 43,
+        "id_comuna": 3,
+        "nombre": "El Piloto",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0315",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 44,
+        "id_comuna": 3,
+        "nombre": "Navarro - La Chanca",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0401",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 45,
+        "id_comuna": 4,
+        "nombre": "Jorge Isaacs",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0402",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 46,
+        "id_comuna": 4,
+        "nombre": "Santander",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0403",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 47,
+        "id_comuna": 4,
+        "nombre": "Porvenir",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0404",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 48,
+        "id_comuna": 4,
+        "nombre": "Las Delicias",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0405",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 49,
+        "id_comuna": 4,
+        "nombre": "Manzanares",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0406",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 50,
+        "id_comuna": 4,
+        "nombre": "Salomia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0407",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 51,
+        "id_comuna": 4,
+        "nombre": "Fátima",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0408",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 52,
+        "id_comuna": 4,
+        "nombre": "Sultana - Berlín - San Francisco",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0410",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 53,
+        "id_comuna": 4,
+        "nombre": "Popular",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0411",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 54,
+        "id_comuna": 4,
+        "nombre": "Ignacio Rengifo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0412",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 55,
+        "id_comuna": 4,
+        "nombre": "Guillermo Valencia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0413",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 56,
+        "id_comuna": 4,
+        "nombre": "La Isla",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0414",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 57,
+        "id_comuna": 4,
+        "nombre": "Marco Fidel Suárez",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0415",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 58,
+        "id_comuna": 4,
+        "nombre": "Evaristo García",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0416",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 59,
+        "id_comuna": 4,
+        "nombre": "La Esmeralda",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0417",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 60,
+        "id_comuna": 4,
+        "nombre": "Bolivariano",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0418",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 61,
+        "id_comuna": 4,
+        "nombre": "Olaya Herrera",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0419",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 62,
+        "id_comuna": 4,
+        "nombre": "Unidad Residencial Bueno Madrid",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0420",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 63,
+        "id_comuna": 4,
+        "nombre": "Flora Industrial",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0421",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 64,
+        "id_comuna": 4,
+        "nombre": "Calima",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0423",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 65,
+        "id_comuna": 4,
+        "nombre": "Industria de Licores",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0497",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 66,
+        "id_comuna": 4,
+        "nombre": "La Alianza",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0501",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 67,
+        "id_comuna": 5,
+        "nombre": "El Sena",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0502",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 68,
+        "id_comuna": 5,
+        "nombre": "Los Andes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0503",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 69,
+        "id_comuna": 5,
+        "nombre": "Los Guayacanes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0504",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 70,
+        "id_comuna": 5,
+        "nombre": "Chiminangos Segunda Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0505",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 71,
+        "id_comuna": 5,
+        "nombre": "Chiminangos Primera Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0506",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 72,
+        "id_comuna": 5,
+        "nombre": "Metropolitano del Norte",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0594",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 73,
+        "id_comuna": 5,
+        "nombre": "Los Parques - Barranquilla",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0595",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 74,
+        "id_comuna": 5,
+        "nombre": "Villa del Sol",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0596",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 75,
+        "id_comuna": 5,
+        "nombre": "Paseo de Los Almendros",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0597",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 76,
+        "id_comuna": 5,
+        "nombre": "Los Andes B - La Riviera",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0598",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 77,
+        "id_comuna": 5,
+        "nombre": "Torres de Comfandi",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0599",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 78,
+        "id_comuna": 5,
+        "nombre": "Villa del Prado - El Guabito",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0601",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 79,
+        "id_comuna": 6,
+        "nombre": "San Luís",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0602",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 80,
+        "id_comuna": 6,
+        "nombre": "Jorge Eliecer Gaitán",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0603",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 81,
+        "id_comuna": 6,
+        "nombre": "Paso del Comercio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0604",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 82,
+        "id_comuna": 6,
+        "nombre": "Los Alcázares",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0605",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 83,
+        "id_comuna": 6,
+        "nombre": "Petecuy Primera Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0606",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 84,
+        "id_comuna": 6,
+        "nombre": "Petecuy Segunda Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0607",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 85,
+        "id_comuna": 6,
+        "nombre": "La Rivera Primera Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0608",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 86,
+        "id_comuna": 6,
+        "nombre": "Los Guaduales",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0609",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 87,
+        "id_comuna": 6,
+        "nombre": "Petecuy Tercera Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0610",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 88,
+        "id_comuna": 6,
+        "nombre": "Ciudadela Floralia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0695",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 89,
+        "id_comuna": 6,
+        "nombre": "Fonaviemcali",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0696",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 90,
+        "id_comuna": 6,
+        "nombre": "San Luís II",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0697",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 91,
+        "id_comuna": 6,
+        "nombre": "Urbanización Calimio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0698",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 92,
+        "id_comuna": 6,
+        "nombre": "Sector Puente del Comercio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0701",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 93,
+        "id_comuna": 7,
+        "nombre": "Alfonso López P. 1a. Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0702",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 94,
+        "id_comuna": 7,
+        "nombre": "Alfonso López P. 2a. Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0703",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 95,
+        "id_comuna": 7,
+        "nombre": "Alfonso López P. 3a. Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0704",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 96,
+        "id_comuna": 7,
+        "nombre": "Puerto Nuevo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0705",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 97,
+        "id_comuna": 7,
+        "nombre": "Puerto Mallarino",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0706",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 98,
+        "id_comuna": 7,
+        "nombre": "Urbanización El Angel del Hogar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0707",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 99,
+        "id_comuna": 7,
+        "nombre": "Siete de Agosto",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0708",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 100,
+        "id_comuna": 7,
+        "nombre": "Los Pinos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0709",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 101,
+        "id_comuna": 7,
+        "nombre": "San Marino",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0710",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 102,
+        "id_comuna": 7,
+        "nombre": "Las Ceibas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0711",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 103,
+        "id_comuna": 7,
+        "nombre": "Base Aérea",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0797",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 104,
+        "id_comuna": 7,
+        "nombre": "Parque de la Caña",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0798",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 105,
+        "id_comuna": 7,
+        "nombre": "Fepicol",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0801",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 106,
+        "id_comuna": 8,
+        "nombre": "Primitivo Crespo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0802",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 107,
+        "id_comuna": 8,
+        "nombre": "Simón Bolívar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0803",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 108,
+        "id_comuna": 8,
+        "nombre": "Saavedra Galindo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0804",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 109,
+        "id_comuna": 8,
+        "nombre": "Uribe Uribe",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0805",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 110,
+        "id_comuna": 8,
+        "nombre": "Santa Mónica Popular",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0806",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 111,
+        "id_comuna": 8,
+        "nombre": "La Floresta",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0807",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 112,
+        "id_comuna": 8,
+        "nombre": "Benjamín Herrera",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0808",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 113,
+        "id_comuna": 8,
+        "nombre": "Municipal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0809",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 114,
+        "id_comuna": 8,
+        "nombre": "Industrial",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0810",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 115,
+        "id_comuna": 8,
+        "nombre": "El Troncal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0811",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 116,
+        "id_comuna": 8,
+        "nombre": "Las Américas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0812",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 117,
+        "id_comuna": 8,
+        "nombre": "Atanasio Girardot",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0813",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 118,
+        "id_comuna": 8,
+        "nombre": "Santa Fe",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0814",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 119,
+        "id_comuna": 8,
+        "nombre": "Chapinero",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0815",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 120,
+        "id_comuna": 8,
+        "nombre": "Villa Colombia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0816",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 121,
+        "id_comuna": 8,
+        "nombre": "EL Trébol",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0817",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 122,
+        "id_comuna": 8,
+        "nombre": "La Base",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0818",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 123,
+        "id_comuna": 8,
+        "nombre": "Urbanización La Nueva Base",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0901",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 124,
+        "id_comuna": 9,
+        "nombre": "Alameda",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0902",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 125,
+        "id_comuna": 9,
+        "nombre": "Bretaña",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0903",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 126,
+        "id_comuna": 9,
+        "nombre": "Junín",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0904",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 127,
+        "id_comuna": 9,
+        "nombre": "Guayaquil",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0905",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 128,
+        "id_comuna": 9,
+        "nombre": "Aranjuez",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0906",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 129,
+        "id_comuna": 9,
+        "nombre": "Manuel María Buenaventura",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0907",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 130,
+        "id_comuna": 9,
+        "nombre": "Santa Mónica Belalcázar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0908",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 131,
+        "id_comuna": 9,
+        "nombre": "Belalcázar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0909",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 132,
+        "id_comuna": 9,
+        "nombre": "Sucre",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "0910",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 133,
+        "id_comuna": 9,
+        "nombre": "Barrio Obrero",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1001",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 134,
+        "id_comuna": 10,
+        "nombre": "El Dorado",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1002",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 135,
+        "id_comuna": 10,
+        "nombre": "El Guabal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1003",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 136,
+        "id_comuna": 10,
+        "nombre": "La Libertad",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1004",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 137,
+        "id_comuna": 10,
+        "nombre": "Santa Elena",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1005",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 138,
+        "id_comuna": 10,
+        "nombre": "Las Acacias",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1006",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 139,
+        "id_comuna": 10,
+        "nombre": "Santo Domingo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1007",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 140,
+        "id_comuna": 10,
+        "nombre": "Jorge Zawadsky",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1008",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 141,
+        "id_comuna": 10,
+        "nombre": "Olímpico",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1009",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 142,
+        "id_comuna": 10,
+        "nombre": "Cristóbal Colón",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1010",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 143,
+        "id_comuna": 10,
+        "nombre": "La Selva",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1011",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 144,
+        "id_comuna": 10,
+        "nombre": "Barrio Departamental",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1012",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 145,
+        "id_comuna": 10,
+        "nombre": "Pasoancho",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1013",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 146,
+        "id_comuna": 10,
+        "nombre": "Panamericano",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1014",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 147,
+        "id_comuna": 10,
+        "nombre": "Colseguros Andes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1015",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 148,
+        "id_comuna": 10,
+        "nombre": "San Cristobal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1016",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 149,
+        "id_comuna": 10,
+        "nombre": "Las Granjas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1017",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 150,
+        "id_comuna": 10,
+        "nombre": "San Judas Tadeo I Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1018",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 151,
+        "id_comuna": 10,
+        "nombre": "San Judas Tadeo II Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1101",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 152,
+        "id_comuna": 11,
+        "nombre": "San Carlos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1102",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 153,
+        "id_comuna": 11,
+        "nombre": "Maracaibo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1103",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 154,
+        "id_comuna": 11,
+        "nombre": "La Independencia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1104",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 155,
+        "id_comuna": 11,
+        "nombre": "La Esperanza",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1105",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 156,
+        "id_comuna": 11,
+        "nombre": "Urbanización Boyacá",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1106",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 157,
+        "id_comuna": 11,
+        "nombre": "El Jardín",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1107",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 158,
+        "id_comuna": 11,
+        "nombre": "La Fortaleza",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1108",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 159,
+        "id_comuna": 11,
+        "nombre": "El Recuerdo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1109",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 160,
+        "id_comuna": 11,
+        "nombre": "Aguablanca",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1110",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 161,
+        "id_comuna": 11,
+        "nombre": "El Prado",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1111",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 162,
+        "id_comuna": 11,
+        "nombre": "20 de Julio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1112",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 163,
+        "id_comuna": 11,
+        "nombre": "Prados de Oriente",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1113",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 164,
+        "id_comuna": 11,
+        "nombre": "Los Sauces",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1114",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 165,
+        "id_comuna": 11,
+        "nombre": "Villa del Sur",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1115",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 166,
+        "id_comuna": 11,
+        "nombre": "José Holguín Garcés",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1116",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 167,
+        "id_comuna": 11,
+        "nombre": "León XIII",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1117",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 168,
+        "id_comuna": 11,
+        "nombre": "José María Cordoba",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1118",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 169,
+        "id_comuna": 11,
+        "nombre": "San Pedro Claver",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1119",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 170,
+        "id_comuna": 11,
+        "nombre": "Los Conquistadores",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1120",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 171,
+        "id_comuna": 11,
+        "nombre": "La Gran Colombia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1121",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 172,
+        "id_comuna": 11,
+        "nombre": "San Benito",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1122",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 173,
+        "id_comuna": 11,
+        "nombre": "Primavera",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1201",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 174,
+        "id_comuna": 12,
+        "nombre": "Villanueva",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1202",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 175,
+        "id_comuna": 12,
+        "nombre": "Asturias",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1203",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 176,
+        "id_comuna": 12,
+        "nombre": "Eduardo Santos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1204",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 177,
+        "id_comuna": 12,
+        "nombre": "Alfonso Barberena A.",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1205",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 178,
+        "id_comuna": 12,
+        "nombre": "El Paraiso",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1206",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 179,
+        "id_comuna": 12,
+        "nombre": "Fenalco Kennedy",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1207",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 180,
+        "id_comuna": 12,
+        "nombre": "Nueva Floresta",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1208",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 181,
+        "id_comuna": 12,
+        "nombre": "Julio Rincón",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1209",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 182,
+        "id_comuna": 12,
+        "nombre": "Doce de Octubre",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1210",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 183,
+        "id_comuna": 12,
+        "nombre": "El Rodeo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1211",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 184,
+        "id_comuna": 12,
+        "nombre": "Sindical",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1212",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 185,
+        "id_comuna": 12,
+        "nombre": "Bello Horizonte",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1301",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 186,
+        "id_comuna": 13,
+        "nombre": "Ulpiano Lloreda",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1302",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 187,
+        "id_comuna": 13,
+        "nombre": "El Vergel",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1303",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 188,
+        "id_comuna": 13,
+        "nombre": "El Poblado I",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1304",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 189,
+        "id_comuna": 13,
+        "nombre": "El Poblado II",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1305",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 190,
+        "id_comuna": 13,
+        "nombre": "Los Comuneros Segunda Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1306",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 191,
+        "id_comuna": 13,
+        "nombre": "Ricardo Balcázar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1307",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 192,
+        "id_comuna": 13,
+        "nombre": "Omar Torrijos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1308",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 193,
+        "id_comuna": 13,
+        "nombre": "El Diamante",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1309",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 194,
+        "id_comuna": 13,
+        "nombre": "Lleras Restrepo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1310",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 195,
+        "id_comuna": 13,
+        "nombre": "Villa del Lago",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1311",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 196,
+        "id_comuna": 13,
+        "nombre": "Los Robles",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1312",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 197,
+        "id_comuna": 13,
+        "nombre": "Rodrigo Lara Bonilla",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1313",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 198,
+        "id_comuna": 13,
+        "nombre": "Charco Azul",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1314",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 199,
+        "id_comuna": 13,
+        "nombre": "Villablanca",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1315",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 200,
+        "id_comuna": 13,
+        "nombre": "Calipso",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1390",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 201,
+        "id_comuna": 13,
+        "nombre": "Yira Castro",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1393",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 202,
+        "id_comuna": 13,
+        "nombre": "Lleras Restrepo II Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1394",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 203,
+        "id_comuna": 13,
+        "nombre": "Marroquín III",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1395",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 204,
+        "id_comuna": 13,
+        "nombre": "Los Lagos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1397",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 205,
+        "id_comuna": 13,
+        "nombre": "Sector Laguna del Pondaje",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1398",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 206,
+        "id_comuna": 13,
+        "nombre": "El Pondaje",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1399",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 207,
+        "id_comuna": 13,
+        "nombre": "Sector Asprosocial-Diamante",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1401",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 208,
+        "id_comuna": 14,
+        "nombre": "Alfonso Bonilla Aragón",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1402",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 209,
+        "id_comuna": 14,
+        "nombre": "Alirio Mora Beltrán",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1403",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 210,
+        "id_comuna": 14,
+        "nombre": "Manuela Beltrán",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1404",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 211,
+        "id_comuna": 14,
+        "nombre": "Las Orquídeas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1405",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 212,
+        "id_comuna": 14,
+        "nombre": "José Manuel Marroquín Segunda Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1406",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 213,
+        "id_comuna": 14,
+        "nombre": "José Manuel Marroquín Primera Etapa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1495",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 214,
+        "id_comuna": 14,
+        "nombre": "Puerta del Sol",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1496",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 215,
+        "id_comuna": 14,
+        "nombre": "Los Naranjos I",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1498",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 216,
+        "id_comuna": 14,
+        "nombre": "Promociones Populares B",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1499",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 217,
+        "id_comuna": 14,
+        "nombre": "Los Naranjos II",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1501",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 218,
+        "id_comuna": 15,
+        "nombre": "El Retiro",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1502",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 219,
+        "id_comuna": 15,
+        "nombre": "Comuneros I",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1503",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 220,
+        "id_comuna": 15,
+        "nombre": "Laureano Gómez",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1504",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 221,
+        "id_comuna": 15,
+        "nombre": "El Vallado",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1596",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 222,
+        "id_comuna": 15,
+        "nombre": "Ciudad Cordoba",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1598",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 223,
+        "id_comuna": 15,
+        "nombre": "Mojica",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1599",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 224,
+        "id_comuna": 15,
+        "nombre": "El Morichal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1601",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 225,
+        "id_comuna": 16,
+        "nombre": "Mariano Ramos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1602",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 226,
+        "id_comuna": 16,
+        "nombre": "República de Israel",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1603",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 227,
+        "id_comuna": 16,
+        "nombre": "Unión de Vivienda Popular",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1604",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 228,
+        "id_comuna": 16,
+        "nombre": "Antonio Nariño",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1605",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 229,
+        "id_comuna": 16,
+        "nombre": "Brisas del Limonar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1696",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 230,
+        "id_comuna": 16,
+        "nombre": "Vendimia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1697",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 231,
+        "id_comuna": 16,
+        "nombre": "Ciudad 2000",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1698",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 232,
+        "id_comuna": 16,
+        "nombre": "La Alborada",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1701",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 233,
+        "id_comuna": 17,
+        "nombre": "La Playa",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1702",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 234,
+        "id_comuna": 17,
+        "nombre": "Primero de Mayo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1703",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 235,
+        "id_comuna": 17,
+        "nombre": "Ciudadela Comfandi",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1705",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 236,
+        "id_comuna": 17,
+        "nombre": "Ciudad Universitaria",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1774",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 237,
+        "id_comuna": 17,
+        "nombre": "Caney",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1775",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 238,
+        "id_comuna": 17,
+        "nombre": "Lili",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1778",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 239,
+        "id_comuna": 17,
+        "nombre": "Santa Anita - La Selva",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1780",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 240,
+        "id_comuna": 17,
+        "nombre": "El Ingenio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1781",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 241,
+        "id_comuna": 17,
+        "nombre": "Mayapan - Las Vegas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1782",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 242,
+        "id_comuna": 17,
+        "nombre": "Las Quintas de Don Simón",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1783",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 243,
+        "id_comuna": 17,
+        "nombre": "Ciudad Capri",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1784",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 244,
+        "id_comuna": 17,
+        "nombre": "La Hacienda",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1785",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 245,
+        "id_comuna": 17,
+        "nombre": "Los Portales - Nuevo Rey",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1786",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 246,
+        "id_comuna": 17,
+        "nombre": "Cañaverales - Los Samanes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1787",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 247,
+        "id_comuna": 17,
+        "nombre": "El Limonar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1788",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 248,
+        "id_comuna": 17,
+        "nombre": "Bosques del Limonar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1789",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 249,
+        "id_comuna": 17,
+        "nombre": "El Gran Limonar - Cataya",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1790",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 250,
+        "id_comuna": 17,
+        "nombre": "El Gran Limonar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1791",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 251,
+        "id_comuna": 17,
+        "nombre": "Unicentro Cali",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1793",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 252,
+        "id_comuna": 17,
+        "nombre": "Ciudadela Pasoancho",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1794",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 253,
+        "id_comuna": 17,
+        "nombre": "Prados del Limonar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1796",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 254,
+        "id_comuna": 17,
+        "nombre": "Urbanización San Joaquin",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1801",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 255,
+        "id_comuna": 18,
+        "nombre": "Buenos Aires",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1802",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 256,
+        "id_comuna": 18,
+        "nombre": "Barrio Caldas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1803",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 257,
+        "id_comuna": 18,
+        "nombre": "Los Chorros",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1804",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 258,
+        "id_comuna": 18,
+        "nombre": "Meléndez",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1805",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 259,
+        "id_comuna": 18,
+        "nombre": "Los Farallones",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1807",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 260,
+        "id_comuna": 18,
+        "nombre": "Francisco Eladio Ramirez",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1808",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 261,
+        "id_comuna": 18,
+        "nombre": "Prados del Sur",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1809",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 262,
+        "id_comuna": 18,
+        "nombre": "Horizontes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1810",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 263,
+        "id_comuna": 18,
+        "nombre": "Mario Correa Rengifo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1811",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 264,
+        "id_comuna": 18,
+        "nombre": "Lourdes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1812",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 265,
+        "id_comuna": 18,
+        "nombre": "Colinas del Sur",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1813",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 266,
+        "id_comuna": 18,
+        "nombre": "Alférez Real",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1814",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 267,
+        "id_comuna": 18,
+        "nombre": "Nápoles",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1815",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 268,
+        "id_comuna": 18,
+        "nombre": "El Jordán",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1816",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 269,
+        "id_comuna": 18,
+        "nombre": "Cuarteles Napoles",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1890",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 270,
+        "id_comuna": 18,
+        "nombre": "Sector Alto de Los Chorros",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1891",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 271,
+        "id_comuna": 18,
+        "nombre": "Polvorines",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1896",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 272,
+        "id_comuna": 18,
+        "nombre": "Sector Meléndez",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1897",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 273,
+        "id_comuna": 18,
+        "nombre": "Sector Alto Jordán",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1898",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 274,
+        "id_comuna": 18,
+        "nombre": "Alto Nápoles",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1901",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 275,
+        "id_comuna": 19,
+        "nombre": "El Refugio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1902",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 276,
+        "id_comuna": 19,
+        "nombre": "La Cascada",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1903",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 277,
+        "id_comuna": 19,
+        "nombre": "El Lido",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1904",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 278,
+        "id_comuna": 19,
+        "nombre": "Urbanización Tequendama",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1905",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 279,
+        "id_comuna": 19,
+        "nombre": "Barrio Eucarístico",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1906",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 280,
+        "id_comuna": 19,
+        "nombre": "San Fernando Nuevo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1907",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 281,
+        "id_comuna": 19,
+        "nombre": "Urbanización Nueva Granada",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1908",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 282,
+        "id_comuna": 19,
+        "nombre": "Santa Isabel",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1909",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 283,
+        "id_comuna": 19,
+        "nombre": "Bellavista",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1910",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 284,
+        "id_comuna": 19,
+        "nombre": "San Fernando Viejo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1911",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 285,
+        "id_comuna": 19,
+        "nombre": "Miraflores",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1912",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 286,
+        "id_comuna": 19,
+        "nombre": "3 de Julio",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1913",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 287,
+        "id_comuna": 19,
+        "nombre": "El Cedro",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1914",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 288,
+        "id_comuna": 19,
+        "nombre": "Champagñat",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1915",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 289,
+        "id_comuna": 19,
+        "nombre": "Urbanización Colseguros",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1916",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 290,
+        "id_comuna": 19,
+        "nombre": "Los Cambulos",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1917",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 291,
+        "id_comuna": 19,
+        "nombre": "El Mortiñal",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1918",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 292,
+        "id_comuna": 19,
+        "nombre": "Urbanización Militar",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1919",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 293,
+        "id_comuna": 19,
+        "nombre": "Cuarto de Legua - Guadalupe",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1921",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 294,
+        "id_comuna": 19,
+        "nombre": "Nueva Tequendama",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1922",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 295,
+        "id_comuna": 19,
+        "nombre": "Camino Real - Joaquín Borrero Sinisterra",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1923",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 296,
+        "id_comuna": 19,
+        "nombre": "Camino Real - Los Fundadores",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1981",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 297,
+        "id_comuna": 19,
+        "nombre": "Altos de Santa Isabel -  La Morelia",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1982",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 298,
+        "id_comuna": 19,
+        "nombre": "Santa Barbara",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1983",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 299,
+        "id_comuna": 19,
+        "nombre": "Tejares - Cristales",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1984",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 300,
+        "id_comuna": 19,
+        "nombre": "Unidad Residencial Santiago de Cali",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1985",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "4",
+        "id": 301,
+        "id_comuna": 19,
+        "nombre": "Unidad Residencial El Coliseo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1988",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 302,
+        "id_comuna": 19,
+        "nombre": "Cañaveralejo - Seguros Patria",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1992",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 303,
+        "id_comuna": 19,
+        "nombre": "Cañaveral",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1994",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 304,
+        "id_comuna": 19,
+        "nombre": "Pampa Linda",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1995",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "5",
+        "id": 305,
+        "id_comuna": 19,
+        "nombre": "Sector Cañaveralejo Guadalupe",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "1999",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 306,
+        "id_comuna": 19,
+        "nombre": "U.D. Alberto Galindo -  Plaza de Toros",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2001",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 307,
+        "id_comuna": 20,
+        "nombre": "El Cortijo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2002",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "3",
+        "id": 308,
+        "id_comuna": 20,
+        "nombre": "Belisario Caicedo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2003",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 309,
+        "id_comuna": 20,
+        "nombre": "Siloé",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2004",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 310,
+        "id_comuna": 20,
+        "nombre": "Lleras Camargo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2005",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 311,
+        "id_comuna": 20,
+        "nombre": "Belén",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2006",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 312,
+        "id_comuna": 20,
+        "nombre": "Brisas de Mayo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2007",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 313,
+        "id_comuna": 20,
+        "nombre": "Tierra Blanca",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2008",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 314,
+        "id_comuna": 20,
+        "nombre": "Pueblo Joven",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2097",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 315,
+        "id_comuna": 20,
+        "nombre": "Carabineros",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2098",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 316,
+        "id_comuna": 20,
+        "nombre": "Venezuela - Urbanización Cañaveralejo",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2099",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 317,
+        "id_comuna": 20,
+        "nombre": "La Sultana",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2101",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 318,
+        "id_comuna": 21,
+        "nombre": "Pízamos I",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2102",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 319,
+        "id_comuna": 21,
+        "nombre": "Pízamos II",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2103",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 320,
+        "id_comuna": 21,
+        "nombre": "Calimio Desepaz",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2104",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 321,
+        "id_comuna": 21,
+        "nombre": "El Remanso",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2105",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 322,
+        "id_comuna": 21,
+        "nombre": "Los Líderes",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2106",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 323,
+        "id_comuna": 21,
+        "nombre": "Desepaz Invicali",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2107",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 324,
+        "id_comuna": 21,
+        "nombre": "Compartir",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2108",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 325,
+        "id_comuna": 21,
+        "nombre": "Ciudad Talanga",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2194",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 326,
+        "id_comuna": 21,
+        "nombre": "Villamercedes I - Villa Luz - Las Garzas",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2195",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 327,
+        "id_comuna": 21,
+        "nombre": "Pízamos III - Las Dalias",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2196",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "1",
+        "id": 328,
+        "id_comuna": 21,
+        "nombre": "Potrero Grande",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2197",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 329,
+        "id_comuna": 21,
+        "nombre": "Ciudadela del Río",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2198",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "2",
+        "id": 330,
+        "id_comuna": 21,
+        "nombre": "Valle Grande",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2199",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "NR",
+        "id": 331,
+        "id_comuna": 21,
+        "nombre": "Planta de Tratamiento",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2201",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 332,
+        "id_comuna": 22,
+        "nombre": "Urbanización Ciudad Jardín",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2296",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 333,
+        "id_comuna": 22,
+        "nombre": "Parcelaciones Pance",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2297",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 334,
+        "id_comuna": 22,
+        "nombre": "Urbanización Río Lili",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2298",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 335,
+        "id_comuna": 22,
+        "nombre": "Ciudad Campestre",
+        "updated": "2023-04-27T20:02:34-07:00"
+    },
+    {
+        "codigo": "2299",
+        "created": "2023-04-27T20:02:34-07:00",
+        "estrato": "6",
+        "id": 336,
+        "id_comuna": 22,
+        "nombre": "Club Campestre",
+        "updated": "2023-04-27T20:02:34-07:00"
+    }
+]
