@@ -47,6 +47,14 @@ Finally, we have exported an SQL file [./db/tangara-mvp.sql](./db/tangara-mvp.sq
 
 Jupyter Notebooks are helpful to explore some features and explain them to the team and easy to use before coding those features into the API, the purpose of the notebooks created in [./notebooks](./notebooks/) is only to explore, test, and explain those features to the team. You dont need change anything here.
 
+## How to run
+
+> **Development Mode**
+
+```bash
+$promt> uvicorn --app-dir ./app/ main:app --reload
+```
+
 ---
 
 ***That's all for now ...***
