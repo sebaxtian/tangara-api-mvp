@@ -1,0 +1,486 @@
+id,nombre
+1000,Las Vegas
+1001,Las Vegas del Lili
+1002,Ciudad Melendez
+1003,Ciudad Melendez 2
+1004,El Guayabal
+1005,PP2
+1006,El Verdal - Gonchelandia
+1007,Bochalema
+1008,PP1
+1009,Andalucía (PP3)
+1010,Cachipay
+1011,Lituania - Dalandia
+1012,Piedrachiquita
+1013,El Capricho
+1014,El Marañon
+1015,PP4
+1016,PP5
+1017,Marañon Bajo
+1018,Zonaméríca
+1019,El Carmen - San Bartolo - PP11
+1020,PP9
+1021,PP10
+1022,PP8
+1023,PP6
+2000,Jarillon Río Cauca I
+2001,Jarillon Río Cauca II
+2002,Jarillon Río Cauca III
+3000,Terrón Colorado
+3001,Vista Hermosa
+3002,Sector Patio Bonito
+3003,Aguacatal
+3004,Santa Rita
+3005,Santa Teresita
+3006,Arboledas
+3007,Normandía
+3008,Juanambú
+3009,Centenario
+3010,Granada
+3011,Versalles
+3012,San Vicente
+3013,Santa Mónica
+3014,Prados del Norte
+3015,La Flora
+3016,La Campiña
+3017,La Paz
+3018,El Bosque
+3019,Menga
+3020,Ciudad Los Alamos
+3021,Chipichape
+3022,Brisas de los Alamos
+3023,Urbanización La Merced
+3024,Vipasa
+3025,Urbanización La Flora
+3026,Altos de Menga
+3027,Sector Altos Normandía
+3028,Senderos de la Flora
+3029,El Nacional
+3030,El Peñón
+3031,San Antonio
+3032,San Cayetano
+3033,Los Libertadores
+3034,San Juan Bosco
+3035,Santa Rosa
+3036,La Merced
+3037,San Pascual
+3038,El Calvario
+3039,San Pedro
+3040,San Nicolas
+3041,El Hoyo
+3042,El Piloto
+3043,Navarro - La Chanca
+3044,Jorge Isaacs
+3045,Santander
+3046,Porvenir
+3047,Las Delicias
+3048,Manzanares
+3049,Salomia
+3050,Fátima
+3051,Sultana - Berlín - San Francisco
+3052,Popular
+3053,Ignacio Rengifo
+3054,Guillermo Valencia
+3055,La Isla
+3056,Marco Fidel Suárez
+3057,Evaristo García
+3058,La Esmeralda
+3059,Bolivariano
+3060,Olaya Herrera
+3061,Unidad Residencial Bueno Madrid
+3062,Flora Industrial
+3063,Calima
+3064,Industria de Licores
+3065,La Alianza
+3066,El Sena
+3067,Los Andes
+3068,Los Guayacanes
+3069,Chiminangos Segunda Etapa
+3070,Chiminangos Primera Etapa
+3071,Metropolitano del Norte
+3072,Los Parques - Barranquilla
+3073,Villa del Sol
+3074,Paseo de Los Almendros
+3075,Los Andes B - La Riviera
+3076,Torres de Comfandi
+3077,Villa del Prado - El Guabito
+3078,San Luís
+3079,Jorge Eliecer Gaitán
+3080,Paso del Comercio
+3081,Los Alcázares
+3082,Petecuy Primera Etapa
+3083,Petecuy Segunda Etapa
+3084,La Rivera Primera Etapa
+3085,Los Guaduales
+3086,Petecuy Tercera Etapa
+3087,Ciudadela Floralia
+3088,Fonaviemcali
+3089,San Luís II
+3090,Urbanización Calimio
+3091,Sector Puente del Comercio
+3092,Alfonso López P. 1a. Etapa
+3093,Alfonso López P. 2a. Etapa
+3094,Alfonso López P. 3a. Etapa
+3095,Puerto Nuevo
+3096,Puerto Mallarino
+3097,Urbanización El Angel del Hogar
+3098,Siete de Agosto
+3099,Los Pinos
+3100,San Marino
+3101,Las Ceibas
+3102,Base Aérea
+3103,Parque de la Caña
+3104,Fepicol
+3105,Primitivo Crespo
+3106,Simón Bolívar
+3107,Saavedra Galindo
+3108,Uribe Uribe
+3109,Santa Mónica Popular
+3110,La Floresta
+3111,Benjamín Herrera
+3112,Municipal
+3113,Industrial
+3114,El Troncal
+3115,Las Américas
+3116,Atanasio Girardot
+3117,Santa Fe
+3118,Chapinero
+3119,Villa Colombia
+3120,EL Trébol
+3121,La Base
+3122,Urbanización La Nueva Base
+3123,Alameda
+3124,Bretaña
+3125,Junín
+3126,Guayaquil
+3127,Aranjuez
+3128,Manuel María Buenaventura
+3129,Santa Mónica Belalcázar
+3130,Belalcázar
+3131,Sucre
+3132,Barrio Obrero
+3133,El Dorado
+3134,El Guabal
+3135,La Libertad
+3136,Santa Elena
+3137,Las Acacias
+3138,Santo Domingo
+3139,Jorge Zawadsky
+3140,Olímpico
+3141,Cristóbal Colón
+3142,La Selva
+3143,Barrio Departamental
+3144,Pasoancho
+3145,Panamericano
+3146,Colseguros Andes
+3147,San Cristobal
+3148,Las Granjas
+3149,San Judas Tadeo I Etapa
+3150,San Judas Tadeo II Etapa
+3151,San Carlos
+3152,Maracaibo
+3153,La Independencia
+3154,La Esperanza
+3155,Urbanización Boyacá
+3156,El Jardín
+3157,La Fortaleza
+3158,El Recuerdo
+3159,Aguablanca
+3160,El Prado
+3161,20 de Julio
+3162,Prados de Oriente
+3163,Los Sauces
+3164,Villa del Sur
+3165,José Holguín Garcés
+3166,León XIII
+3167,José María Cordoba
+3168,San Pedro Claver
+3169,Los Conquistadores
+3170,La Gran Colombia
+3171,San Benito
+3172,Primavera
+3173,Villanueva
+3174,Asturias
+3175,Eduardo Santos
+3176,Alfonso Barberena A.
+3177,El Paraiso
+3178,Fenalco Kennedy
+3179,Nueva Floresta
+3180,Julio Rincón
+3181,Doce de Octubre
+3182,El Rodeo
+3183,Sindical
+3184,Bello Horizonte
+3185,Ulpiano Lloreda
+3186,El Vergel
+3187,El Poblado I
+3188,El Poblado II
+3189,Los Comuneros Segunda Etapa
+3190,Ricardo Balcázar
+3191,Omar Torrijos
+3192,El Diamante
+3193,Lleras Restrepo
+3194,Villa del Lago
+3195,Los Robles
+3196,Rodrigo Lara Bonilla
+3197,Charco Azul
+3198,Villablanca
+3199,Calipso
+3200,Yira Castro
+3201,Lleras Restrepo II Etapa
+3202,Marroquín III
+3203,Los Lagos
+3204,Sector Laguna del Pondaje
+3205,El Pondaje
+3206,Sector Asprosocial-Diamante
+3207,Alfonso Bonilla Aragón
+3208,Alirio Mora Beltrán
+3209,Manuela Beltrán
+3210,Las Orquídeas
+3211,José Manuel Marroquín Segunda Etapa
+3212,José Manuel Marroquín Primera Etapa
+3213,Puerta del Sol
+3214,Los Naranjos I
+3215,Promociones Populares B
+3216,Los Naranjos II
+3217,El Retiro
+3218,Comuneros I
+3219,Laureano Gómez
+3220,El Vallado
+3221,Ciudad Cordoba
+3222,Mojica
+3223,El Morichal
+3224,Mariano Ramos
+3225,República de Israel
+3226,Unión de Vivienda Popular
+3227,Antonio Nariño
+3228,Brisas del Limonar
+3229,Vendimia
+3230,Ciudad 2000
+3231,La Alborada
+3232,La Playa
+3233,Primero de Mayo
+3234,Ciudadela Comfandi
+3235,Ciudad Universitaria
+3236,Caney
+3237,Lili
+3238,Santa Anita - La Selva
+3239,El Ingenio
+3240,Mayapan - Las Vegas
+3241,Las Quintas de Don Simón
+3242,Ciudad Capri
+3243,La Hacienda
+3244,Los Portales - Nuevo Rey
+3245,Cañaverales - Los Samanes
+3246,El Limonar
+3247,Bosques del Limonar
+3248,El Gran Limonar - Cataya
+3249,El Gran Limonar
+3250,Unicentro Cali
+3251,Ciudadela Pasoancho
+3252,Prados del Limonar
+3253,Urbanización San Joaquin
+3254,Buenos Aires
+3255,Barrio Caldas
+3256,Los Chorros
+3257,Meléndez
+3258,Los Farallones
+3259,Francisco Eladio Ramirez
+3260,Prados del Sur
+3261,Horizontes
+3262,Mario Correa Rengifo
+3263,Lourdes
+3264,Colinas del Sur
+3265,Alférez Real
+3266,Nápoles
+3267,El Jordán
+3268,Cuarteles Napoles
+3269,Sector Alto de Los Chorros
+3270,Polvorines
+3271,Sector Meléndez
+3272,Sector Alto Jordán
+3273,Alto Nápoles
+3274,El Refugio
+3275,La Cascada
+3276,El Lido
+3277,Urbanización Tequendama
+3278,Barrio Eucarístico
+3279,San Fernando Nuevo
+3280,Urbanización Nueva Granada
+3281,Santa Isabel
+3282,Bellavista
+3283,San Fernando Viejo
+3284,Miraflores
+3285,3 de Julio
+3286,El Cedro
+3287,Champagñat
+3288,Urbanización Colseguros
+3289,Los Cambulos
+3290,El Mortiñal
+3291,Urbanización Militar
+3292,Cuarto de Legua - Guadalupe
+3293,Nueva Tequendama
+3294,Camino Real - Joaquín Borrero Sinisterra
+3295,Camino Real - Los Fundadores
+3296,Altos de Santa Isabel -  La Morelia
+3297,Santa Barbara
+3298,Tejares - Cristales
+3299,Unidad Residencial Santiago de Cali
+3300,Unidad Residencial El Coliseo
+3301,Cañaveralejo - Seguros Patria
+3302,Cañaveral
+3303,Pampa Linda
+3304,Sector Cañaveralejo Guadalupe
+3305,U.D. Alberto Galindo -  Plaza de Toros
+3306,El Cortijo
+3307,Belisario Caicedo
+3308,Siloé
+3309,Lleras Camargo
+3310,Belén
+3311,Brisas de Mayo
+3312,Tierra Blanca
+3313,Pueblo Joven
+3314,Carabineros
+3315,Venezuela - Urbanización Cañaveralejo
+3316,La Sultana
+3317,Pízamos I
+3318,Pízamos II
+3319,Calimio Desepaz
+3320,El Remanso
+3321,Los Líderes
+3322,Desepaz Invicali
+3323,Compartir
+3324,Ciudad Talanga
+3325,Villamercedes I - Villa Luz - Las Garzas
+3326,Pízamos III - Las Dalias
+3327,Potrero Grande
+3328,Ciudadela del Río
+3329,Valle Grande
+3330,Planta de Tratamiento
+3331,Urbanización Ciudad Jardín
+3332,Parcelaciones Pance
+3333,Urbanización Río Lili
+3334,Ciudad Campestre
+3335,Club Campestre
+4000,Comuna 1
+4001,Comuna 2
+4002,Comuna 3
+4003,Comuna 4
+4004,Comuna 5
+4005,Comuna 6
+4006,Comuna 7
+4007,Comuna 8
+4008,Comuna 9
+4009,Comuna 10
+4010,Comuna 11
+4011,Comuna 12
+4012,Comuna 13
+4013,Comuna 14
+4014,Comuna 15
+4015,Comuna 16
+4016,Comuna 17
+4017,Comuna 18
+4018,Comuna 19
+4019,Comuna 20
+4020,Comuna 21
+4021,Comuna 22
+5000,Navarro (Cabecera)
+5001,El Estero
+5002,Zona de reserva agrícola
+5003,Jarillón Navarro
+5004,El Hormiguero (Cabecera)
+5005,Morgan
+5006,La Paila
+5007,Cauca Viejo
+5008,Cascajal
+5009,Zona de reserva agrícola
+5010,La Vorágine
+5011,Pance (Cabecera)
+5012,San Francisco
+5013,El Jardín
+5014,Pico de Aguila
+5015,El Banqueo
+5016,El Peón
+5017,La María
+5018,Pance Suburbano (La Viga)
+5019,La Buitrera (Cabecera)
+5020,La Riverita
+5021,El Rosario
+5022,El Otoño
+5023,Alto de Los Mangos
+5024,La Luisa
+5025,La Sirena
+5026,Parque de La Bandera
+5027,Cantaclaro
+5028,Club Campestre
+5029,Villacarmelo (Cabecera)
+5030,La Fonda
+5031,Dos Quebradas
+5032,La Candelaria
+5033,El Carmen
+5034,La Sirena
+5035,Los Andes (Cabecera)
+5036,Los Cárpatos
+5037,Quebrada Honda
+5038,Pueblo Nuevo
+5039,El Faro
+5040,La Reforma - El Mango
+5041,La Carolina - Los Andes Bajo
+5042,El Cabuyal
+5043,Atenas - Mameyal
+5044,Mónaco
+5045,Pichindé (Cabecera)
+5046,Peñas Blancas
+5047,Loma de La Cajita
+5048,La Leonera (Cabecera)
+5049,El Pato
+5050,El Porvenir
+5051,El Pajuil
+5052,La Cajita
+5053,Felidia (Cabecera)
+5054,La Esperanza
+5055,Las Nieves
+5056,El Diamante
+5057,Santa Helena
+5058,El Saladito (Cabecera)
+5059,San Antonio
+5060,San Pablo
+5061,San Miguel
+5062,Montañuelas
+5063,El Palomar
+5064,El Cerezo
+5065,Las Nieves
+5066,La Elvira (Cabecera)
+5067,Los Laureles
+5068,Alto Aguacatal
+5069,La Castilla (Cabecera)
+5070,Las Palmas
+5071,Los Limones
+5072,Las Brisas
+5073,El Futuro
+5074,El Pinar
+5075,Galeras
+5076,La Paz (Cabecera)
+5077,Villa del Rosario
+5078,Lomitas
+5079,Montebello (Cabecera)
+5080,Campoalegre
+5081,Aguacatal
+5082,Golondrinas (Cabecera)
+5083,La María
+5084,Sector Tres Cruces
+6000,Navarro
+6001,El Hormiguero
+6002,Pance
+6003,La Buitrera
+6004,Villacarmelo
+6005,Los Andes
+6006,Pichinde
+6007,La Leonera
+6008,Felidia
+6009,El Saladito
+6010,La Elvira
+6011,La Castilla
+6012,La Paz
+6013,Montebelllo
+6014,Golondrinas
