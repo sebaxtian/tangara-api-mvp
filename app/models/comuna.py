@@ -1,21 +1,16 @@
-from __future__ import annotations
-from typing import List
-
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 
 from database import Base
 
 
-class Comuna(Base):
+class ComunaModel(Base):
     __tablename__ = "comuna"
 
-    id: Mapped[int] = mapped_column(
-        primary_key=True, nullable=False, unique=True, autoincrement=True)
-    nombre: Mapped[str] = mapped_column(nullable=False)
-    codigo: Mapped[str] = mapped_column(nullable=False, unique=True)
-    created: Mapped[str] = mapped_column(nullable=False)
-    updated: Mapped[str] = mapped_column(nullable=False)
-    
-    barrios: Mapped[List["Barrio"]] = relationship(back_populates="comuna") # type: ignore
+    id = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String, nullable=False)
+    codigo = Column(String, nullable=False, unique=True)
+    created = Column(String, nullable=False)
+    updated = Column(String, nullable=False)
+
+    barrios = relationship("BarrioModel", back_populates="comuna")

@@ -1,42 +1,39 @@
 from sqlalchemy.orm import Session
+from fastapi.encoders import jsonable_encoder
 
-from typing import List
-
-from models.comuna import Comuna
-from schemas.comuna import ComunaCreate, ComunaUpdate
-
-# Create
+from models.comuna import ComunaModel
+from schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
 
 
-def create_comuna(db: Session, comuna: ComunaCreate) -> Comuna:
-    db_comuna = Comuna(nombre=comuna.nombre, codigo=comuna.codigo,
-                       created=comuna.created, updated=comuna.updated)
-    db.add(db_comuna)
-    db.commit()
-    db.refresh(db_comuna)
-    return db_comuna
+class ComunaCRUD():
 
-# Read
+    # Create
 
+    def create_comuna(db: Session, comuna: ComunaCreate) -> ComunaSchema:
+        comuna = ComunaModel(**comuna.dict())
+        db.add(comuna)
+        db.commit()
+        db.refresh(comuna)
+        return comuna
 
-def get_comunas(db: Session, skip: int = 0, limit: int = 100) -> List[Comuna]:
-    return db.query(Comuna).offset(skip).limit(limit).all()
+    # Read
 
+    def read_comunas(db: Session, skip: int = 0, limit: int = 100) -> list[ComunaSchema]:
+        return db.query(ComunaModel).offset(skip).limit(limit).all()
 
-def get_comuna(db: Session, id_comuna: int) -> Comuna | None:
-    return db.query(Comuna).filter(Comuna.id == id_comuna).first()
+    def read_comuna(db: Session, id_comuna: int) -> ComunaSchema | None:
+        return db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
 
-# Update
+    # Update
 
+    def update_comuna(db: Session, id_comuna: int, comuna: ComunaUpdate) -> ComunaSchema | None:
+        comuna = jsonable_encoder(comuna)
+        db.query(ComunaModel).filter(ComunaModel.id == id_comuna).update(comuna)
+        db.commit()
+        return db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
 
-def update_comuna(db: Session, comuna: ComunaUpdate, id_comuna: int) -> Comuna:
-    db_comuna = Comuna(nombre=comuna.nombre,
-                       codigo=comuna.codigo, updated=comuna.updated)
-    db.query(Comuna).filter(Comuna.id == id_comuna).update(db_comuna)
-    return db_comuna
+    # Delete
 
-
-# Delete
-
-def delete_comuna(db: Session, id_comuna: int) -> None:
-    db.query(Comuna).filter(Comuna.id == id_comuna).delete()
+    def delete_comuna(db: Session, id_comuna: int) -> None:
+        db.query(ComunaModel).filter(ComunaModel.id == id_comuna).delete()
+        db.commit()

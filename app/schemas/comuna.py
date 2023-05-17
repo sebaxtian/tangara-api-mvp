@@ -1,6 +1,7 @@
 from pydantic import BaseModel
-
 from datetime import datetime, timezone, timedelta
+
+from schemas.barrio import BarrioSchema
 
 
 class ComunaBase(BaseModel):
@@ -19,9 +20,9 @@ class ComunaUpdate(ComunaBase):
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
 
 
-class Comuna(ComunaBase):
+class ComunaSchema(ComunaBase):
     id: int
-    barrios: list["Barrio"] = [] # type: ignore
+    barrios: list[BarrioSchema]
     created: str
     updated: str
 
