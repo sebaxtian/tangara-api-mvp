@@ -3,6 +3,7 @@ from datetime import datetime, timezone, timedelta
 
 
 class BarrioBase(BaseModel):
+    id_comuna: int
     nombre: str
     codigo: str
     estrato: str
@@ -10,6 +11,8 @@ class BarrioBase(BaseModel):
 
 class BarrioCreate(BarrioBase):
     created: str = datetime.now(tz=timezone(
+        offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
+    updated: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
 
 
