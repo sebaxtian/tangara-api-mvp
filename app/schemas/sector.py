@@ -1,12 +1,9 @@
 from pydantic import BaseModel
-
 from datetime import datetime, timezone, timedelta
-
-from ..models.vereda import Vereda
-from ..models.tangara import Tangara
 
 
 class SectorBase(BaseModel):
+    id_vereda: int
     nombre: str
     codigo: str
 
@@ -14,6 +11,7 @@ class SectorBase(BaseModel):
 class SectorCreate(SectorBase):
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
+    updated: str = created
 
 
 class SectorUpdate(SectorBase):
@@ -21,11 +19,11 @@ class SectorUpdate(SectorBase):
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
 
 
-class Sector(SectorBase):
+class SectorSchema(SectorBase):
     id: int
     id_vereda: int
-    vereda: Vereda
-    tangaras: list[Tangara] = []
+    created: str
+    updated: str
 
     class Config:
         orm_mode = True

@@ -2,6 +2,8 @@ from database import SessionLocal, engine, Base
 
 from models.comuna import ComunaModel
 from models.barrio import BarrioModel
+from models.vereda import VeredaModel
+from models.sector import SectorModel
 
 Base.metadata.create_all(bind=engine)
 
