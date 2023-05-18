@@ -22,7 +22,7 @@ async def barrios(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)
 
 @router.get("/{id}", response_model=BarrioSchema, status_code=status.HTTP_200_OK)
 async def barrios(id: int, db: Session = Depends(get_db)) -> BarrioSchema:
-    barrio = BarrioCRUD.read_barrio(db, id_comuna=id)
+    barrio = BarrioCRUD.read_barrio(db, id_barrio=id)
     if not barrio:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     return barrio

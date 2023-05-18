@@ -25,8 +25,8 @@ class BarrioCRUD():
     def read_barrios(db: Session, skip: int = 0, limit: int = 100) -> list[BarrioSchema]:
         return db.query(BarrioModel).offset(skip).limit(limit).all()
 
-    def read_barrio(db: Session, id_comuna: int) -> BarrioSchema | None:
-        return db.query(BarrioModel).filter(BarrioModel.id == id_comuna).first()
+    def read_barrio(db: Session, id_barrio: int) -> BarrioSchema | None:
+        return db.query(BarrioModel).filter(BarrioModel.id == id_barrio).first()
 
     # Update
 

@@ -22,7 +22,7 @@ class BarrioUpdate(BarrioBase):
 
 class BarrioSchema(BarrioBase):
     id: int
-    id_comuna: int
+    id_comuna: int #TODO: remove
     created: str
     updated: str
 

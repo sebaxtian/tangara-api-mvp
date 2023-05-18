@@ -21,7 +21,7 @@ class SectorUpdate(SectorBase):
 
 class SectorSchema(SectorBase):
     id: int
-    id_vereda: int
+    id_vereda: int #TODO: remove
     created: str
     updated: str
 

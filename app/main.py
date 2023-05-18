@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI
 
 from dependencies.database import get_db
-from routers import comunas, barrios, veredas
+from routers import comunas, barrios, veredas, sectores
 
 
 app = FastAPI(
@@ -12,6 +12,7 @@ app = FastAPI(
 app.include_router(comunas.router)
 app.include_router(barrios.router)
 app.include_router(veredas.router)
+app.include_router(sectores.router)
 
 
 @app.get("/")
