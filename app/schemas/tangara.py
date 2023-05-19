@@ -1,11 +1,5 @@
 from pydantic import BaseModel
-
 from datetime import datetime, timezone, timedelta
-
-from ..models.barrio import Barrio
-from ..models.sector import Sector
-from ..models.areaexp import AreaExp
-from ..models.areapro import AreaPro
 
 
 class TangaraBase(BaseModel):
@@ -14,12 +8,14 @@ class TangaraBase(BaseModel):
     codigo: str
     latitud: str
     longitud: str
-    online: bool = False
+    online: bool
+    id_areaexp: int
 
 
 class TangaraCreate(TangaraBase):
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
+    updated: str = created
 
 
 class TangaraUpdate(TangaraBase):
@@ -27,17 +23,10 @@ class TangaraUpdate(TangaraBase):
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
 
 
-class Tangara(TangaraBase):
+class TangaraSchema(TangaraBase):
     id: int
-    id_barrio: int
-    id_sector: int
-    id_areaexp: int
-    id_areapro: int
-
-    barrio: Barrio
-    sector: Sector
-    areaexp: AreaExp
-    areapro: AreaPro
+    created: str
+    updated: str
 
     class Config:
         orm_mode = True
