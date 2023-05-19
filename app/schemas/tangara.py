@@ -10,6 +10,7 @@ class TangaraBase(BaseModel):
     longitud: str
     online: bool
     id_areaexp: int
+    id_areapro: int
 
 
 class TangaraCreate(TangaraBase):

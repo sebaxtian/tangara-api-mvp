@@ -5,6 +5,7 @@ from models.barrio import BarrioModel
 from models.vereda import VeredaModel
 from models.sector import SectorModel
 from models.areaexp import AreaExpModel
+from models.areapro import AreaProModel
 from models.tangara import TangaraModel
 
 Base.metadata.create_all(bind=engine)

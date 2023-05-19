@@ -18,5 +18,7 @@ class TangaraModel(Base):
     updated = Column(String, nullable=False)
 
     id_areaexp = Column(Integer, ForeignKey("areaexp.id"))
+    id_areapro = Column(Integer, ForeignKey("areapro.id"))
 
     areaexp = relationship("AreaExpModel", back_populates="tangaras")
+    areapro = relationship("AreaProModel", back_populates="tangaras")
