@@ -8,9 +8,11 @@ class TangaraBase(BaseModel):
     codigo: str
     latitud: str
     longitud: str
-    online: bool
-    id_areaexp: int
-    id_areapro: int
+    online: bool = False
+    id_barrio: int | None
+    id_sector: int | None
+    id_areaexp: int | None
+    id_areapro: int | None
 
 
 class TangaraCreate(TangaraBase):

@@ -17,3 +17,4 @@ class BarrioModel(Base):
     id_comuna = Column(Integer, ForeignKey("comuna.id"))
 
     comuna = relationship("ComunaModel", back_populates="barrios")
+    tangaras = relationship("TangaraModel", back_populates="barrio")

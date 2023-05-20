@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from datetime import datetime, timezone, timedelta
 
+from schemas.tangara import TangaraSchema
+
 
 class SectorBase(BaseModel):
     id_vereda: int
@@ -21,7 +23,7 @@ class SectorUpdate(SectorBase):
 
 class SectorSchema(SectorBase):
     id: int
-    id_vereda: int #TODO: remove
+    tangaras: list[TangaraSchema]
     created: str
     updated: str
 

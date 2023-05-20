@@ -16,3 +16,4 @@ class SectorModel(Base):
     id_vereda = Column(Integer, ForeignKey("vereda.id"))
 
     vereda = relationship("VeredaModel", back_populates="sectores")
+    tangaras = relationship("TangaraModel", back_populates="sector")

@@ -17,8 +17,12 @@ class TangaraModel(Base):
     created = Column(String, nullable=False)
     updated = Column(String, nullable=False)
 
+    id_barrio = Column(Integer, ForeignKey("barrio.id"))
+    id_sector = Column(Integer, ForeignKey("sector.id"))
     id_areaexp = Column(Integer, ForeignKey("areaexp.id"))
     id_areapro = Column(Integer, ForeignKey("areapro.id"))
 
+    barrio = relationship("BarrioModel", back_populates="tangaras")
+    sector = relationship("SectorModel", back_populates="tangaras")
     areaexp = relationship("AreaExpModel", back_populates="tangaras")
     areapro = relationship("AreaProModel", back_populates="tangaras")

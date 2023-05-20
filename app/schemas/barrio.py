@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from datetime import datetime, timezone, timedelta
 
+from schemas.tangara import TangaraSchema
+
 
 class BarrioBase(BaseModel):
     id_comuna: int
@@ -22,7 +24,7 @@ class BarrioUpdate(BarrioBase):
 
 class BarrioSchema(BarrioBase):
     id: int
-    id_comuna: int #TODO: remove
+    tangaras: list[TangaraSchema]
     created: str
     updated: str
 
