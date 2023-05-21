@@ -1,6 +1,6 @@
 from fastapi import Depends, FastAPI
 
-from dependencies.database import get_db
+from dependencies.db import get_db
 from routers import comunas, barrios, veredas, sectores, areasexp, areaspro, tangaras, lugares
 
 

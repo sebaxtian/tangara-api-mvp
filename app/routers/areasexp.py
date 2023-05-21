@@ -1,7 +1,7 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 
-from dependencies.database import get_db
+from dependencies.db import get_db
 from schemas.areaexp import AreaExpSchema, AreaExpCreate, AreaExpUpdate
 from crud.areaexp import AreaExpCRUD
 from schemas.tangara import TangaraSchema

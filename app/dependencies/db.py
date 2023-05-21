@@ -1,4 +1,4 @@
-from database import SessionLocal, engine, Base
+from db.dev import SessionLocal, engine, Base
 
 from models.comuna import ComunaModel
 from models.barrio import BarrioModel
