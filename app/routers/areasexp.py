@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from dependencies.database import get_db
 from schemas.areaexp import AreaExpSchema, AreaExpCreate, AreaExpUpdate
 from crud.areaexp import AreaExpCRUD
+from schemas.tangara import TangaraSchema
 
 
 router = APIRouter(
@@ -45,3 +46,9 @@ async def areasexp(id: int, areaexp: AreaExpUpdate, db: Session = Depends(get_db
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def areasexp(id: int, db: Session = Depends(get_db)) -> None:
     AreaExpCRUD.delete_areaexp(db, id_areaexp=id)
+
+
+@router.get("/{id}/tangaras", response_model=list[TangaraSchema], status_code=status.HTTP_200_OK)
+async def areasexp(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[TangaraSchema]:
+    tangaras = AreaExpCRUD.read_tangaras(db, id_areaexp=id, skip=skip, limit=limit)
+    return tangaras
