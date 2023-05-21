@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from dependencies.database import get_db
 from schemas.barrio import BarrioSchema, BarrioCreate, BarrioUpdate
 from crud.barrio import BarrioCRUD
+from schemas.tangara import TangaraSchema
 
 
 router = APIRouter(
@@ -45,3 +46,9 @@ async def barrios(id: int, barrio: BarrioUpdate, db: Session = Depends(get_db)) 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def barrios(id: int, db: Session = Depends(get_db)) -> None:
     BarrioCRUD.delete_barrio(db, id_barrio=id)
+
+
+@router.get("/{id}/tangaras", response_model=list[TangaraSchema], status_code=status.HTTP_200_OK)
+async def barrios(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[TangaraSchema]:
+    tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id, skip=skip, limit=limit)
+    return tangaras

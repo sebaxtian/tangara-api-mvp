@@ -5,6 +5,8 @@ from fastapi.encoders import jsonable_encoder
 from models.comuna import ComunaModel
 from models.barrio import BarrioModel
 from schemas.barrio import BarrioSchema, BarrioCreate, BarrioUpdate
+from models.tangara import TangaraModel
+from schemas.tangara import TangaraSchema
 
 
 class BarrioCRUD():
@@ -27,6 +29,9 @@ class BarrioCRUD():
 
     def read_barrio(db: Session, id_barrio: int) -> BarrioSchema | None:
         return db.query(BarrioModel).filter(BarrioModel.id == id_barrio).first()
+    
+    def read_tangaras(db: Session, id_barrio: int, skip: int = 0, limit: int = 100) -> list[TangaraSchema]:
+        return db.query(TangaraModel).filter(TangaraModel.id_barrio == id_barrio).offset(skip).limit(limit).all()
 
     # Update
 
