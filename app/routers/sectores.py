@@ -1,10 +1,10 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 
-from dependencies.database import get_db
-from schemas.sector import SectorSchema, SectorCreate, SectorUpdate
-from crud.sector import SectorCRUD
-from schemas.tangara import TangaraSchema
+from app.dependencies.database import get_db
+from app.schemas.sector import SectorSchema, SectorCreate, SectorUpdate
+from app.crud.sector import SectorCRUD
+from app.schemas.tangara import TangaraSchema
 
 
 router = APIRouter(

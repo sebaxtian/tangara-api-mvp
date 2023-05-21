@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime, timezone, timedelta
 
-from schemas.tangara import TangaraSchema
+from app.schemas.tangara import TangaraSchema
 
 
 class AreaExpBase(BaseModel):

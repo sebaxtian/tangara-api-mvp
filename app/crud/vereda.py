@@ -2,12 +2,12 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
-from models.vereda import VeredaModel
-from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
-from models.sector import SectorModel
-from schemas.sector import SectorSchema
-from models.tangara import TangaraModel
-from schemas.tangara import TangaraSchema
+from app.models.vereda import VeredaModel
+from app.schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
+from app.models.sector import SectorModel
+from app.schemas.sector import SectorSchema
+from app.models.tangara import TangaraModel
+from app.schemas.tangara import TangaraSchema
 
 
 class VeredaCRUD():

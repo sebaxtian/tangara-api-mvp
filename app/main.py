@@ -1,9 +1,9 @@
 from fastapi import Depends, FastAPI
 
-from config import Settings
-from dependencies.database import get_db
-from dependencies.settings import get_settings
-from routers import comunas, barrios, veredas, sectores, areasexp, areaspro, tangaras, lugares
+from app.config import Settings
+from app.dependencies.database import get_db
+from app.dependencies.settings import get_settings
+from app.routers import comunas, barrios, veredas, sectores, areasexp, areaspro, tangaras, lugares
 
 
 app = FastAPI(

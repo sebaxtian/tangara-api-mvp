@@ -1,11 +1,11 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 
-from dependencies.database import get_db
-from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
-from crud.vereda import VeredaCRUD
-from schemas.sector import SectorSchema
-from schemas.tangara import TangaraSchema
+from app.dependencies.database import get_db
+from app.schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
+from app.crud.vereda import VeredaCRUD
+from app.schemas.sector import SectorSchema
+from app.schemas.tangara import TangaraSchema
 
 
 router = APIRouter(

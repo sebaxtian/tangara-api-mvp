@@ -4,9 +4,9 @@ from sqlalchemy.orm import Session
 import pandas as pd
 import io
 
-from dependencies.database import get_db
-from schemas.lugares import LugaresSchema
-from crud.lugares import LugaresCRUD
+from app.dependencies.database import get_db
+from app.schemas.lugares import LugaresSchema
+from app.crud.lugares import LugaresCRUD
 
 
 router = APIRouter(

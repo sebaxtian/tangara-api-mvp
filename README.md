@@ -52,7 +52,7 @@ Jupyter Notebooks are helpful to explore some features and explain them to the t
 > **Development Mode**
 
 ```bash
-$promt> uvicorn --app-dir ./app/ main:app --reload
+$promt> uvicorn app.main:app --reload
 ```
 
 ---

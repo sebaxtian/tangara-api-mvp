@@ -1,6 +1,6 @@
 from functools import lru_cache
 
-from config import Settings
+from app.config import Settings
 
 
 # Dependency

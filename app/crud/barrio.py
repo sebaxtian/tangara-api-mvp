@@ -2,11 +2,11 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
-from models.comuna import ComunaModel
-from models.barrio import BarrioModel
-from schemas.barrio import BarrioSchema, BarrioCreate, BarrioUpdate
-from models.tangara import TangaraModel
-from schemas.tangara import TangaraSchema
+from app.models.comuna import ComunaModel
+from app.models.barrio import BarrioModel
+from app.schemas.barrio import BarrioSchema, BarrioCreate, BarrioUpdate
+from app.models.tangara import TangaraModel
+from app.schemas.tangara import TangaraSchema
 
 
 class BarrioCRUD():

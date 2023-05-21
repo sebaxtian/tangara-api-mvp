@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime, timezone, timedelta
 
-from schemas.sector import SectorSchema
+from app.schemas.sector import SectorSchema
 
 
 class VeredaBase(BaseModel):

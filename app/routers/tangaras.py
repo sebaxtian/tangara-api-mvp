@@ -1,9 +1,9 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 
-from dependencies.database import get_db
-from schemas.tangara import TangaraSchema, TangaraCreate, TangaraUpdate
-from crud.tangara import TangaraCRUD
+from app.dependencies.database import get_db
+from app.schemas.tangara import TangaraSchema, TangaraCreate, TangaraUpdate
+from app.crud.tangara import TangaraCRUD
 
 
 router = APIRouter(

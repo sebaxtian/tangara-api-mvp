@@ -1,7 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
-from db.connection import Base
+from app.db.connection import Base
 
 
 class SectorModel(Base):

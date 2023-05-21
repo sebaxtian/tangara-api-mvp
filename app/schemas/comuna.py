@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime, timezone, timedelta
 
-from schemas.barrio import BarrioSchema
+from app.schemas.barrio import BarrioSchema
 
 
 class ComunaBase(BaseModel):

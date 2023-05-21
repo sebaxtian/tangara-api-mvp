@@ -2,10 +2,10 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
-from models.areapro import AreaProModel
-from schemas.areapro import AreaProSchema, AreaProCreate, AreaProUpdate
-from models.tangara import TangaraModel
-from schemas.tangara import TangaraSchema
+from app.models.areapro import AreaProModel
+from app.schemas.areapro import AreaProSchema, AreaProCreate, AreaProUpdate
+from app.models.tangara import TangaraModel
+from app.schemas.tangara import TangaraSchema
 
 
 class AreaProCRUD():

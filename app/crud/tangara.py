@@ -2,13 +2,13 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
-from models.barrio import BarrioModel
-from models.tangara import TangaraModel
-from schemas.tangara import TangaraSchema, TangaraCreate, TangaraUpdate
-from crud.barrio import BarrioCRUD
-from crud.sector import SectorCRUD
-from crud.areaexp import AreaExpCRUD
-from crud.areapro import AreaProCRUD
+from app.models.barrio import BarrioModel
+from app.models.tangara import TangaraModel
+from app.schemas.tangara import TangaraSchema, TangaraCreate, TangaraUpdate
+from app.crud.barrio import BarrioCRUD
+from app.crud.sector import SectorCRUD
+from app.crud.areaexp import AreaExpCRUD
+from app.crud.areapro import AreaProCRUD
 
 
 class TangaraCRUD():

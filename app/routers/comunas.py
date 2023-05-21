@@ -1,11 +1,11 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 
-from dependencies.database import get_db
-from schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
-from crud.comuna import ComunaCRUD
-from schemas.barrio import BarrioSchema
-from schemas.tangara import TangaraSchema
+from app.dependencies.database import get_db
+from app.schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
+from app.crud.comuna import ComunaCRUD
+from app.schemas.barrio import BarrioSchema
+from app.schemas.tangara import TangaraSchema
 
 
 router = APIRouter(
