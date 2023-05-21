@@ -3,6 +3,8 @@ from fastapi.encoders import jsonable_encoder
 
 from models.areapro import AreaProModel
 from schemas.areapro import AreaProSchema, AreaProCreate, AreaProUpdate
+from models.tangara import TangaraModel
+from schemas.tangara import TangaraSchema
 
 
 class AreaProCRUD():
@@ -23,6 +25,9 @@ class AreaProCRUD():
 
     def read_areapro(db: Session, id_areapro: int) -> AreaProSchema | None:
         return db.query(AreaProModel).filter(AreaProModel.id == id_areapro).first()
+    
+    def read_tangaras(db: Session, id_areapro: int, skip: int = 0, limit: int = 100) -> list[TangaraSchema]:
+        return db.query(TangaraModel).filter(TangaraModel.id_areapro == id_areapro).offset(skip).limit(limit).all()
 
     # Update
 
