@@ -5,6 +5,8 @@ from models.comuna import ComunaModel
 from schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
 from models.barrio import BarrioModel
 from schemas.barrio import BarrioSchema
+from models.tangara import TangaraModel
+from schemas.tangara import TangaraSchema
 
 
 class ComunaCRUD():
@@ -28,6 +30,11 @@ class ComunaCRUD():
     
     def read_barrios(db: Session, id_comuna: int, skip: int = 0, limit: int = 100) -> list[BarrioSchema]:
         return db.query(BarrioModel).filter(BarrioModel.id_comuna == id_comuna).offset(skip).limit(limit).all()
+    
+    def read_tangaras(db: Session, id_comuna: int, skip: int = 0, limit: int = 100) -> list[TangaraSchema]:
+        barrios = db.query(BarrioModel).filter(BarrioModel.id_comuna == id_comuna).all()
+        ids_barrios = [barrio.id for barrio in barrios]
+        return db.query(TangaraModel).filter(TangaraModel.id_barrio.in_(ids_barrios)).offset(skip).limit(limit).all()
 
     # Update
 

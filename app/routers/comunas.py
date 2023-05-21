@@ -5,6 +5,7 @@ from dependencies.database import get_db
 from schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
 from crud.comuna import ComunaCRUD
 from schemas.barrio import BarrioSchema
+from schemas.tangara import TangaraSchema
 
 
 router = APIRouter(
@@ -52,3 +53,9 @@ async def comunas(id: int, db: Session = Depends(get_db)) -> None:
 async def comunas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[BarrioSchema]:
     barrios = ComunaCRUD.read_barrios(db, id_comuna=id, skip=skip, limit=limit)
     return barrios
+
+
+@router.get("/{id}/tangaras", response_model=list[TangaraSchema], status_code=status.HTTP_200_OK)
+async def comunas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[BarrioSchema]:
+    tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id, skip=skip, limit=limit)
+    return tangaras
