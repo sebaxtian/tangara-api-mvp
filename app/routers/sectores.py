@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from dependencies.database import get_db
 from schemas.sector import SectorSchema, SectorCreate, SectorUpdate
 from crud.sector import SectorCRUD
+from schemas.tangara import TangaraSchema
 
 
 router = APIRouter(
@@ -45,3 +46,9 @@ async def sectores(id: int, sector: SectorUpdate, db: Session = Depends(get_db))
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def sectores(id: int, db: Session = Depends(get_db)) -> None:
     SectorCRUD.delete_sector(db, id_sector=id)
+
+
+@router.get("/{id}/tangaras", response_model=list[TangaraSchema], status_code=status.HTTP_200_OK)
+async def sectores(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[TangaraSchema]:
+    tangaras = SectorCRUD.read_tangaras(db, id_sector=id, skip=skip, limit=limit)
+    return tangaras

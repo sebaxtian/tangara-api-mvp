@@ -5,6 +5,8 @@ from fastapi.encoders import jsonable_encoder
 from models.vereda import VeredaModel
 from models.sector import SectorModel
 from schemas.sector import SectorSchema, SectorCreate, SectorUpdate
+from models.tangara import TangaraModel
+from schemas.tangara import TangaraSchema
 
 
 class SectorCRUD():
@@ -27,6 +29,9 @@ class SectorCRUD():
 
     def read_sector(db: Session, id_sector: int) -> SectorSchema | None:
         return db.query(SectorModel).filter(SectorModel.id == id_sector).first()
+    
+    def read_tangaras(db: Session, id_sector: int, skip: int = 0, limit: int = 100) -> list[TangaraSchema]:
+        return db.query(TangaraModel).filter(TangaraModel.id_sector == id_sector).offset(skip).limit(limit).all()
 
     # Update
 
