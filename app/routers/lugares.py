@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 import pandas as pd
 import io
 
-from dependencies.db import get_db
+from dependencies.database import get_db
 from schemas.lugares import LugaresSchema
 from crud.lugares import LugaresCRUD
 

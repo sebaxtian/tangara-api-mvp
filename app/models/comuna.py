@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 
-from db.dev import Base
+from db.connection import Base
 
 
 class ComunaModel(Base):

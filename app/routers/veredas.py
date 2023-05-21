@@ -1,7 +1,7 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 
-from dependencies.db import get_db
+from dependencies.database import get_db
 from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
 from crud.vereda import VeredaCRUD
 from schemas.sector import SectorSchema

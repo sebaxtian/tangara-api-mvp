@@ -2,7 +2,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///db/tangara-mvp.db"
+from config import Settings
+from dependencies.settings import get_settings
+
+settings: Settings = get_settings()
+
+db_sqlite = {"dev": "tangara-mvp.db", "test": "test-tangara-mvp.db"}
+
+SQLALCHEMY_DATABASE_URL = f"sqlite:///db/{db_sqlite[settings.env]}"
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
 
 engine = create_engine(

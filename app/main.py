@@ -1,11 +1,13 @@
 from fastapi import Depends, FastAPI
 
-from dependencies.db import get_db
+from config import Settings
+from dependencies.database import get_db
+from dependencies.settings import get_settings
 from routers import comunas, barrios, veredas, sectores, areasexp, areaspro, tangaras, lugares
 
 
 app = FastAPI(
-    dependencies=[Depends(get_db)]
+    dependencies=[Depends(get_db), Depends(get_settings)]
 )
 
 
@@ -20,5 +22,5 @@ app.include_router(lugares.router)
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello Bigger Applications!"}
+async def root(settings: Settings = Depends(get_settings)):
+    return {"message": "Hello Bigger Applications!", "settings": settings}
