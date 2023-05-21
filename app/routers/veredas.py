@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from dependencies.database import get_db
 from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
 from crud.vereda import VeredaCRUD
+from schemas.sector import SectorSchema
 
 
 router = APIRouter(
@@ -45,3 +46,9 @@ async def veredas(id: int, vereda: VeredaUpdate, db: Session = Depends(get_db)) 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def veredas(id: int, db: Session = Depends(get_db)) -> None:
     VeredaCRUD.delete_vereda(db, id_vereda=id)
+
+
+@router.get("/{id}/sectores", response_model=list[SectorSchema], status_code=status.HTTP_200_OK)
+async def veredas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[SectorSchema]:
+    sectores = VeredaCRUD.read_sectores(db, id_vereda=id, skip=skip, limit=limit)
+    return sectores

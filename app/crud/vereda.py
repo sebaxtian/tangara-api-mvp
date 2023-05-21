@@ -3,6 +3,8 @@ from fastapi.encoders import jsonable_encoder
 
 from models.vereda import VeredaModel
 from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
+from models.sector import SectorModel
+from schemas.sector import SectorSchema
 
 
 class VeredaCRUD():
@@ -23,6 +25,9 @@ class VeredaCRUD():
 
     def read_vereda(db: Session, id_vereda: int) -> VeredaSchema | None:
         return db.query(VeredaModel).filter(VeredaModel.id == id_vereda).first()
+    
+    def read_sectores(db: Session, id_vereda: int, skip: int = 0, limit: int = 100) -> list[SectorSchema]:
+        return db.query(SectorModel).filter(SectorModel.id_vereda == id_vereda).offset(skip).limit(limit).all()
 
     # Update
 
