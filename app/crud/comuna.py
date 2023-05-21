@@ -3,6 +3,8 @@ from fastapi.encoders import jsonable_encoder
 
 from models.comuna import ComunaModel
 from schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
+from models.barrio import BarrioModel
+from schemas.barrio import BarrioSchema
 
 
 class ComunaCRUD():
@@ -23,6 +25,9 @@ class ComunaCRUD():
 
     def read_comuna(db: Session, id_comuna: int) -> ComunaSchema | None:
         return db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
+    
+    def read_barrios(db: Session, id_comuna: int, skip: int = 0, limit: int = 100) -> list[BarrioSchema]:
+        return db.query(BarrioModel).filter(BarrioModel.id_comuna == id_comuna).offset(skip).limit(limit).all()
 
     # Update
 

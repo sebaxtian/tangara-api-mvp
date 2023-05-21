@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from dependencies.database import get_db
 from schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
 from crud.comuna import ComunaCRUD
+from schemas.barrio import BarrioSchema
 
 
 router = APIRouter(
@@ -45,3 +46,9 @@ async def comunas(id: int, comuna: ComunaUpdate, db: Session = Depends(get_db)) 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def comunas(id: int, db: Session = Depends(get_db)) -> None:
     ComunaCRUD.delete_comuna(db, id_comuna=id)
+
+
+@router.get("/{id}/barrios", response_model=list[BarrioSchema], status_code=status.HTTP_200_OK)
+async def comunas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[BarrioSchema]:
+    barrios = ComunaCRUD.read_barrios(db, id_comuna=id, skip=skip, limit=limit)
+    return barrios
