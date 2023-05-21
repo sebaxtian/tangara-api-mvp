@@ -56,6 +56,6 @@ async def comunas(id: int, skip: int = 0, limit: int = 100, db: Session = Depend
 
 
 @router.get("/{id}/tangaras", response_model=list[TangaraSchema], status_code=status.HTTP_200_OK)
-async def comunas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[BarrioSchema]:
+async def comunas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[TangaraSchema]:
     tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id, skip=skip, limit=limit)
     return tangaras

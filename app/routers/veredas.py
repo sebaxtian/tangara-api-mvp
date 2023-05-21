@@ -5,6 +5,7 @@ from dependencies.database import get_db
 from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
 from crud.vereda import VeredaCRUD
 from schemas.sector import SectorSchema
+from schemas.tangara import TangaraSchema
 
 
 router = APIRouter(
@@ -52,3 +53,9 @@ async def veredas(id: int, db: Session = Depends(get_db)) -> None:
 async def veredas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[SectorSchema]:
     sectores = VeredaCRUD.read_sectores(db, id_vereda=id, skip=skip, limit=limit)
     return sectores
+
+
+@router.get("/{id}/tangaras", response_model=list[TangaraSchema], status_code=status.HTTP_200_OK)
+async def veredas(id: int, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)) -> list[TangaraSchema]:
+    tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id, skip=skip, limit=limit)
+    return tangaras

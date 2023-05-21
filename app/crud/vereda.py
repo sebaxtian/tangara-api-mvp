@@ -5,6 +5,8 @@ from models.vereda import VeredaModel
 from schemas.vereda import VeredaSchema, VeredaCreate, VeredaUpdate
 from models.sector import SectorModel
 from schemas.sector import SectorSchema
+from models.tangara import TangaraModel
+from schemas.tangara import TangaraSchema
 
 
 class VeredaCRUD():
@@ -28,6 +30,11 @@ class VeredaCRUD():
     
     def read_sectores(db: Session, id_vereda: int, skip: int = 0, limit: int = 100) -> list[SectorSchema]:
         return db.query(SectorModel).filter(SectorModel.id_vereda == id_vereda).offset(skip).limit(limit).all()
+    
+    def read_tangaras(db: Session, id_vereda: int, skip: int = 0, limit: int = 100) -> list[TangaraSchema]:
+        sectores = db.query(SectorModel).filter(SectorModel.id_vereda == id_vereda).all()
+        ids_sectores = [sector.id for sector in sectores]
+        return db.query(TangaraModel).filter(TangaraModel.id_sector.in_(ids_sectores)).offset(skip).limit(limit).all()
 
     # Update
 
