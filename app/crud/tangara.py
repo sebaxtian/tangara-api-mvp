@@ -38,18 +38,17 @@ class TangaraCRUD():
         if list(lugares.keys())[0] == "id_areapro" and not AreaProCRUD.read_areapro(db, tangara.id_areapro):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID AreaPro Not Found")
         
-        tangara_db = db.query(TangaraModel).filter(TangaraModel.mac == tangara.mac, TangaraModel.codigo == tangara.codigo).first()
-        # Create new one
-        if not tangara_db:
-            tangara = TangaraModel(**tangara.dict())
-            db.add(tangara)
-            db.commit()
-            db.refresh(tangara)
-            return tangara
-        # Update that one
-        db.query(TangaraModel).filter(TangaraModel.id == tangara_db.id).update(jsonable_encoder(tangara))
+        if db.query(TangaraModel).filter(TangaraModel.mac == tangara.mac).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Tangara mac must be Unique")
+        
+        if db.query(TangaraModel).filter(TangaraModel.codigo == tangara.codigo).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Tangara codigo must be Unique")
+        
+        tangara = TangaraModel(**tangara.dict())
+        db.add(tangara)
         db.commit()
-        return db.query(TangaraModel).filter(TangaraModel.id == tangara_db.id).first()
+        db.refresh(tangara)
+        return tangara
 
     # Read
 
@@ -83,6 +82,12 @@ class TangaraCRUD():
         
         if list(lugares.keys())[0] == "id_areapro" and not AreaProCRUD.read_areapro(db, tangara.id_areapro):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID AreaPro Not Found")
+        
+        if len(db.query(TangaraModel).filter(TangaraModel.id != id_tangara, TangaraModel.mac == tangara.mac).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Tangara mac must be Unique")
+        
+        if len(db.query(TangaraModel).filter(TangaraModel.id != id_tangara, TangaraModel.codigo == tangara.codigo).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Tangara codigo must be Unique")
 
         tangara = jsonable_encoder(tangara)
         db.query(TangaraModel).filter(TangaraModel.id == id_tangara).update(tangara)

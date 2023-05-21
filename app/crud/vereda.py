@@ -1,3 +1,4 @@
+from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
@@ -15,6 +16,8 @@ class VeredaCRUD():
 
     def create_vereda(db: Session, vereda: VeredaCreate) -> VeredaSchema:
         vereda = VeredaModel(**vereda.dict())
+        if db.query(VeredaModel).filter(VeredaModel.codigo == vereda.codigo).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Vereda codigo must be Unique")
         db.add(vereda)
         db.commit()
         db.refresh(vereda)
@@ -39,6 +42,8 @@ class VeredaCRUD():
     # Update
 
     def update_vereda(db: Session, id_vereda: int, vereda: VeredaUpdate) -> VeredaSchema | None:
+        if len(db.query(VeredaModel).filter(VeredaModel.id != id_vereda, VeredaModel.codigo == vereda.codigo).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Vereda codigo must be Unique")
         vereda = jsonable_encoder(vereda)
         db.query(VeredaModel).filter(VeredaModel.id == id_vereda).update(vereda)
         db.commit()

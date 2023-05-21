@@ -1,3 +1,4 @@
+from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
@@ -15,6 +16,8 @@ class ComunaCRUD():
 
     def create_comuna(db: Session, comuna: ComunaCreate) -> ComunaSchema:
         comuna = ComunaModel(**comuna.dict())
+        if db.query(ComunaModel).filter(ComunaModel.codigo == comuna.codigo).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Comuna codigo must be Unique")
         db.add(comuna)
         db.commit()
         db.refresh(comuna)
@@ -39,6 +42,8 @@ class ComunaCRUD():
     # Update
 
     def update_comuna(db: Session, id_comuna: int, comuna: ComunaUpdate) -> ComunaSchema | None:
+        if len(db.query(ComunaModel).filter(ComunaModel.id != id_comuna, ComunaModel.codigo == comuna.codigo).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Comuna codigo must be Unique")
         comuna = jsonable_encoder(comuna)
         db.query(ComunaModel).filter(ComunaModel.id == id_comuna).update(comuna)
         db.commit()

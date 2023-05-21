@@ -17,6 +17,8 @@ class SectorCRUD():
         sector = SectorModel(**sector.dict())
         if not db.query(VeredaModel).filter(VeredaModel.id == sector.id_vereda).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Vereda Not Found")
+        if db.query(SectorModel).filter(SectorModel.codigo == sector.codigo).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Sector codigo must be Unique")
         db.add(sector)
         db.commit()
         db.refresh(sector)
@@ -38,6 +40,8 @@ class SectorCRUD():
     def update_sector(db: Session, id_sector: int, sector: SectorUpdate) -> SectorSchema | None:
         if not db.query(VeredaModel).filter(VeredaModel.id == sector.id_vereda).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Vereda Not Found")
+        if len(db.query(SectorModel).filter(SectorModel.id != id_sector, SectorModel.codigo == sector.codigo).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Sector codigo must be Unique")
         sector = jsonable_encoder(sector)
         db.query(SectorModel).filter(SectorModel.id == id_sector).update(sector)
         db.commit()

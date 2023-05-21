@@ -17,6 +17,8 @@ class BarrioCRUD():
         barrio = BarrioModel(**barrio.dict())
         if not db.query(ComunaModel).filter(ComunaModel.id == barrio.id_comuna).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Comuna Not Found")
+        if db.query(BarrioModel).filter(BarrioModel.codigo == barrio.codigo).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Barrio codigo must be Unique")
         db.add(barrio)
         db.commit()
         db.refresh(barrio)
@@ -38,6 +40,8 @@ class BarrioCRUD():
     def update_barrio(db: Session, id_barrio: int, barrio: BarrioUpdate) -> BarrioSchema | None:
         if not db.query(ComunaModel).filter(ComunaModel.id == barrio.id_comuna).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Comuna Not Found")
+        if len(db.query(BarrioModel).filter(BarrioModel.id != id_barrio, BarrioModel.codigo == barrio.codigo).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Barrio codigo must be Unique")
         barrio = jsonable_encoder(barrio)
         db.query(BarrioModel).filter(BarrioModel.id == id_barrio).update(barrio)
         db.commit()

@@ -1,3 +1,4 @@
+from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 
@@ -13,6 +14,8 @@ class AreaProCRUD():
 
     def create_areapro(db: Session, areapro: AreaProCreate) -> AreaProSchema:
         areapro = AreaProModel(**areapro.dict())
+        if db.query(AreaProModel).filter(AreaProModel.codigo == areapro.codigo).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="AreaPro codigo must be Unique")
         db.add(areapro)
         db.commit()
         db.refresh(areapro)
@@ -32,6 +35,8 @@ class AreaProCRUD():
     # Update
 
     def update_areapro(db: Session, id_areapro: int, areapro: AreaProUpdate) -> AreaProSchema | None:
+        if len(db.query(AreaProModel).filter(AreaProModel.id != id_areapro, AreaProModel.codigo == areapro.codigo).all()) > 0:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="AreaPro codigo must be Unique")
         areapro = jsonable_encoder(areapro)
         db.query(AreaProModel).filter(AreaProModel.id == id_areapro).update(areapro)
         db.commit()
