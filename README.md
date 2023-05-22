@@ -55,6 +55,12 @@ Jupyter Notebooks are helpful to explore some features and explain them to the t
 $promt> uvicorn app.main:app --reload
 ```
 
+## Testing
+
+```bash
+$promt> pytest -W ignore::trio.TrioDeprecationWarning
+```
+
 ---
 
 ***That's all for now ...***

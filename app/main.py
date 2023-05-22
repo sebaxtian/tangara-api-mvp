@@ -23,4 +23,4 @@ app.include_router(lugares.router)
 
 @app.get("/")
 async def root(settings: Settings = Depends(get_settings)):
-    return {"message": "Hello Bigger Applications!", "settings": settings}
+    return {"message": settings.app_name, "environment": settings.env}
