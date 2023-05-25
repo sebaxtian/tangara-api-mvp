@@ -16,6 +16,7 @@ class TangaraBase(BaseModel):
 
 
 class TangaraCreate(TangaraBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -33,3 +34,7 @@ class TangaraSchema(TangaraBase):
 
     class Config:
         orm_mode = True
+
+
+class TangaraSchemaList(BaseModel):
+    tangaras: list[TangaraSchema]

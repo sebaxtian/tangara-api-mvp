@@ -10,6 +10,7 @@ class AreaExpBase(BaseModel):
 
 
 class AreaExpCreate(AreaExpBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -28,3 +29,7 @@ class AreaExpSchema(AreaExpBase):
 
     class Config:
         orm_mode = True
+
+
+class AreaExpSchemaList(BaseModel):
+    areasexp: list[AreaExpSchema]

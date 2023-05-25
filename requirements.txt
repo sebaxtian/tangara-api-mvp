@@ -15,6 +15,7 @@ decorator==5.1.1
 docutils==0.19
 exceptiongroup==1.1.1
 executing==1.2.0
+Faker==18.9.0
 fastapi==0.95.1
 fastjsonschema==2.16.3
 geohash2==1.1

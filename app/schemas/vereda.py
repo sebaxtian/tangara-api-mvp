@@ -10,6 +10,7 @@ class VeredaBase(BaseModel):
 
 
 class VeredaCreate(VeredaBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -28,3 +29,7 @@ class VeredaSchema(VeredaBase):
 
     class Config:
         orm_mode = True
+
+
+class VeredaSchemaList(BaseModel):
+    veredas: list[VeredaSchema]

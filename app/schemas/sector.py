@@ -11,6 +11,7 @@ class SectorBase(BaseModel):
 
 
 class SectorCreate(SectorBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -29,3 +30,7 @@ class SectorSchema(SectorBase):
 
     class Config:
         orm_mode = True
+
+
+class SectorSchemaList(BaseModel):
+    sectores: list[SectorSchema]

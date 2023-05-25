@@ -12,6 +12,7 @@ class BarrioBase(BaseModel):
 
 
 class BarrioCreate(BarrioBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -30,3 +31,7 @@ class BarrioSchema(BarrioBase):
 
     class Config:
         orm_mode = True
+
+
+class BarrioSchemaList(BaseModel):
+    barrios: list[BarrioSchema]

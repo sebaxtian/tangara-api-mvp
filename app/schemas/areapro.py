@@ -10,6 +10,7 @@ class AreaProBase(BaseModel):
 
 
 class AreaProCreate(AreaProBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -28,3 +29,7 @@ class AreaProSchema(AreaProBase):
 
     class Config:
         orm_mode = True
+
+
+class AreaProSchemaList(BaseModel):
+    areaspro: list[AreaProSchema]

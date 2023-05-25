@@ -10,6 +10,7 @@ class ComunaBase(BaseModel):
 
 
 class ComunaCreate(ComunaBase):
+    id: int | None
     created: str = datetime.now(tz=timezone(
         offset=-timedelta(hours=5), name='America/Bogota')).isoformat()
     updated: str = created
@@ -28,3 +29,7 @@ class ComunaSchema(ComunaBase):
 
     class Config:
         orm_mode = True
+
+
+class ComunaSchemaList(BaseModel):
+    comunas: list[ComunaSchema]
