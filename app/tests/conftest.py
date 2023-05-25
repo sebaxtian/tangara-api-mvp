@@ -1,6 +1,6 @@
 import pytest
-from faker import Faker
 import random
+from faker import Faker
 from enum import IntEnum
 
 from app.db.connection import Base
@@ -24,6 +24,7 @@ from app.schemas.tangara import TangaraCreate
 
 fake = Faker()
 fake.seed_instance('tangara-mvp')
+
 
 # IDs Lugares
 class Codes(IntEnum):
@@ -150,8 +151,11 @@ def areaspro(db_engine):
 def tangaras(db_engine, barrios, sectores, areasexp, areaspro):
     db = next(override_get_db())
     for id_tangara in range(Totals.TANGARAS):
-        lugar = random.choice([Codes.BARRIO, Codes.SECTOR, Codes.AREAEXP, Codes.AREAPRO])
-        total = {Codes.BARRIO: Totals.BARRIOS, Codes.SECTOR: Totals.SECTORES, Codes.AREAEXP: Totals.AREASEXP, Codes.AREAPRO: Totals.AREASPRO}
+        lugar = random.choice(
+            [Codes.BARRIO, Codes.SECTOR, Codes.AREAEXP, Codes.AREAPRO]
+        )
+        total = {Codes.BARRIO: Totals.BARRIOS, Codes.SECTOR: Totals.SECTORES,
+                 Codes.AREAEXP: Totals.AREASEXP, Codes.AREAPRO: Totals.AREASPRO}
         id_lugar = random.choice(range(
             lugar,
             lugar + total[lugar])
