@@ -16,6 +16,8 @@ class ComunaCRUD():
 
     def create_comuna(db: Session, comuna: ComunaCreate) -> ComunaSchema:
         comuna = ComunaModel(**comuna.dict())
+        if db.query(ComunaModel).filter(ComunaModel.id == comuna.id).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Comuna id must be Unique")
         if db.query(ComunaModel).filter(ComunaModel.codigo == comuna.codigo).first():
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Comuna codigo must be Unique")
         db.add(comuna)
