@@ -73,7 +73,7 @@ def test_get_vereda_by_id(tangaras):
 def test_post_vereda(tangaras):
     vereda1 = VeredaCreate(
         id=fake.random_int(min=Codes.VEREDA + Totals.VEREDAS + 1, max=Codes.SECTOR), 
-        nombre=f"Vereda {fake.unique.bothify(text='###')}", 
+        nombre=f"Vereda {fake.unique.street_name()}",
         codigo=f"{fake.unique.bothify(text='???_###').upper()}"
     )
     response1 = client.post(f"/veredas/", json=vereda1.dict())
@@ -102,7 +102,7 @@ def test_put_vereda(tangaras):
     vereda1 = response1.json()
     vereda1 = VeredaSchema.validate(vereda1)
 
-    vereda1.nombre = f"Vereda {fake.unique.bothify(text='###')}"
+    vereda1.nombre = f"Vereda {fake.unique.street_name()}"
     vereda1.codigo = f"{fake.unique.bothify(text='???_###').upper()}"
 
     response2 = client.put(f"/veredas/{id_vereda}", json=vereda1.dict())

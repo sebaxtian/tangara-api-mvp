@@ -15,6 +15,8 @@ class BarrioCRUD():
 
     def create_barrio(db: Session, barrio: BarrioCreate) -> BarrioSchema:
         barrio = BarrioModel(**barrio.dict())
+        if db.query(BarrioModel).filter(BarrioModel.id == barrio.id).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Barrio id must be Unique")
         if not db.query(ComunaModel).filter(ComunaModel.id == barrio.id_comuna).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Comuna Not Found")
         if db.query(BarrioModel).filter(BarrioModel.codigo == barrio.codigo).first():
