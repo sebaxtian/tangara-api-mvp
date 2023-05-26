@@ -85,7 +85,7 @@ def test_get_comuna_by_id(tangaras):
 def test_post_comuna(tangaras):
     comuna1 = ComunaCreate(
         id=fake.random_int(min=Codes.COMUNA + Totals.COMUNAS + 1, max=Codes.BARRIO), 
-        nombre=f"Comuna {fake.unique.bothify(text='##')}", 
+        nombre=f"Comuna {fake.unique.bothify(text='###')}", 
         codigo=f"{fake.unique.bothify(text='???_###').upper()}"
     )
     response1 = client.post(f"/comunas/", json=comuna1.dict())
@@ -114,7 +114,7 @@ def test_put_comuna(tangaras):
     comuna1 = response1.json()
     comuna1 = ComunaSchema.validate(comuna1)
 
-    comuna1.nombre = f"Comuna {fake.unique.bothify(text='##')}"
+    comuna1.nombre = f"Comuna {fake.unique.bothify(text='###')}"
     comuna1.codigo = f"{fake.unique.bothify(text='???_###').upper()}"
 
     response2 = client.put(f"/comunas/{id_comuna}", json=comuna1.dict())

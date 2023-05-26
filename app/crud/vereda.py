@@ -16,6 +16,8 @@ class VeredaCRUD():
 
     def create_vereda(db: Session, vereda: VeredaCreate) -> VeredaSchema:
         vereda = VeredaModel(**vereda.dict())
+        if db.query(VeredaModel).filter(VeredaModel.id == vereda.id).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Vereda id must be Unique")
         if db.query(VeredaModel).filter(VeredaModel.codigo == vereda.codigo).first():
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Vereda codigo must be Unique")
         db.add(vereda)

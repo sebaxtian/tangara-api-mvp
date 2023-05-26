@@ -58,7 +58,7 @@ def comunas(db_engine):
     for id_comuna in range(Codes.COMUNA, Codes.COMUNA + Totals.COMUNAS):
         comuna = ComunaModel(**ComunaCreate(
             id=id_comuna,
-            nombre=f"Comuna {fake.unique.bothify(text='##')}",
+            nombre=f"Comuna {fake.unique.bothify(text='###')}",
             codigo=f"{fake.unique.bothify(text='???_###').upper()}").dict()
         )
         if not db.query(ComunaModel).filter(ComunaModel.codigo == comuna.codigo or ComunaModel.id == comuna.id).first():
