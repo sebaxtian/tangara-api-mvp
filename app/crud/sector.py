@@ -15,6 +15,8 @@ class SectorCRUD():
 
     def create_sector(db: Session, sector: SectorCreate) -> SectorSchema:
         sector = SectorModel(**sector.dict())
+        if db.query(SectorModel).filter(SectorModel.id == sector.id).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Sector id must be Unique")
         if not db.query(VeredaModel).filter(VeredaModel.id == sector.id_vereda).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Vereda Not Found")
         if db.query(SectorModel).filter(SectorModel.codigo == sector.codigo).first():
