@@ -23,8 +23,14 @@ class TangaraCRUD():
             "id_areapro": tangara.id_areapro
         }, exclude_none=True)
 
+        if db.query(TangaraModel).filter(TangaraModel.id == tangara.id).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Tangara id must be Unique")
+
         if len(list(lugares.keys())) > 1:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Only one accepted: id_barrio, id_sector, id_areaexp, id_areapro")
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Only one accepted: id_barrio, id_sector, id_areaexp, id_areapro")
+
+        if not lugares.keys():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Any of id_barrio, id_sector, id_areaexp, id_areapro is required")
 
         if list(lugares.keys())[0] == "id_barrio" and not BarrioCRUD.read_barrio(db, tangara.id_barrio):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Barrio Not Found")
