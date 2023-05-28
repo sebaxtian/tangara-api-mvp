@@ -14,6 +14,8 @@ class AreaExpCRUD():
 
     def create_areaexp(db: Session, areaexp: AreaExpCreate) -> AreaExpSchema:
         areaexp = AreaExpModel(**areaexp.dict())
+        if db.query(AreaExpModel).filter(AreaExpModel.id == areaexp.id).first():
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="AreaExp id must be Unique")
         if db.query(AreaExpModel).filter(AreaExpModel.codigo == areaexp.codigo).first():
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="AreaExp codigo must be Unique")
         db.add(areaexp)
