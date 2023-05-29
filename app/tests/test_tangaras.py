@@ -70,9 +70,7 @@ def test_get_tangara_by_id(tangaras):
     assert tangara_not_found["detail"] == "Not Found"
 
 
-def _create_tangara() -> dict:
-    id_tangara = Totals.TANGARAS + 1
-
+def _create_tangara(id_tangara) -> dict:
     mac = fake.unique.hexify(text='^^:^^:^^:^^:^^:^^', upper=True)
     dict_tangara = {
         "id": id_tangara,
@@ -110,7 +108,7 @@ def _create_tangara() -> dict:
 
 
 def test_post_tangara(tangaras):
-    tangara1 = TangaraCreate(**_create_tangara())
+    tangara1 = TangaraCreate(**_create_tangara(id_tangara=Totals.TANGARAS))
     tangara2 = tangara1.copy()
     tangara3 = tangara1.copy()
     tangara3.id = tangara1.id + 1
@@ -183,7 +181,7 @@ def test_put_tangara(tangaras):
     tangara1 = response1.json()
     tangara1 = TangaraSchema.validate(tangara1)
 
-    tangara1 = TangaraCreate(**_create_tangara())
+    tangara1 = TangaraCreate(**_create_tangara(id_tangara=Totals.TANGARAS))
     tangara1.id = id_tangara
 
     response2 = client.put(f"/tangaras/{id_tangara}", json=tangara1.dict())
