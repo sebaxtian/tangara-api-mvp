@@ -12,6 +12,13 @@ on:
 permissions:
   contents: read
 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  app_name_var: ${{ vars.APP_NAME }}
+  env_var: ${{ vars.ENV }}
+  url_influxdb_secret: ${{ secrets.URL_INFLUXDB }}
+  db_influxdb_secret: ${{ secrets.URL_INFLUXDB }}
+
 jobs:
   build:
 
@@ -36,4 +43,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
+        echo "app_name_var: $app_name_var"
+        echo "env_var: $env_var"
+        echo "url_influxdb_secret: $url_influxdb_secret"
+        echo "db_influxdb_secret: $db_influxdb_secret"
+        echo "----------------------------------------------"
         pytest -v -s -W ignore::trio.TrioDeprecationWarning
