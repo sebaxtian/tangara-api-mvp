@@ -11,7 +11,7 @@ from app.crud.vereda import VeredaCRUD
 from app.crud.sector import SectorCRUD
 from app.crud.areaexp import AreaExpCRUD
 from app.crud.areapro import AreaProCRUD
-from app.utils.pm25 import pm25_realtime
+from app.utils.pm25 import pm25_realtime, pm25_last_1_hour
 
 
 # IDs Lugares
@@ -24,6 +24,26 @@ class Codes(IntEnum): #TODO: Refactoring
     AREAPRO = 6000
 
 
+    def get_mac_addresses(id, db: Session):
+        tangaras: list[TangaraSchema] = []
+
+        if id in range(Codes.COMUNA, Codes.BARRIO):
+            tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id)
+        if id in range(Codes.BARRIO, Codes.VEREDA):
+            tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id)
+        if id in range(Codes.VEREDA, Codes.SECTOR):
+            tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id)
+        if id in range(Codes.SECTOR, Codes.AREAEXP):
+            tangaras = SectorCRUD.read_tangaras(db, id_sector=id)
+        if id in range(Codes.AREAEXP, Codes.AREAPRO):
+            tangaras = AreaExpCRUD.read_tangaras(db, id_areaexp=id)
+        if id in range(Codes.AREAPRO, Codes.AREAPRO + 1000):
+            tangaras = AreaProCRUD.read_tangaras(db, id_areapro=id)
+        
+        return [tangara.mac for tangara in tangaras]
+
+
+
 router = APIRouter(
     prefix="/pm25",
     tags=["pm25"],
@@ -34,25 +54,21 @@ router = APIRouter(
 
 @router.get("/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
 async def realtime(id: int, db: Session = Depends(get_db)) -> PM25Schema:
-    
-    tangaras: list[TangaraSchema] = []
-
-    if id in range(Codes.COMUNA, Codes.BARRIO):
-        tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id)
-    if id in range(Codes.BARRIO, Codes.VEREDA):
-        tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id)
-    if id in range(Codes.VEREDA, Codes.SECTOR):
-        tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id)
-    if id in range(Codes.SECTOR, Codes.AREAEXP):
-        tangaras = SectorCRUD.read_tangaras(db, id_sector=id)
-    if id in range(Codes.AREAEXP, Codes.AREAPRO):
-        tangaras = AreaExpCRUD.read_tangaras(db, id_areaexp=id)
-    if id in range(Codes.AREAPRO, Codes.AREAPRO + 1000):
-        tangaras = AreaProCRUD.read_tangaras(db, id_areapro=id)
-
-    mac_addresses: list[str] = [tangara.mac for tangara in tangaras]
+    # MAC Addresses
+    mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
     # Check data
     if len(mac_addresses) == 0:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Not Found")
     
     return await pm25_realtime(mac_addresses)
+
+
+@router.get("/last1h/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+async def last_1_hour(id: int, db: Session = Depends(get_db)) -> PM25Schema:
+    # MAC Addresses
+    mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
+    # Check data
+    if len(mac_addresses) == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Not Found")
+    
+    return await pm25_last_1_hour(mac_addresses)
