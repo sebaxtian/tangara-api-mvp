@@ -43,9 +43,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        echo "APP_NAME: $APP_NAME - ${{ vars.APP_NAME }}"
-        echo "ENV: $ENV - ${{ vars.ENV }}"
-        echo "URL_INFLUXDB: $URL_INFLUXDB - ${{ secrets.URL_INFLUXDB }}"
-        echo "DB_INFLUXDB: $DB_INFLUXDB - ${{ secrets.DB_INFLUXDB }}"
-        echo "----------------------------------------------"
         pytest -v -s -W ignore::trio.TrioDeprecationWarning
