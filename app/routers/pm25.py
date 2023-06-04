@@ -83,3 +83,14 @@ async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Not Found")
     
     return await pm25_last_24_hours(mac_addresses)
+
+
+@router.get("/movil24h/{id}", response_model=PM25Schema | list[PM25Schema], status_code=status.HTTP_200_OK)
+async def movil_24_hours(id: int, db: Session = Depends(get_db)) -> list[PM25Schema]:
+    # MAC Addresses
+    mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
+    # Check data
+    if len(mac_addresses) == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Not Found")
+    
+    return await pm25_last_24_hours(mac_addresses, movil=True)

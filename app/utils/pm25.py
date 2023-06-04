@@ -253,7 +253,7 @@ async def pm25_last_1_hour(mac_addresses: List[str]) -> PM25Schema: #TODO: Refac
     return get_pm25_schema(round(df_last_1_hour['PM25'].mean(), 2), datetime.now(tz=tz_bogota_co).isoformat())
 
 
-async def pm25_last_24_hours(mac_addresses: List[str]) -> PM25Schema: #TODO: Refactoring
+async def pm25_last_24_hours(mac_addresses: List[str], movil: bool=False) -> PM25Schema | List[PM25Schema]: #TODO: Refactoring
     # ISO 8601 Format, TZ='America/Bogota' -05:00, Last 24 hours
     tz_bogota_co = timezone(offset=-timedelta(hours=5), name='America/Bogota')
     time_delta = timedelta(hours=24)
@@ -293,4 +293,11 @@ async def pm25_last_24_hours(mac_addresses: List[str]) -> PM25Schema: #TODO: Ref
     #df_last_24_hours['AQI'] = df_last_24_hours['PM25'].apply(lambda x: PM25_TO_AQI.equation1(x))
     #
     #return round(df_last_24_hours['PM25'].mean(), 2)
-    return get_pm25_schema(round(df_last_24_hours['PM25'].mean(), 2), datetime.now(tz=tz_bogota_co).isoformat())
+    if not movil:
+        return get_pm25_schema(round(df_last_24_hours['PM25'].mean(), 2), datetime.now(tz=tz_bogota_co).isoformat())
+    # Movil 24 hours, timeserie
+    movil_24h: list[PM25Schema] = []
+    for _, row in df_last_24_hours.iterrows():
+        movil_24h.append(get_pm25_schema(row['PM25'], row['DATETIME']))
+    #
+    return movil_24h
