@@ -12,6 +12,13 @@ on:
 permissions:
   contents: read
 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  APP_NAME: ${{ vars.APP_NAME }}
+  ENV: ${{ vars.ENV }}
+  URL_INFLUXDB: ${{ secrets.URL_INFLUXDB }}
+  DB_INFLUXDB: ${{ secrets.DB_INFLUXDB }}
+
 jobs:
   build:
 
