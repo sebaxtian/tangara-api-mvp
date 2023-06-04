@@ -251,3 +251,46 @@ async def pm25_last_1_hour(mac_addresses: List[str]) -> PM25Schema: #TODO: Refac
     #
     #return round(df_last_1_hour['PM25'].mean(), 2)
     return get_pm25_schema(round(df_last_1_hour['PM25'].mean(), 2), datetime.now(tz=tz_bogota_co).isoformat())
+
+
+async def pm25_last_24_hours(mac_addresses: List[str]) -> PM25Schema: #TODO: Refactoring
+    # ISO 8601 Format, TZ='America/Bogota' -05:00, Last 24 hours
+    tz_bogota_co = timezone(offset=-timedelta(hours=5), name='America/Bogota')
+    time_delta = timedelta(hours=24)
+    # Start DateTime
+    start_datetime = (datetime.now(tz=tz_bogota_co) - time_delta).timestamp()
+    start_datetime = int(start_datetime) * 1000
+    # End DateTime
+    end_datetime = datetime.now(tz=tz_bogota_co).timestamp()
+    end_datetime = int(end_datetime) * 1000
+    # Perdiod DateTime
+    period_time = f"time >= {start_datetime}ms AND time <= {end_datetime}ms"
+    # SQL Query
+    sql_query = f"SELECT mean(\"pm25\") " \
+                "FROM \"fixed_stations_01\" WHERE ("
+    for mac in mac_addresses:
+        sql_query += f"\"name\" = '{mac}' OR "
+    sql_query = sql_query[:-4]
+    sql_query += f") AND " \
+                 f"{period_time} " \
+                 f"GROUP BY time(1h) fill(none);"
+    # InfluxDB API REST Request
+    influxdb_request = request_influxdb(sql_query)
+    #print("----->>> influxdb_request.status_code:", influxdb_request.status_code, "influxdb_request.text:", influxdb_request.text)
+    if influxdb_request.status_code != status.HTTP_200_OK or not influxdb_request.text:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Data Not Found")
+    # DataFrame last 24 hours
+    df_last_24_hours = pd.read_csv(StringIO(influxdb_request.text), sep=",", low_memory=False)
+    # Check data
+    if df_last_24_hours.empty:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Data Not Found")
+    # Remove/Add Columns
+    df_last_24_hours = df_last_24_hours[['time', 'mean']]
+    df_last_24_hours.rename(columns={'time': 'DATETIME', 'mean': 'PM25'}, inplace=True)
+    # Date Time ISO 8601 Format, TZ='America/Bogota' -05:00
+    df_last_24_hours['DATETIME'] = df_last_24_hours['DATETIME'].apply(lambda x: datetime.fromtimestamp(int(x) / 1000, tz=tz_bogota_co).isoformat())
+    # AQI
+    #df_last_24_hours['AQI'] = df_last_24_hours['PM25'].apply(lambda x: PM25_TO_AQI.equation1(x))
+    #
+    #return round(df_last_24_hours['PM25'].mean(), 2)
+    return get_pm25_schema(round(df_last_24_hours['PM25'].mean(), 2), datetime.now(tz=tz_bogota_co).isoformat())

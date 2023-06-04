@@ -11,7 +11,7 @@ from app.crud.vereda import VeredaCRUD
 from app.crud.sector import SectorCRUD
 from app.crud.areaexp import AreaExpCRUD
 from app.crud.areapro import AreaProCRUD
-from app.utils.pm25 import pm25_realtime, pm25_last_1_hour
+from app.utils.pm25 import pm25_realtime, pm25_last_1_hour, pm25_last_24_hours
 
 
 # IDs Lugares
@@ -72,3 +72,14 @@ async def last_1_hour(id: int, db: Session = Depends(get_db)) -> PM25Schema:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Not Found")
     
     return await pm25_last_1_hour(mac_addresses)
+
+
+@router.get("/last24h/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
+    # MAC Addresses
+    mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
+    # Check data
+    if len(mac_addresses) == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Not Found")
+    
+    return await pm25_last_24_hours(mac_addresses)
