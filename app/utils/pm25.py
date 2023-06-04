@@ -300,4 +300,8 @@ async def pm25_last_24_hours(mac_addresses: List[str], movil: bool=False) -> PM2
     for _, row in df_last_24_hours.iterrows():
         movil_24h.append(get_pm25_schema(row['PM25'], row['DATETIME']))
     #
+    # Check data
+    if len(movil_24h) == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tangaras Data Not Found")
+    #
     return movil_24h
