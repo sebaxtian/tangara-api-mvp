@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     env: str
     url_influxdb: str
     db_influxdb: str
+    redis_server: str
 
     class Config:
         env_file = "app/.env"
