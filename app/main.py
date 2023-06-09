@@ -1,28 +1,30 @@
 from fastapi import Depends, FastAPI
 
-from fastapi_cache import FastAPICache
-from fastapi_cache.backends.redis import RedisBackend
-from fastapi_cache.decorator import cache
-from redis import asyncio as aioredis
 from datetime import timedelta
+from fastapi_cache.decorator import cache
+from redis import Redis
+from redis.exceptions import ConnectionError
 
 from app.config import Settings
 from app.dependencies.database import get_db
 from app.dependencies.settings import get_settings
+from app.dependencies.redis import get_redis
 from app.routers import comunas, barrios, veredas, sectores, areasexp, areaspro, tangaras, lugares, pm25
 
 
 app = FastAPI(
-    dependencies=[Depends(get_db), Depends(get_settings)]
+    dependencies=[Depends(get_db), Depends(get_settings), Depends(get_redis)]
 )
 
 
 @app.on_event("startup")
-def startup(settings: Settings = get_settings()):
+async def startup(conn: Redis = get_redis()):
     print("CONNECT_BEGIN: Attempting to connect to Redis server...")
-    redis = aioredis.from_url(settings.redis_server)
-    FastAPICache.init(RedisBackend(redis), prefix="tangara-cache")
-    print("CONNECT_SUCCESS: Redis client is connected to server.")
+    try:
+        print(f"Ping successful: {await conn.ping()}")
+        print("CONNECT_SUCCESS: Redis client is connected to server.")
+    except ConnectionError:
+        print("CONNECT_FAIL: Redis server not response.")
 
 
 app.include_router(comunas.router)

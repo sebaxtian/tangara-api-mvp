@@ -1,9 +1,10 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from fastapi.encoders import jsonable_encoder
 
 from app.models.comuna import ComunaModel
-from app.schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate
+from app.schemas.comuna import ComunaSchema, ComunaCreate, ComunaUpdate, ComunaPaginationSchema
 from app.models.barrio import BarrioModel
 from app.schemas.barrio import BarrioSchema
 from app.models.tangara import TangaraModel
@@ -23,15 +24,26 @@ class ComunaCRUD():
         db.add(comuna)
         db.commit()
         db.refresh(comuna)
-        return comuna
+        return ComunaSchema.validate(comuna)
 
     # Read
 
-    def read_comunas(db: Session, skip: int = 0, limit: int = 100) -> list[ComunaSchema]:
-        return db.query(ComunaModel).offset(skip).limit(limit).all()
+    def read_comunas(db: Session, skip: int = 0, limit: int = None) -> ComunaPaginationSchema:
+        comunas = db.query(ComunaModel).offset(skip).limit(limit).all()
+        count = len(comunas)
+        limit = count if not limit or limit > count else limit
+        return ComunaPaginationSchema.validate({
+            "count": count, 
+            "skip": skip, 
+            "limit": limit, 
+            "comunas": comunas
+        })
 
-    def read_comuna(db: Session, id_comuna: int) -> ComunaSchema | None:
-        return db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
+    def read_comuna(db: Session, id_comuna: int) -> ComunaSchema:
+        comuna = db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
+        if not comuna:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Comuna not found")
+        return ComunaSchema.validate(comuna)
     
     def read_barrios(db: Session, id_comuna: int, skip: int = 0, limit: int = 100) -> list[BarrioSchema]:
         return db.query(BarrioModel).filter(BarrioModel.id_comuna == id_comuna).offset(skip).limit(limit).all()
@@ -43,13 +55,16 @@ class ComunaCRUD():
 
     # Update
 
-    def update_comuna(db: Session, id_comuna: int, comuna: ComunaUpdate) -> ComunaSchema | None:
+    def update_comuna(db: Session, id_comuna: int, comuna: ComunaUpdate) -> ComunaSchema:
+        comuna = db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
+        if not comuna:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Comuna not found")
         if len(db.query(ComunaModel).filter(ComunaModel.id != id_comuna, ComunaModel.codigo == comuna.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Comuna codigo must be Unique")
         comuna = jsonable_encoder(comuna)
         db.query(ComunaModel).filter(ComunaModel.id == id_comuna).update(comuna)
         db.commit()
-        return db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
+        return ComunaSchema.validate(db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first())
 
     # Delete
 
