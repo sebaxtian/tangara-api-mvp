@@ -58,7 +58,7 @@ $promt> uvicorn app.main:app --reload
 ## Testing
 
 ```bash
-$promt> pytest -v -s -W ignore::trio.TrioDeprecationWarning
+$promt> pytest -v -s -W ignore::trio.TrioDeprecationWarning -W ignore::DeprecationWarning
 ```
 
 ---

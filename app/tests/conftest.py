@@ -8,6 +8,7 @@ from fastapi.encoders import jsonable_encoder
 from app.db.connection import Base
 from app.db.testing_connection import engine
 from app.dependencies.testing_database import override_get_db
+from app.dependencies.mem_cache import create_mem_cache
 
 from app.models.comuna import ComunaModel
 from app.schemas.comuna import ComunaCreate
@@ -50,7 +51,12 @@ class Totals(IntEnum):
 
 
 @pytest.fixture
-def db_engine():
+def men_cache():
+    create_mem_cache()
+
+
+@pytest.fixture
+def db_engine(men_cache):
     Base.metadata.create_all(bind=engine)
 
 

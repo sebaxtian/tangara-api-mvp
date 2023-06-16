@@ -1,6 +1,8 @@
+aiomcache==0.8.1
 anyio==3.6.2
 asttokens==2.2.1
 async-generator==1.10
+async-timeout==4.0.2
 attrs==23.1.0
 autopep8==2.0.2
 backcall==0.2.0
@@ -17,6 +19,7 @@ exceptiongroup==1.1.1
 executing==1.2.0
 Faker==18.9.0
 fastapi==0.95.1
+fastapi-cache2==0.2.1
 fastjsonschema==2.16.3
 geohash2==1.1
 greenlet==2.0.2
@@ -41,6 +44,7 @@ outcome==1.2.0
 packaging==23.1
 pandas==2.0.1
 parso==0.8.3
+pendulum==2.1.2
 pexpect==4.8.0
 pickleshare==0.7.5
 platformdirs==3.5.0
@@ -57,8 +61,10 @@ pytest==7.3.1
 python-dateutil==2.8.2
 python-dotenv==1.0.0
 pytz==2023.3
+pytzdata==2020.1
 PyYAML==6.0
 pyzmq==25.0.2
+redis==4.5.5
 requests==2.29.0
 rich==12.6.0
 shellingham==1.5.0.post1
