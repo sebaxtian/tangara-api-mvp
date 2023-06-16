@@ -31,5 +31,8 @@ class ComunaSchema(ComunaBase):
         orm_mode = True
 
 
-class ComunaSchemaList(BaseModel):
+class ComunaPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     comunas: list[ComunaSchema]

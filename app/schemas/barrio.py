@@ -35,3 +35,10 @@ class BarrioSchema(BarrioBase):
 
 class BarrioSchemaList(BaseModel):
     barrios: list[BarrioSchema]
+
+
+class BarrioPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
+    barrios: list[BarrioSchema]

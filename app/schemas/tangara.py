@@ -38,3 +38,10 @@ class TangaraSchema(TangaraBase):
 
 class TangaraSchemaList(BaseModel):
     tangaras: list[TangaraSchema]
+
+
+class TangaraPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
+    tangaras: list[TangaraSchema]
