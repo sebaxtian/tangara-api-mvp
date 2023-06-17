@@ -7,8 +7,8 @@ from app.main import app, get_db
 from app.dependencies.testing_database import override_get_db
 from app.tests.conftest import Totals, Codes
 
-from app.schemas.areapro import AreaProSchemaList, AreaProSchema, AreaProCreate
-from app.schemas.tangara import TangaraSchemaList
+from app.schemas.areapro import AreaProPaginationSchema, AreaProSchema, AreaProCreate
+from app.schemas.tangara import TangaraPaginationSchema
 
 
 fake = Faker()
@@ -22,32 +22,32 @@ client = TestClient(app)
 def test_get_areaspro(tangaras):
     response = client.get("/areaspro/")
     areaspro = response.json()
-    AreaProSchemaList.validate({"areaspro": areaspro})
+    areaspro = AreaProPaginationSchema.validate(areaspro)
     # print("areaspro:", areaspro)
 
     assert response.status_code == status.HTTP_200_OK
-    assert len(areaspro) == Totals.AREASPRO
+    assert areaspro.count == Totals.AREASPRO
 
 
 def test_get_areaspro_pagination(tangaras):
     response_page1 = client.get(f"/areaspro/?limit={round(Totals.AREASPRO / 2)}&skip=0")
     areaspro_page1 = response_page1.json()
-    AreaProSchemaList.validate({"areaspro": areaspro_page1})
+    areaspro_page1 = AreaProPaginationSchema.validate(areaspro_page1)
 
     response_page2 = client.get(f"/areaspro/?limit={round(Totals.AREASPRO / 2)}&skip={round(Totals.AREASPRO / 2)}")
     areaspro_page2 = response_page2.json()
-    AreaProSchemaList.validate({"areaspro": areaspro_page2})
+    areaspro_page2 = AreaProPaginationSchema.validate(areaspro_page2)
 
     response_page3 = client.get(f"/areaspro/?limit={Totals.AREASPRO}&skip={Totals.AREASPRO}")
     areaspro_page3 = response_page3.json()
-    AreaProSchemaList.validate({"areaspro": areaspro_page3})
+    areaspro_page3 = AreaProPaginationSchema.validate(areaspro_page3)
 
     assert response_page1.status_code == status.HTTP_200_OK
     assert response_page2.status_code == status.HTTP_200_OK
     assert response_page3.status_code == status.HTTP_200_OK
-    assert len(areaspro_page1) == round(Totals.AREASPRO / 2)
-    assert len(areaspro_page2) == round(Totals.AREASPRO / 2) - 1
-    assert len(areaspro_page3) == 0
+    assert areaspro_page1.count == round(Totals.AREASPRO / 2)
+    assert areaspro_page2.count == round(Totals.AREASPRO / 2) - 1
+    assert areaspro_page3.count == 0
 
 
 def test_get_areapro_by_id(tangaras):
@@ -66,7 +66,7 @@ def test_get_areapro_by_id(tangaras):
     assert response_found.status_code == status.HTTP_200_OK
     assert areapro_found.id == id_areapro
     assert response_not_found.status_code == status.HTTP_404_NOT_FOUND
-    assert areapro_not_found["detail"] == "Not Found"
+    assert areapro_not_found["detail"] == "AreaPro not found"
 
 
 def test_post_areapro(tangaras):
@@ -127,7 +127,7 @@ def test_delete_areapro(tangaras):
 
     assert response1.status_code == status.HTTP_204_NO_CONTENT
     assert response2.status_code == status.HTTP_404_NOT_FOUND
-    assert response2.json()["detail"] == "Not Found"
+    assert response2.json()["detail"] == "AreaPro not found"
 
 
 def test_get_tangaras(tangaras):
@@ -137,7 +137,7 @@ def test_get_tangaras(tangaras):
     )
     response = client.get(f"/areaspro/{id_areapro}/tangaras")
     tangaras = response.json()
-    TangaraSchemaList.validate({"tangaras": tangaras})
+    TangaraPaginationSchema.validate(tangaras)
     # print("tangaras:", tangaras)
 
     assert response.status_code == status.HTTP_200_OK
