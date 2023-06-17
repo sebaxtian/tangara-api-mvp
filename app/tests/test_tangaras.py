@@ -167,7 +167,7 @@ def test_post_tangara(tangaras):
     assert response8.status_code == status.HTTP_404_NOT_FOUND
     assert response8.json()["detail"] == "Sector not found"
     assert response9.status_code == status.HTTP_404_NOT_FOUND
-    assert response9.json()["detail"] == "ID AreaExp Not Found"
+    assert response9.json()["detail"] == "AreaExp not found"
     assert response10.status_code == status.HTTP_404_NOT_FOUND
     assert response10.json()["detail"] == "ID AreaPro Not Found"
 

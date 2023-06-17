@@ -39,7 +39,7 @@ class TangaraCRUD():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Sector not found")
         
         if list(lugares.keys())[0] == "id_areaexp" and not AreaExpCRUD.read_areaexp(db, tangara.id_areaexp):
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID AreaExp Not Found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="AreaExp not found")
         
         if list(lugares.keys())[0] == "id_areapro" and not AreaProCRUD.read_areapro(db, tangara.id_areapro):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID AreaPro Not Found")
