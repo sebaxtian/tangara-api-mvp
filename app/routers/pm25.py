@@ -2,6 +2,10 @@ from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 from enum import IntEnum
 
+from fastapi_cache import FastAPICache
+from fastapi_cache.decorator import cache
+from datetime import timedelta
+
 from app.dependencies.database import get_db
 from app.schemas.tangara import TangaraSchema
 from app.schemas.pm25 import PM25Schema
@@ -53,6 +57,7 @@ router = APIRouter(
 
 
 @router.get("/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+@cache(namespace="realtime", expire=timedelta(minutes=5))
 async def realtime(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
@@ -64,6 +69,7 @@ async def realtime(id: int, db: Session = Depends(get_db)) -> PM25Schema:
 
 
 @router.get("/last1h/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+@cache(namespace="last1h", expire=timedelta(hours=1))
 async def last_1_hour(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
@@ -75,6 +81,7 @@ async def last_1_hour(id: int, db: Session = Depends(get_db)) -> PM25Schema:
 
 
 @router.get("/last24h/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+@cache(namespace="last24h", expire=timedelta(hours=24))
 async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
@@ -86,6 +93,7 @@ async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
 
 
 @router.get("/movil24h/{id}", response_model=PM25Schema | list[PM25Schema], status_code=status.HTTP_200_OK)
+@cache(namespace="movil24h", expire=timedelta(hours=24))
 async def movil_24_hours(id: int, db: Session = Depends(get_db)) -> list[PM25Schema]:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
