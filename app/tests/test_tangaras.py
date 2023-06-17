@@ -163,7 +163,7 @@ def test_post_tangara(tangaras):
     assert response6.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
     assert response6.json()["detail"] == "Any of id_barrio, id_sector, id_areaexp, id_areapro is required"
     assert response7.status_code == status.HTTP_404_NOT_FOUND
-    assert response7.json()["detail"] == "ID Barrio Not Found"
+    assert response7.json()["detail"] == "Barrio not found"
     assert response8.status_code == status.HTTP_404_NOT_FOUND
     assert response8.json()["detail"] == "ID Sector Not Found"
     assert response9.status_code == status.HTTP_404_NOT_FOUND

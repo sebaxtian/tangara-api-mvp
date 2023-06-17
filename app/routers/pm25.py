@@ -30,7 +30,7 @@ class Codes(IntEnum): #TODO: Refactoring
         if id in range(Codes.COMUNA, Codes.BARRIO):
             tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id).tangaras
         if id in range(Codes.BARRIO, Codes.VEREDA):
-            tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id)
+            tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id).tangaras
         if id in range(Codes.VEREDA, Codes.SECTOR):
             tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id).tangaras
         if id in range(Codes.SECTOR, Codes.AREAEXP):

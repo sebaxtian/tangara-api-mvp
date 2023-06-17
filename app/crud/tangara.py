@@ -33,7 +33,7 @@ class TangaraCRUD():
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Any of id_barrio, id_sector, id_areaexp, id_areapro is required")
 
         if list(lugares.keys())[0] == "id_barrio" and not BarrioCRUD.read_barrio(db, tangara.id_barrio):
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Barrio Not Found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Barrio not found")
         
         if list(lugares.keys())[0] == "id_sector" and not SectorCRUD.read_sector(db, tangara.id_sector):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Sector Not Found")
