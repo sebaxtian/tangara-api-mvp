@@ -4,9 +4,9 @@ from fastapi.encoders import jsonable_encoder
 
 from app.models.vereda import VeredaModel
 from app.models.sector import SectorModel
-from app.schemas.sector import SectorSchema, SectorCreate, SectorUpdate
+from app.schemas.sector import SectorSchema, SectorCreate, SectorUpdate, SectorPaginationSchema
 from app.models.tangara import TangaraModel
-from app.schemas.tangara import TangaraSchema
+from app.schemas.tangara import TangaraPaginationSchema
 
 
 class SectorCRUD():
@@ -24,22 +24,41 @@ class SectorCRUD():
         db.add(sector)
         db.commit()
         db.refresh(sector)
-        return sector
+        return SectorSchema.validate(sector)
 
     # Read
 
-    def read_sectores(db: Session, skip: int = 0, limit: int = 100) -> list[SectorSchema]:
-        return db.query(SectorModel).offset(skip).limit(limit).all()
+    def read_sectores(db: Session, skip: int = 0, limit: int = None) -> SectorPaginationSchema:
+        sectores = db.query(SectorModel).offset(skip).limit(limit).all()
+        count = len(sectores)
+        limit = count if not limit or limit > count else limit
+        return SectorPaginationSchema.validate({
+            "count": count, 
+            "skip": skip, 
+            "limit": limit, 
+            "sectores": sectores
+        })
 
-    def read_sector(db: Session, id_sector: int) -> SectorSchema | None:
-        return db.query(SectorModel).filter(SectorModel.id == id_sector).first()
+    def read_sector(db: Session, id_sector: int) -> SectorSchema:
+        sector = db.query(SectorModel).filter(SectorModel.id == id_sector).first()
+        if not sector:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Sector not found")
+        return SectorSchema.validate(sector)
     
-    def read_tangaras(db: Session, id_sector: int, skip: int = 0, limit: int = 100) -> list[TangaraSchema]:
-        return db.query(TangaraModel).filter(TangaraModel.id_sector == id_sector).offset(skip).limit(limit).all()
+    def read_tangaras(db: Session, id_sector: int, skip: int = 0, limit: int = None) -> TangaraPaginationSchema:
+        tangaras = db.query(TangaraModel).filter(TangaraModel.id_sector == id_sector).offset(skip).limit(limit).all()
+        count = len(tangaras)
+        limit = count if not limit or limit > count else limit
+        return TangaraPaginationSchema.validate({
+            "count": count, 
+            "skip": skip, 
+            "limit": limit, 
+            "tangaras": tangaras
+        })
 
     # Update
 
-    def update_sector(db: Session, id_sector: int, sector: SectorUpdate) -> SectorSchema | None:
+    def update_sector(db: Session, id_sector: int, sector: SectorUpdate) -> SectorSchema:
         if not db.query(VeredaModel).filter(VeredaModel.id == sector.id_vereda).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Vereda Not Found")
         if len(db.query(SectorModel).filter(SectorModel.id != id_sector, SectorModel.codigo == sector.codigo).all()) > 0:
@@ -47,7 +66,7 @@ class SectorCRUD():
         sector = jsonable_encoder(sector)
         db.query(SectorModel).filter(SectorModel.id == id_sector).update(sector)
         db.commit()
-        return db.query(SectorModel).filter(SectorModel.id == id_sector).first()
+        return SectorSchema.validate(db.query(SectorModel).filter(SectorModel.id == id_sector).first())
 
     # Delete
 

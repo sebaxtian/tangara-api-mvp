@@ -34,7 +34,7 @@ class Codes(IntEnum): #TODO: Refactoring
         if id in range(Codes.VEREDA, Codes.SECTOR):
             tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id).tangaras
         if id in range(Codes.SECTOR, Codes.AREAEXP):
-            tangaras = SectorCRUD.read_tangaras(db, id_sector=id)
+            tangaras = SectorCRUD.read_tangaras(db, id_sector=id).tangaras
         if id in range(Codes.AREAEXP, Codes.AREAPRO):
             tangaras = AreaExpCRUD.read_tangaras(db, id_areaexp=id)
         if id in range(Codes.AREAPRO, Codes.AREAPRO + 1000):

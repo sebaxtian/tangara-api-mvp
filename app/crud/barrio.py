@@ -24,7 +24,7 @@ class BarrioCRUD():
         db.add(barrio)
         db.commit()
         db.refresh(barrio)
-        return barrio
+        return BarrioSchema.validate(barrio)
 
     # Read
 
@@ -66,7 +66,7 @@ class BarrioCRUD():
         barrio = jsonable_encoder(barrio)
         db.query(BarrioModel).filter(BarrioModel.id == id_barrio).update(barrio)
         db.commit()
-        return db.query(BarrioModel).filter(BarrioModel.id == id_barrio).first()
+        return BarrioSchema.validate(db.query(BarrioModel).filter(BarrioModel.id == id_barrio).first())
 
     # Delete
 

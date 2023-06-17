@@ -23,7 +23,7 @@ class VeredaCRUD():
         db.add(vereda)
         db.commit()
         db.refresh(vereda)
-        return vereda
+        return VeredaSchema.validate(vereda)
 
     # Read
 
