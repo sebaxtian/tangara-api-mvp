@@ -58,7 +58,6 @@ class ComunaCRUD():
     def read_tangaras(db: Session, id_comuna: int, skip: int = 0, limit: int = None) -> TangaraPaginationSchema:
         barrios = db.query(BarrioModel).filter(BarrioModel.id_comuna == id_comuna).all()
         ids_barrios = [barrio.id for barrio in barrios]
-        #return db.query(TangaraModel).filter(TangaraModel.id_barrio.in_(ids_barrios)).offset(skip).limit(limit).all()
         tangaras = db.query(TangaraModel).filter(TangaraModel.id_barrio.in_(ids_barrios)).offset(skip).limit(limit).all()
         count = len(tangaras)
         limit = count if not limit or limit > count else limit

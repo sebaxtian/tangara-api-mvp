@@ -35,7 +35,7 @@ class TangaraSchema(TangaraBase):
     class Config:
         orm_mode = True
 
-
+# TODO: Remove Method, replaced by TangaraPaginationSchema
 class TangaraSchemaList(BaseModel):
     tangaras: list[TangaraSchema]
 

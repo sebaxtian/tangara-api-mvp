@@ -29,6 +29,7 @@ def test_get_realtime(pm25):
     response = client.get(f"/pm25/{id_lugar}")
     #print("response.json():", response.json())
     pm25realtime = response.json()
+    #print("pm25realtime:", pm25realtime)
 
     if response.status_code == status.HTTP_404_NOT_FOUND:
         assert pm25realtime['detail'] in ["Tangaras Data Not Found", "Tangaras Not Found"]
@@ -60,6 +61,7 @@ def test_get_last_1_hour(pm25):
     response = client.get(f"/pm25/last1h/{id_lugar}")
     #print("response.json():", response.json())
     pm25last1h = response.json()
+    #print("pm25last1h:", pm25last1h)
 
     if response.status_code == status.HTTP_404_NOT_FOUND:
         assert pm25last1h['detail'] in ["Tangaras Data Not Found", "Tangaras Not Found"]
@@ -91,6 +93,7 @@ def test_get_last_24_hours(pm25):
     response = client.get(f"/pm25/last24h/{id_lugar}")
     #print("response.json():", response.json())
     pm25last24h = response.json()
+    #print("pm25last24h:", pm25last24h)
 
     if response.status_code == status.HTTP_404_NOT_FOUND:
         assert pm25last24h['detail'] in ["Tangaras Data Not Found", "Tangaras Not Found"]
@@ -122,6 +125,7 @@ def test_get_movil_24_hours(pm25):
     response = client.get(f"/pm25/movil24h/{id_lugar}")
     #print("response.json():", response.json())
     pm25movil24h = response.json()
+    #print("pm25movil24h:", pm25movil24h)
 
     if response.status_code == status.HTTP_404_NOT_FOUND:
         assert pm25movil24h['detail'] in ["Tangaras Data Not Found", "Tangaras Not Found"]

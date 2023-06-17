@@ -32,7 +32,7 @@ class BarrioSchema(BarrioBase):
     class Config:
         orm_mode = True
 
-
+# TODO: Remove Method, replaced by BarrioPaginationSchema
 class BarrioSchemaList(BaseModel):
     barrios: list[BarrioSchema]
 

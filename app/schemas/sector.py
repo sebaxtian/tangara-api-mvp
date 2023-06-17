@@ -31,6 +31,13 @@ class SectorSchema(SectorBase):
     class Config:
         orm_mode = True
 
-
+# TODO: Remove Method, replaced by SectorPaginationSchema
 class SectorSchemaList(BaseModel):
+    sectores: list[SectorSchema]
+
+
+class SectorPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     sectores: list[SectorSchema]

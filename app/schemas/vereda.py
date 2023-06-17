@@ -31,5 +31,8 @@ class VeredaSchema(VeredaBase):
         orm_mode = True
 
 
-class VeredaSchemaList(BaseModel):
+class VeredaPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     veredas: list[VeredaSchema]
