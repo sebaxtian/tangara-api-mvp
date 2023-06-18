@@ -13,6 +13,8 @@ client = TestClient(app)
 
 
 def test_get_lugares(tangaras):
+    codes = [Codes.COMUNA, Codes.BARRIO, Codes.VEREDA, Codes.SECTOR, Codes.AREAEXP, Codes.AREAPRO]
+    
     response1 = client.get("/lugares/")
     lugares = response1.json()
 
@@ -27,8 +29,6 @@ def test_get_lugares(tangaras):
         ids_lugares_csv = df_lugares_csv['id'].astype('int').values
         assert all(code in ids_lugares_csv for code in codes) == True
     # print(ids_lugares_csv)
-
-    codes = [Codes.COMUNA, Codes.BARRIO, Codes.VEREDA, Codes.SECTOR, Codes.AREAEXP, Codes.AREAPRO]
 
     assert response1.status_code == status.HTTP_200_OK
     assert response2.status_code == status.HTTP_200_OK
