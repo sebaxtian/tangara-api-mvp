@@ -17,7 +17,7 @@ from app.main import app
 client = TestClient(app)
 
 
-def test_root():
+def test_root(men_cache):
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {"message": "Tangara API MVP", "environment": "dev"}

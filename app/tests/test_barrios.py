@@ -7,8 +7,8 @@ from app.main import app, get_db
 from app.dependencies.testing_database import override_get_db
 from app.tests.conftest import Totals, Codes
 
-from app.schemas.barrio import BarrioSchemaList, BarrioSchema, BarrioCreate
-from app.schemas.tangara import TangaraSchemaList
+from app.schemas.barrio import BarrioPaginationSchema, BarrioSchema, BarrioCreate
+from app.schemas.tangara import TangaraPaginationSchema
 
 
 fake = Faker()
@@ -22,32 +22,32 @@ client = TestClient(app)
 def test_get_barrios(tangaras):
     response = client.get("/barrios/")
     barrios = response.json()
-    BarrioSchemaList.validate({"barrios": barrios})
+    barrios = BarrioPaginationSchema.validate(barrios)
     # print("barrios:", barrios)
 
     assert response.status_code == status.HTTP_200_OK
-    assert len(barrios) == Totals.BARRIOS
+    assert barrios.count == Totals.BARRIOS
 
 
 def test_get_barrios_pagination(tangaras):
     response_page1 = client.get(f"/barrios/?limit={round(Totals.BARRIOS / 2)}&skip=0")
     barrios_page1 = response_page1.json()
-    BarrioSchemaList.validate({"barrios": barrios_page1})
+    barrios_page1 = BarrioPaginationSchema.validate(barrios_page1)
 
     response_page2 = client.get(f"/barrios/?limit={round(Totals.BARRIOS / 2)}&skip={round(Totals.BARRIOS / 2)}")
     barrios_page2 = response_page2.json()
-    BarrioSchemaList.validate({"barrios": barrios_page2})
+    barrios_page2 = BarrioPaginationSchema.validate(barrios_page2)
 
     response_page3 = client.get(f"/barrios/?limit={Totals.BARRIOS}&skip={Totals.BARRIOS}")
     barrios_page3 = response_page3.json()
-    BarrioSchemaList.validate({"barrios": barrios_page3})
+    barrios_page3 = BarrioPaginationSchema.validate(barrios_page3)
 
     assert response_page1.status_code == status.HTTP_200_OK
     assert response_page2.status_code == status.HTTP_200_OK
     assert response_page3.status_code == status.HTTP_200_OK
-    assert len(barrios_page1) == round(Totals.BARRIOS / 2)
-    assert len(barrios_page2) == round(Totals.BARRIOS / 2)
-    assert len(barrios_page3) == 0
+    assert barrios_page1.count == round(Totals.BARRIOS / 2)
+    assert barrios_page2.count == round(Totals.BARRIOS / 2)
+    assert barrios_page3.count == 0
 
 
 def test_get_barrio_by_id(tangaras):
@@ -66,7 +66,7 @@ def test_get_barrio_by_id(tangaras):
     assert response_found.status_code == status.HTTP_200_OK
     assert barrio_found.id == id_barrio
     assert response_not_found.status_code == status.HTTP_404_NOT_FOUND
-    assert barrio_not_found["detail"] == "Not Found"
+    assert barrio_not_found["detail"] == "Barrio not found"
 
 
 def test_post_barrio(tangaras):
@@ -121,6 +121,9 @@ def test_put_barrio(tangaras):
     barrio2 = response2.json()
     barrio2 = BarrioSchema.validate(barrio2)
 
+    response1 = client.get(f"/barrios/{id_barrio}")
+    barrio1 = response1.json()
+    barrio1 = BarrioSchema.validate(barrio1)
 
     assert response1.status_code == status.HTTP_200_OK
     assert barrio1.id == id_barrio
@@ -143,7 +146,7 @@ def test_delete_barrio(tangaras):
 
     assert response1.status_code == status.HTTP_204_NO_CONTENT
     assert response2.status_code == status.HTTP_404_NOT_FOUND
-    assert response2.json()["detail"] == "Not Found"
+    assert response2.json()["detail"] == "Barrio not found"
 
 
 def test_get_tangaras(tangaras):
@@ -153,7 +156,7 @@ def test_get_tangaras(tangaras):
     )
     response = client.get(f"/barrios/{id_barrio}/tangaras")
     tangaras = response.json()
-    TangaraSchemaList.validate({"tangaras": tangaras})
+    TangaraPaginationSchema.validate(tangaras)
     # print("tangaras:", tangaras)
 
     assert response.status_code == status.HTTP_200_OK

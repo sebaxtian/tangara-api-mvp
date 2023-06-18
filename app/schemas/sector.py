@@ -32,5 +32,8 @@ class SectorSchema(SectorBase):
         orm_mode = True
 
 
-class SectorSchemaList(BaseModel):
+class SectorPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     sectores: list[SectorSchema]
