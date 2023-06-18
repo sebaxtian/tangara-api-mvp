@@ -18,6 +18,7 @@ env:
   ENV: ${{ vars.ENV }}
   URL_INFLUXDB: ${{ secrets.URL_INFLUXDB }}
   DB_INFLUXDB: ${{ secrets.DB_INFLUXDB }}
+  URL_REDIS: ${{ secrets.URL_REDIS }}
 
 jobs:
   build:
