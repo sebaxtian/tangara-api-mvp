@@ -7,9 +7,9 @@ from app.main import app, get_db
 from app.dependencies.testing_database import override_get_db
 from app.tests.conftest import Totals, Codes
 
-from app.schemas.vereda import VeredaSchemaList, VeredaSchema, VeredaCreate
-from app.schemas.sector import SectorSchemaList
-from app.schemas.tangara import TangaraSchemaList
+from app.schemas.vereda import VeredaPaginationSchema, VeredaSchema, VeredaCreate
+from app.schemas.sector import SectorPaginationSchema
+from app.schemas.tangara import TangaraPaginationSchema
 
 
 fake = Faker()
@@ -23,32 +23,32 @@ client = TestClient(app)
 def test_get_veredas(tangaras):
     response = client.get("/veredas/")
     veredas = response.json()
-    VeredaSchemaList.validate({"veredas": veredas})
+    veredas = VeredaPaginationSchema.validate(veredas)
     # print("veredas:", veredas)
 
     assert response.status_code == status.HTTP_200_OK
-    assert len(veredas) == Totals.VEREDAS
+    assert veredas.count == Totals.VEREDAS
 
 
 def test_get_veredas_pagination(tangaras):
     response_page1 = client.get(f"/veredas/?limit={round(Totals.VEREDAS / 2)}&skip=0")
     veredas_page1 = response_page1.json()
-    VeredaSchemaList.validate({"veredas": veredas_page1})
+    veredas_page1 = VeredaPaginationSchema.validate(veredas_page1)
 
     response_page2 = client.get(f"/veredas/?limit={round(Totals.VEREDAS / 2)}&skip={round(Totals.VEREDAS / 2)}")
     veredas_page2 = response_page2.json()
-    VeredaSchemaList.validate({"veredas": veredas_page2})
+    veredas_page2 = VeredaPaginationSchema.validate(veredas_page2)
 
     response_page3 = client.get(f"/veredas/?limit={Totals.VEREDAS}&skip={Totals.VEREDAS}")
     veredas_page3 = response_page3.json()
-    VeredaSchemaList.validate({"veredas": veredas_page3})
+    veredas_page3 = VeredaPaginationSchema.validate(veredas_page3)
 
     assert response_page1.status_code == status.HTTP_200_OK
     assert response_page2.status_code == status.HTTP_200_OK
     assert response_page3.status_code == status.HTTP_200_OK
-    assert len(veredas_page1) == round(Totals.VEREDAS / 2)
-    assert len(veredas_page2) == round(Totals.VEREDAS / 2)
-    assert len(veredas_page3) == 0
+    assert veredas_page1.count == round(Totals.VEREDAS / 2)
+    assert veredas_page2.count == round(Totals.VEREDAS / 2)
+    assert veredas_page3.count == 0
 
 
 def test_get_vereda_by_id(tangaras):
@@ -67,7 +67,7 @@ def test_get_vereda_by_id(tangaras):
     assert response_found.status_code == status.HTTP_200_OK
     assert vereda_found.id == id_vereda
     assert response_not_found.status_code == status.HTTP_404_NOT_FOUND
-    assert vereda_not_found["detail"] == "Not Found"
+    assert vereda_not_found["detail"] == "Vereda not found"
 
 
 def test_post_vereda(tangaras):
@@ -109,6 +109,9 @@ def test_put_vereda(tangaras):
     vereda2 = response2.json()
     vereda2 = VeredaSchema.validate(vereda2)
 
+    response1 = client.get(f"/veredas/{id_vereda}")
+    vereda1 = response1.json()
+    vereda1 = VeredaSchema.validate(vereda1)
 
     assert response1.status_code == status.HTTP_200_OK
     assert vereda1.id == id_vereda
@@ -129,7 +132,7 @@ def test_delete_vereda(tangaras):
 
     assert response1.status_code == status.HTTP_204_NO_CONTENT
     assert response2.status_code == status.HTTP_404_NOT_FOUND
-    assert response2.json()["detail"] == "Not Found"
+    assert response2.json()["detail"] == "Vereda not found"
 
 
 def test_get_veredas_sectores(tangaras):
@@ -139,7 +142,7 @@ def test_get_veredas_sectores(tangaras):
     )
     response = client.get(f"/veredas/{id_vereda}/sectores")
     sectores = response.json()
-    SectorSchemaList.validate({"sectores": sectores})
+    SectorPaginationSchema.validate(sectores)
     # print("sectores:", sectores)
 
     assert response.status_code == status.HTTP_200_OK
@@ -152,7 +155,7 @@ def test_get_veredas_tangaras(tangaras):
     )
     response = client.get(f"/veredas/{id_vereda}/tangaras")
     tangaras = response.json()
-    TangaraSchemaList.validate({"tangaras": tangaras})
+    TangaraPaginationSchema.validate(tangaras)
     # print("tangaras:", tangaras)
 
     assert response.status_code == status.HTTP_200_OK

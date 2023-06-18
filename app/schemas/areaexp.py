@@ -31,5 +31,8 @@ class AreaExpSchema(AreaExpBase):
         orm_mode = True
 
 
-class AreaExpSchemaList(BaseModel):
+class AreaExpPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     areasexp: list[AreaExpSchema]

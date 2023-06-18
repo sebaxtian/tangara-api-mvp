@@ -18,6 +18,7 @@ env:
   ENV: ${{ vars.ENV }}
   URL_INFLUXDB: ${{ secrets.URL_INFLUXDB }}
   DB_INFLUXDB: ${{ secrets.DB_INFLUXDB }}
+  URL_REDIS: ${{ secrets.URL_REDIS }}
 
 jobs:
   build:
@@ -43,4 +44,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest -v -s -W ignore::trio.TrioDeprecationWarning
+        pytest -v -s -W ignore::trio.TrioDeprecationWarning -W ignore::DeprecationWarning

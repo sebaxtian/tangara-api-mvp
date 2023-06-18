@@ -33,5 +33,8 @@ class BarrioSchema(BarrioBase):
         orm_mode = True
 
 
-class BarrioSchemaList(BaseModel):
+class BarrioPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     barrios: list[BarrioSchema]
