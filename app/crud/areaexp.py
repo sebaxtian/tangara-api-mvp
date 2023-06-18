@@ -58,8 +58,7 @@ class AreaExpCRUD():
     def update_areaexp(db: Session, id_areaexp: int, areaexp: AreaExpUpdate) -> AreaExpSchema:
         if len(db.query(AreaExpModel).filter(AreaExpModel.id != id_areaexp, AreaExpModel.codigo == areaexp.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="AreaExp codigo must be Unique")
-        areaexp = jsonable_encoder(areaexp)
-        db.query(AreaExpModel).filter(AreaExpModel.id == id_areaexp).update(areaexp)
+        db.query(AreaExpModel).filter(AreaExpModel.id == id_areaexp).update(jsonable_encoder(areaexp))
         db.commit()
         return AreaExpSchema.validate(db.query(AreaExpModel).filter(AreaExpModel.id == id_areaexp).first())
 

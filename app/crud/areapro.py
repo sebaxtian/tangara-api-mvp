@@ -58,8 +58,7 @@ class AreaProCRUD():
     def update_areapro(db: Session, id_areapro: int, areapro: AreaProUpdate) -> AreaProSchema:
         if len(db.query(AreaProModel).filter(AreaProModel.id != id_areapro, AreaProModel.codigo == areapro.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="AreaPro codigo must be Unique")
-        areapro = jsonable_encoder(areapro)
-        db.query(AreaProModel).filter(AreaProModel.id == id_areapro).update(areapro)
+        db.query(AreaProModel).filter(AreaProModel.id == id_areapro).update(jsonable_encoder(areapro))
         db.commit()
         return AreaProSchema.validate(db.query(AreaProModel).filter(AreaProModel.id == id_areapro).first())
 

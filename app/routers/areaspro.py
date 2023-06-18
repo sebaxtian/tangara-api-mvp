@@ -38,7 +38,7 @@ async def areaspro(id: int, db: Session = Depends(get_db)) -> AreaProSchema:
 @router.post("/", response_model=AreaProSchema, status_code=status.HTTP_201_CREATED)
 async def areaspro(areapro: AreaProCreate, db: Session = Depends(get_db)) -> AreaProSchema:
     areapro = AreaProCRUD.create_areapro(db, areapro=areapro)
-    #await FastAPICache.clear(namespace="areaspro")
+    await FastAPICache.clear(namespace="areaspro")
     return areapro
 
 
@@ -47,14 +47,14 @@ async def areaspro(id: int, areapro: AreaProUpdate, db: Session = Depends(get_db
     areapro = AreaProCRUD.update_areapro(db, id_areapro=id, areapro=areapro)
     if not areapro:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="areaspro")
+    await FastAPICache.clear(namespace="areaspro")
     return areapro
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def areaspro(id: int, db: Session = Depends(get_db)) -> None:
     AreaProCRUD.delete_areapro(db, id_areapro=id)
-    #await FastAPICache.clear(namespace="areaspro")
+    await FastAPICache.clear(namespace="areaspro")
 
 
 @router.get("/{id}/tangaras", response_model=TangaraPaginationSchema, status_code=status.HTTP_200_OK)

@@ -63,8 +63,7 @@ class BarrioCRUD():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Comuna Not Found")
         if len(db.query(BarrioModel).filter(BarrioModel.id != id_barrio, BarrioModel.codigo == barrio.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Barrio codigo must be Unique")
-        barrio = jsonable_encoder(barrio)
-        db.query(BarrioModel).filter(BarrioModel.id == id_barrio).update(barrio)
+        db.query(BarrioModel).filter(BarrioModel.id == id_barrio).update(jsonable_encoder(barrio))
         db.commit()
         return BarrioSchema.validate(db.query(BarrioModel).filter(BarrioModel.id == id_barrio).first())
 

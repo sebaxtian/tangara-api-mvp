@@ -105,8 +105,7 @@ class TangaraCRUD():
         if len(db.query(TangaraModel).filter(TangaraModel.id != id_tangara, TangaraModel.codigo == tangara.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Tangara codigo must be Unique")
 
-        tangara = jsonable_encoder(tangara)
-        db.query(TangaraModel).filter(TangaraModel.id == id_tangara).update(tangara)
+        db.query(TangaraModel).filter(TangaraModel.id == id_tangara).update(jsonable_encoder(tangara))
         db.commit()
         return TangaraSchema.validate(db.query(TangaraModel).filter(TangaraModel.id == id_tangara).first())
 

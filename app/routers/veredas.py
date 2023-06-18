@@ -39,7 +39,7 @@ async def veredas(id: int, db: Session = Depends(get_db)) -> VeredaSchema:
 @router.post("/", response_model=VeredaSchema, status_code=status.HTTP_201_CREATED)
 async def veredas(vereda: VeredaCreate, db: Session = Depends(get_db)) -> VeredaSchema:
     vereda = VeredaCRUD.create_vereda(db, vereda=vereda)
-    #await FastAPICache.clear(namespace="veredas")
+    await FastAPICache.clear(namespace="veredas")
     return vereda
 
 
@@ -48,14 +48,14 @@ async def veredas(id: int, vereda: VeredaUpdate, db: Session = Depends(get_db)) 
     vereda = VeredaCRUD.update_vereda(db, id_vereda=id, vereda=vereda)
     if not vereda:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="veredas")
+    await FastAPICache.clear(namespace="veredas")
     return vereda
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def veredas(id: int, db: Session = Depends(get_db)) -> None:
     VeredaCRUD.delete_vereda(db, id_vereda=id)
-    #await FastAPICache.clear(namespace="veredas")
+    await FastAPICache.clear(namespace="veredas")
 
 
 @router.get("/{id}/sectores", response_model=SectorPaginationSchema, status_code=status.HTTP_200_OK)

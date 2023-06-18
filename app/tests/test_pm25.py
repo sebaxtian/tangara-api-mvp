@@ -131,13 +131,13 @@ def test_get_movil_24_hours(pm25):
         assert pm25movil24h['detail'] in ["Tangaras Data Not Found", "Tangaras Not Found"]
     else:
         assert response.status_code == status.HTTP_200_OK
-        pm25movil24h = TimeSeriesSchema.validate(timeseries=pm25movil24h)
-        assert len(pm25movil24h) == 24
-        assert pm25movil24h.pm25 >= 0
-        assert pm25movil24h.aqi >= 0
-        assert pm25movil24h.aqi_color in ['#00e400', '#ffff00', '#ff7e00', '#ff0000', '#8f3f97', '#7e0023']
-        assert pm25movil24h.aqi_category in ['Good', 'Moderate', 'Unhealthy for sensitive groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous']
-        assert pm25movil24h.aqi_desc in [
+        pm25movil24h = TimeSeriesSchema.validate({"timeseries": pm25movil24h}).timeseries
+        assert len(pm25movil24h) == 25
+        assert pm25movil24h[0].pm25 >= 0
+        assert pm25movil24h[0].aqi >= 0
+        assert pm25movil24h[0].aqi_color in ['#00e400', '#ffff00', '#ff7e00', '#ff0000', '#8f3f97', '#7e0023']
+        assert pm25movil24h[0].aqi_category in ['Good', 'Moderate', 'Unhealthy for sensitive groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous']
+        assert pm25movil24h[0].aqi_desc in [
             'Air quality is satisfactory, and air pollution poses little or no risk.', 
             'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.', 
             'Members of sensitive groups may experience health effects. The general public is less likely to be affected.', 

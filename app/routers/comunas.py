@@ -39,7 +39,7 @@ async def comunas(id: int, db: Session = Depends(get_db)) -> ComunaSchema:
 @router.post("/", response_model=ComunaSchema, status_code=status.HTTP_201_CREATED)
 async def comunas(comuna: ComunaCreate, db: Session = Depends(get_db)) -> ComunaSchema:
     comuna = ComunaCRUD.create_comuna(db, comuna=comuna)
-    #await FastAPICache.clear(namespace="comunas")
+    await FastAPICache.clear(namespace="comunas")
     return comuna
 
 
@@ -48,14 +48,14 @@ async def comunas(id: int, comuna: ComunaUpdate, db: Session = Depends(get_db)) 
     comuna = ComunaCRUD.update_comuna(db, id_comuna=id, comuna=comuna)
     if not comuna:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="comunas")
+    await FastAPICache.clear(namespace="comunas")
     return comuna
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def comunas(id: int, db: Session = Depends(get_db)) -> None:
     ComunaCRUD.delete_comuna(db, id_comuna=id)
-    #await FastAPICache.clear(namespace="comunas")
+    await FastAPICache.clear(namespace="comunas")
 
 
 @router.get("/{id}/barrios", response_model=BarrioPaginationSchema, status_code=status.HTTP_200_OK)

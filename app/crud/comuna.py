@@ -72,13 +72,11 @@ class ComunaCRUD():
     # Update
 
     def update_comuna(db: Session, id_comuna: int, comuna: ComunaUpdate) -> ComunaSchema:
-        comuna = db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first()
-        if not comuna:
+        if not db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Comuna not found")
         if len(db.query(ComunaModel).filter(ComunaModel.id != id_comuna, ComunaModel.codigo == comuna.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Comuna codigo must be Unique")
-        comuna = jsonable_encoder(comuna)
-        db.query(ComunaModel).filter(ComunaModel.id == id_comuna).update(comuna)
+        db.query(ComunaModel).filter(ComunaModel.id == id_comuna).update(jsonable_encoder(comuna))
         db.commit()
         return ComunaSchema.validate(db.query(ComunaModel).filter(ComunaModel.id == id_comuna).first())
 

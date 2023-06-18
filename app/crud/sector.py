@@ -63,8 +63,7 @@ class SectorCRUD():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="ID Vereda Not Found")
         if len(db.query(SectorModel).filter(SectorModel.id != id_sector, SectorModel.codigo == sector.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Sector codigo must be Unique")
-        sector = jsonable_encoder(sector)
-        db.query(SectorModel).filter(SectorModel.id == id_sector).update(sector)
+        db.query(SectorModel).filter(SectorModel.id == id_sector).update(jsonable_encoder(sector))
         db.commit()
         return SectorSchema.validate(db.query(SectorModel).filter(SectorModel.id == id_sector).first())
 

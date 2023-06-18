@@ -71,13 +71,13 @@ class VeredaCRUD():
     # Update
 
     def update_vereda(db: Session, id_vereda: int, vereda: VeredaUpdate) -> VeredaSchema:
-        vereda = db.query(VeredaModel).filter(VeredaModel.id == id_vereda).first()
-        if not vereda:
+        #vereda = db.query(VeredaModel).filter(VeredaModel.id == id_vereda).first()
+        if not db.query(VeredaModel).filter(VeredaModel.id == id_vereda).first():
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Vereda not found")
         if len(db.query(VeredaModel).filter(VeredaModel.id != id_vereda, VeredaModel.codigo == vereda.codigo).all()) > 0:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Vereda codigo must be Unique")
-        vereda = jsonable_encoder(vereda)
-        db.query(VeredaModel).filter(VeredaModel.id == id_vereda).update(vereda)
+        #vereda = jsonable_encoder(vereda)
+        db.query(VeredaModel).filter(VeredaModel.id == id_vereda).update(jsonable_encoder(vereda))
         db.commit()
         return VeredaSchema.validate(db.query(VeredaModel).filter(VeredaModel.id == id_vereda).first())
 

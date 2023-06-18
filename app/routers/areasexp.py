@@ -38,7 +38,7 @@ async def areasexp(id: int, db: Session = Depends(get_db)) -> AreaExpSchema:
 @router.post("/", response_model=AreaExpSchema, status_code=status.HTTP_201_CREATED)
 async def areasexp(areaexp: AreaExpCreate, db: Session = Depends(get_db)) -> AreaExpSchema:
     areaexp = AreaExpCRUD.create_areaexp(db, areaexp=areaexp)
-    #await FastAPICache.clear(namespace="areasexp")
+    await FastAPICache.clear(namespace="areasexp")
     return areaexp
 
 
@@ -47,14 +47,14 @@ async def areasexp(id: int, areaexp: AreaExpUpdate, db: Session = Depends(get_db
     areaexp = AreaExpCRUD.update_areaexp(db, id_areaexp=id, areaexp=areaexp)
     if not areaexp:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="areasexp")
+    await FastAPICache.clear(namespace="areasexp")
     return areaexp
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def areasexp(id: int, db: Session = Depends(get_db)) -> None:
     AreaExpCRUD.delete_areaexp(db, id_areaexp=id)
-    #await FastAPICache.clear(namespace="areasexp")
+    await FastAPICache.clear(namespace="areasexp")
 
 
 @router.get("/{id}/tangaras", response_model=TangaraPaginationSchema, status_code=status.HTTP_200_OK)

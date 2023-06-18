@@ -92,7 +92,7 @@ async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     return await pm25_last_24_hours(mac_addresses)
 
 
-@router.get("/movil24h/{id}", response_model=PM25Schema | list[PM25Schema], status_code=status.HTTP_200_OK)
+@router.get("/movil24h/{id}", response_model=list[PM25Schema], status_code=status.HTTP_200_OK)
 @cache(namespace="movil24h", expire=timedelta(hours=24))
 async def movil_24_hours(id: int, db: Session = Depends(get_db)) -> list[PM25Schema]:
     # MAC Addresses

@@ -38,7 +38,7 @@ async def barrios(id: int, db: Session = Depends(get_db)) -> BarrioSchema:
 @router.post("/", response_model=BarrioSchema, status_code=status.HTTP_201_CREATED)
 async def barrios(barrio: BarrioCreate, db: Session = Depends(get_db)) -> BarrioSchema:
     barrio = BarrioCRUD.create_barrio(db, barrio=barrio)
-    #await FastAPICache.clear(namespace="barrios")
+    await FastAPICache.clear(namespace="barrios")
     return barrio
 
 
@@ -47,14 +47,14 @@ async def barrios(id: int, barrio: BarrioUpdate, db: Session = Depends(get_db)) 
     barrio = BarrioCRUD.update_barrio(db, id_barrio=id, barrio=barrio)
     if not barrio:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="barrios")
+    await FastAPICache.clear(namespace="barrios")
     return barrio
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def barrios(id: int, db: Session = Depends(get_db)) -> None:
     BarrioCRUD.delete_barrio(db, id_barrio=id)
-    #await FastAPICache.clear(namespace="barrios")
+    await FastAPICache.clear(namespace="barrios")
 
 
 @router.get("/{id}/tangaras", response_model=TangaraPaginationSchema, status_code=status.HTTP_200_OK)

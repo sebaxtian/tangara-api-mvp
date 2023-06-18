@@ -37,7 +37,7 @@ async def tangaras(id: int, db: Session = Depends(get_db)) -> TangaraSchema:
 @router.post("/", response_model=TangaraSchema, status_code=status.HTTP_201_CREATED)
 async def tangaras(tangara: TangaraCreate, db: Session = Depends(get_db)) -> TangaraSchema:
     tangara = TangaraCRUD.create_tangara(db, tangara=tangara)
-    #await FastAPICache.clear(namespace="tangaras")
+    await FastAPICache.clear(namespace="tangaras")
     return tangara
 
 
@@ -46,11 +46,11 @@ async def tangaras(id: int, tangara: TangaraUpdate, db: Session = Depends(get_db
     tangara = TangaraCRUD.update_tangara(db, id_tangara=id, tangara=tangara)
     if not tangara:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="tangaras")
+    await FastAPICache.clear(namespace="tangaras")
     return tangara
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def tangaras(id: int, db: Session = Depends(get_db)) -> None:
     TangaraCRUD.delete_tangara(db, id_tangara=id)
-    #await FastAPICache.clear(namespace="areasexp")
+    await FastAPICache.clear(namespace="areasexp")

@@ -38,7 +38,7 @@ async def sectores(id: int, db: Session = Depends(get_db)) -> SectorSchema:
 @router.post("/", response_model=SectorSchema, status_code=status.HTTP_201_CREATED)
 async def sectores(sector: SectorCreate, db: Session = Depends(get_db)) -> SectorSchema:
     sector = SectorCRUD.create_sector(db, sector=sector)
-    #await FastAPICache.clear(namespace="barrios")
+    await FastAPICache.clear(namespace="sectores")
     return sector
 
 
@@ -47,14 +47,14 @@ async def sectores(id: int, sector: SectorUpdate, db: Session = Depends(get_db))
     sector = SectorCRUD.update_sector(db, id_sector=id, sector=sector)
     if not sector:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
-    #await FastAPICache.clear(namespace="barrios")
+    await FastAPICache.clear(namespace="sectores")
     return sector
 
 
 @router.delete("/{id}", response_model=None, status_code=status.HTTP_204_NO_CONTENT)
 async def sectores(id: int, db: Session = Depends(get_db)) -> None:
     SectorCRUD.delete_sector(db, id_sector=id)
-    #await FastAPICache.clear(namespace="barrios")
+    await FastAPICache.clear(namespace="sectores")
 
 
 @router.get("/{id}/tangaras", response_model=TangaraPaginationSchema, status_code=status.HTTP_200_OK)

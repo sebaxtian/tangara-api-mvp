@@ -47,6 +47,50 @@ Finally, we have exported an SQL file [./db/tangara-mvp.sql](./db/tangara-mvp.sq
 
 Jupyter Notebooks are helpful to explore some features and explain them to the team and easy to use before coding those features into the API, the purpose of the notebooks created in [./notebooks](./notebooks/) is only to explore, test, and explain those features to the team. You dont need change anything here.
 
+## Redis CLI
+
+Redis is an open source (BSD licensed), in-memory data structure store used as a database, cache, message broker, and streaming engine.
+
+In development mode we need to install Redis CLI to debug our code and do some test. We will use Redis Server on a Docker configuration, that will be explaned later.
+
+**Downloading the source files:**
+```bash
+$promt> wget https://download.redis.io/redis-stable.tar.gz
+```
+
+**Compiling Redis CLI:**
+```bash
+$promt> tar -xzvf redis-stable.tar.gz
+$promt> cd redis-stable/
+$promt> make redis-cli
+```
+
+**Installing Redis CLI:**
+```bash
+$promt> sudo cp src/redis-cli /usr/local/bin/
+```
+
+**Connecting to the Redis server locally:**
+```bash
+$promt> redis-cli -h 0.0.0.0 -p 6379
+```
+
+## Redis Server
+
+In development mode we are going to use a Docker container, to achieve that, we need just download the official Redis Docker Image, then we run a docker command to run a Redis Server container.
+
+**Downloading the official Redis Docker image:**
+```bash
+$promt> docker pull redis:7-alpine
+```
+
+**Run Redis Server container:**
+```bash
+$promt> docker run --name tangara-redis -p 6379:6379 -d redis:7-alpine
+```
+
+Finally, we are ready to use a Redis Server in our project.
+
 ## How to run
 
 > **Development Mode**
