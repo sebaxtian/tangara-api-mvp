@@ -36,5 +36,8 @@ class TangaraSchema(TangaraBase):
         orm_mode = True
 
 
-class TangaraSchemaList(BaseModel):
+class TangaraPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     tangaras: list[TangaraSchema]

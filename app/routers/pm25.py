@@ -2,6 +2,10 @@ from fastapi import Depends, APIRouter, HTTPException, status
 from sqlalchemy.orm import Session
 from enum import IntEnum
 
+from fastapi_cache import FastAPICache
+from fastapi_cache.decorator import cache
+from datetime import timedelta
+
 from app.dependencies.database import get_db
 from app.schemas.tangara import TangaraSchema
 from app.schemas.pm25 import PM25Schema
@@ -28,17 +32,17 @@ class Codes(IntEnum): #TODO: Refactoring
         tangaras: list[TangaraSchema] = []
 
         if id in range(Codes.COMUNA, Codes.BARRIO):
-            tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id)
+            tangaras = ComunaCRUD.read_tangaras(db, id_comuna=id).tangaras
         if id in range(Codes.BARRIO, Codes.VEREDA):
-            tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id)
+            tangaras = BarrioCRUD.read_tangaras(db, id_barrio=id).tangaras
         if id in range(Codes.VEREDA, Codes.SECTOR):
-            tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id)
+            tangaras = VeredaCRUD.read_tangaras(db, id_vereda=id).tangaras
         if id in range(Codes.SECTOR, Codes.AREAEXP):
-            tangaras = SectorCRUD.read_tangaras(db, id_sector=id)
+            tangaras = SectorCRUD.read_tangaras(db, id_sector=id).tangaras
         if id in range(Codes.AREAEXP, Codes.AREAPRO):
-            tangaras = AreaExpCRUD.read_tangaras(db, id_areaexp=id)
+            tangaras = AreaExpCRUD.read_tangaras(db, id_areaexp=id).tangaras
         if id in range(Codes.AREAPRO, Codes.AREAPRO + 1000):
-            tangaras = AreaProCRUD.read_tangaras(db, id_areapro=id)
+            tangaras = AreaProCRUD.read_tangaras(db, id_areapro=id).tangaras
         
         return [tangara.mac for tangara in tangaras]
 
@@ -53,6 +57,7 @@ router = APIRouter(
 
 
 @router.get("/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+@cache(namespace="realtime", expire=timedelta(minutes=5))
 async def realtime(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
@@ -64,6 +69,7 @@ async def realtime(id: int, db: Session = Depends(get_db)) -> PM25Schema:
 
 
 @router.get("/last1h/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+@cache(namespace="last1h", expire=timedelta(hours=1))
 async def last_1_hour(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
@@ -75,6 +81,7 @@ async def last_1_hour(id: int, db: Session = Depends(get_db)) -> PM25Schema:
 
 
 @router.get("/last24h/{id}", response_model=PM25Schema, status_code=status.HTTP_200_OK)
+@cache(namespace="last24h", expire=timedelta(hours=24))
 async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)
@@ -85,7 +92,8 @@ async def last_24_hours(id: int, db: Session = Depends(get_db)) -> PM25Schema:
     return await pm25_last_24_hours(mac_addresses)
 
 
-@router.get("/movil24h/{id}", response_model=PM25Schema | list[PM25Schema], status_code=status.HTTP_200_OK)
+@router.get("/movil24h/{id}", response_model=list[PM25Schema], status_code=status.HTTP_200_OK)
+@cache(namespace="movil24h", expire=timedelta(hours=24))
 async def movil_24_hours(id: int, db: Session = Depends(get_db)) -> list[PM25Schema]:
     # MAC Addresses
     mac_addresses: list[str] = Codes.get_mac_addresses(id, db)

@@ -31,5 +31,8 @@ class AreaProSchema(AreaProBase):
         orm_mode = True
 
 
-class AreaProSchemaList(BaseModel):
+class AreaProPaginationSchema(BaseModel):
+    count: int
+    skip: int
+    limit: int
     areaspro: list[AreaProSchema]

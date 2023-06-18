@@ -20,8 +20,8 @@ from app.dependencies.testing_database import override_get_db
 from app.tests.conftest import Totals, Codes
 
 from app.schemas.comuna import ComunaPaginationSchema, ComunaSchema, ComunaCreate
-from app.schemas.barrio import BarrioSchemaList
-from app.schemas.tangara import TangaraSchemaList
+from app.schemas.barrio import BarrioPaginationSchema
+from app.schemas.tangara import TangaraPaginationSchema
 
 
 fake = Faker()
@@ -121,11 +121,16 @@ def test_put_comuna(tangaras):
     comuna2 = response2.json()
     comuna2 = ComunaSchema.validate(comuna2)
 
+    response1 = client.get(f"/comunas/{id_comuna}")
+    comuna1 = response1.json()
+    comuna1 = ComunaSchema.validate(comuna1)
 
     assert response1.status_code == status.HTTP_200_OK
     assert comuna1.id == id_comuna
     assert response2.status_code == status.HTTP_200_OK
     assert comuna2.id == comuna1.id
+    assert comuna2.nombre == comuna1.nombre
+    assert comuna2.codigo == comuna1.codigo
 
 
 def test_delete_comuna(tangaras):
@@ -149,7 +154,7 @@ def test_get_comunas_barrios(tangaras):
     )
     response = client.get(f"/comunas/{id_comuna}/barrios")
     barrios = response.json()
-    BarrioSchemaList.validate({"barrios": barrios})
+    BarrioPaginationSchema.validate(barrios)
     # print("barrios:", barrios)
 
     assert response.status_code == status.HTTP_200_OK
@@ -162,7 +167,7 @@ def test_get_comunas_tangaras(tangaras):
     )
     response = client.get(f"/comunas/{id_comuna}/tangaras")
     tangaras = response.json()
-    TangaraSchemaList.validate({"tangaras": tangaras})
+    TangaraPaginationSchema.validate(tangaras)
     # print("tangaras:", tangaras)
 
     assert response.status_code == status.HTTP_200_OK
