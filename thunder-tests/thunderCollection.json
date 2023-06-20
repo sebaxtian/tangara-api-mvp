@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "61431353-1d67-434c-b991-d0d43433f6e1",
+    "colName": "Comunas",
+    "created": "2023-05-17T04:25:17.653Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+    "colName": "Barrios",
+    "created": "2023-05-18T18:45:50.089Z",
+    "sortNum": 20000,
+    "folders": []
+  },
+  {
+    "_id": "5637da13-4934-4f67-b4b8-b1ca37b6a5df",
+    "colName": "Veredas",
+    "created": "2023-05-18T20:22:56.573Z",
+    "sortNum": 30000,
+    "folders": []
+  },
+  {
+    "_id": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+    "colName": "Sectores",
+    "created": "2023-05-18T21:46:52.137Z",
+    "sortNum": 40000,
+    "folders": []
+  },
+  {
+    "_id": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+    "colName": "AreasExp",
+    "created": "2023-05-19T03:26:57.336Z",
+    "sortNum": 50000,
+    "folders": []
+  },
+  {
+    "_id": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+    "colName": "AreasPro",
+    "created": "2023-05-19T04:20:58.497Z",
+    "sortNum": 60000,
+    "folders": []
+  },
+  {
+    "_id": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+    "colName": "Tangaras",
+    "created": "2023-05-20T23:02:49.915Z",
+    "sortNum": 70000,
+    "folders": []
+  },
+  {
+    "_id": "dfa7ddd5-5ecb-4ee6-bfbc-092bd5fec714",
+    "colName": "Lugares",
+    "created": "2023-05-21T08:47:01.464Z",
+    "sortNum": 80000,
+    "folders": []
+  },
+  {
+    "_id": "8932d843-3c01-4640-b822-f7a93bbedaff",
+    "colName": "PM25",
+    "created": "2023-06-04T04:41:48.899Z",
+    "sortNum": 90000,
+    "folders": []
+  }
+]

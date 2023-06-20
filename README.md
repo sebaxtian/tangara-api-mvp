@@ -101,9 +101,27 @@ $promt> uvicorn app.main:app --reload
 
 ## Testing
 
+**Run API tests**
+
 ```bash
 $promt> pytest -v -s -W ignore::trio.TrioDeprecationWarning -W ignore::DeprecationWarning
 ```
+
+**Run API integration tests**
+
+> [Install Thunder Client Extension for VS Code](https://rangav.medium.com/thunder-client-alternative-to-postman-68ee0c9486d6)
+
+Activate the checkbox ***Thunder-client: Save To Workspace*** in Thunder Client Extension **Settings**.
+
+> [Install Thunder Client CLI:](https://rangav.medium.com/thunder-client-cli-a-new-way-to-test-apis-inside-vscode-d91eb5c71d8e)
+```bash
+# Install Thunder Client CLI as a global nodejs package
+$promt> sudo npm i -g @thunderclient/cli
+$promt> tc2 -v
+$promt> tc2 -h
+# Thunder Client CLI Documentation: https://medium.com/p/d91eb5c71d8e
+```
+
 
 ---
 
