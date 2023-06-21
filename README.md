@@ -88,6 +88,11 @@ $promt> docker pull redis:7-alpine
 ```bash
 $promt> docker run --name tangara-redis -p 6379:6379 -d redis:7-alpine
 ```
+s
+**Connecting to the Redis server from container:**
+```bash
+$promt> docker exec -it tangara-redis redis-cli
+```
 
 Finally, we are ready to use a Redis Server in our project.
 

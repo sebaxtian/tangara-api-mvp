@@ -1,0 +1,14 @@
+{
+    "name": "Tangara MVP",
+    "image": "mcr.microsoft.com/devcontainers/python:3",
+    "postCreateCommand": {
+        "redis-container": "docker pull redis:7-alpine",
+        "redis-server": "docker run --name tangara-redis -p 6379:6379 -d redis:7-alpine"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": false,
+			"dockerDashComposeVersion": "v2"
+		}
+	}
+}
