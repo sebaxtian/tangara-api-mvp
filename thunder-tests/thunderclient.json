@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-05-17T04:25:17.656Z",
-    "modified": "2023-06-18T05:38:23.533Z",
+    "modified": "2023-06-23T05:13:26.788Z",
     "headers": [],
     "params": [
       {
@@ -23,7 +23,62 @@
         "isPath": false
       }
     ],
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": ""
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Cache-Control",
+        "action": "contains",
+        "value": "max-age"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.count",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.skip",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.limit",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.comunas",
+        "action": "istype",
+        "value": "array"
+      }
+    ]
   },
   {
     "_id": "f29a12ec-296a-48f3-8158-ff2c5fa3d001",
