@@ -2,6 +2,7 @@
     "name": "Tangara MVP",
     "image": "mcr.microsoft.com/devcontainers/python:3",
     "postCreateCommand": {
+		"python-requirements": "pip install -r requirements.txt",
         "redis-container": "docker pull redis:7-alpine",
         "redis-server": "docker run --name tangara-redis -p 6379:6379 -d redis:7-alpine",
 		"thunder-cli": "npm i -g @thunderclient/cli"
