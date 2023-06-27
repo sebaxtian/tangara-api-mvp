@@ -89,10 +89,77 @@
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-05-17T04:27:09.065Z",
-    "modified": "2023-06-17T22:38:14.122Z",
+    "modified": "2023-06-25T01:50:47.019Z",
     "headers": [],
     "params": [],
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": "true"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Cache-Control",
+        "action": "contains",
+        "value": "max-age"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.nombre",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.codigo",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.id",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.barrios",
+        "action": "istype",
+        "value": "array"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.created",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.updated",
+        "action": "istype",
+        "value": "string"
+      }
+    ]
   },
   {
     "_id": "5ac96708-1288-483e-827f-ff1726a3d1fa",
@@ -103,15 +170,76 @@
     "method": "POST",
     "sortNum": 20625,
     "created": "2023-05-17T04:30:46.654Z",
-    "modified": "2023-06-18T06:47:32.522Z",
+    "modified": "2023-06-25T01:58:39.916Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"nombre\": \"New Comuna 1022\",\n  \"codigo\": \"NEW_1022\"\n}",
+      "raw": "{\n  \"nombre\": \"New Comuna 1022\",\n  \"codigo\": \"NEW_1022\"\n}\n",
       "form": []
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": "true"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.nombre",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.codigo",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.id",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.barrios",
+        "action": "istype",
+        "value": "array"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.created",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.updated",
+        "action": "istype",
+        "value": "string"
+      }
+    ]
   },
   {
     "_id": "b63ecb95-791f-4794-9412-bc29f6a2f685",
@@ -122,7 +250,7 @@
     "method": "PUT",
     "sortNum": 20937.5,
     "created": "2023-05-17T04:31:53.631Z",
-    "modified": "2023-06-18T06:47:44.236Z",
+    "modified": "2023-06-25T02:04:58.768Z",
     "headers": [],
     "params": [],
     "body": {
@@ -130,7 +258,68 @@
       "raw": "{\n  \"nombre\": \"Update Comuna 1022\",\n  \"codigo\": \"UPDATE_1022\"\n}",
       "form": []
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": "true"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.nombre",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.codigo",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.id",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.barrios",
+        "action": "istype",
+        "value": "array"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.created",
+        "action": "istype",
+        "value": "string"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.updated",
+        "action": "istype",
+        "value": "string"
+      }
+    ]
   },
   {
     "_id": "88eb0d28-d5b1-499b-bf29-1abcf353130e",
@@ -141,10 +330,35 @@
     "method": "DELETE",
     "sortNum": 50000,
     "created": "2023-05-17T04:34:31.928Z",
-    "modified": "2023-06-18T06:46:29.916Z",
+    "modified": "2023-06-27T03:50:24.041Z",
     "headers": [],
     "params": [],
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "204"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": ""
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      }
+    ]
   },
   {
     "_id": "9880aeb3-c593-48d3-8622-f5fda89f46c5",
@@ -801,7 +1015,7 @@
     "method": "GET",
     "sortNum": 21093.8,
     "created": "2023-05-21T07:09:49.234Z",
-    "modified": "2023-06-18T06:49:36.571Z",
+    "modified": "2023-06-25T02:09:47.792Z",
     "headers": [],
     "params": [
       {
@@ -815,7 +1029,62 @@
         "isPath": false
       }
     ],
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": "true"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Cache-Control",
+        "action": "contains",
+        "value": "max-age"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.count",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.skip",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.limit",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.barrios",
+        "action": "istype",
+        "value": "array"
+      }
+    ]
   },
   {
     "_id": "70b42b0c-a470-4a78-933a-7cf2241cd44f",
@@ -851,7 +1120,7 @@
     "method": "GET",
     "sortNum": 21250,
     "created": "2023-05-21T07:35:53.387Z",
-    "modified": "2023-06-17T23:18:50.157Z",
+    "modified": "2023-06-27T03:47:32.000Z",
     "headers": [],
     "params": [
       {
@@ -865,7 +1134,62 @@
         "isPath": false
       }
     ],
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "isjson",
+        "value": "true"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-time",
+        "custom": "",
+        "action": "<=",
+        "value": "500"
+      },
+      {
+        "type": "custom-header",
+        "custom": "Cache-Control",
+        "action": "contains",
+        "value": "max-age"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.count",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.skip",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.limit",
+        "action": "istype",
+        "value": "number"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.tangaras",
+        "action": "istype",
+        "value": "array"
+      }
+    ]
   },
   {
     "_id": "34114e07-4e72-4a4d-8f77-d4ae8e4a73f3",
