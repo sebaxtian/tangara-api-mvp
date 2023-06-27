@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "_id": "0cf16e85-5f1a-4b46-a824-868fe29bf45c",
+    "name": "dev",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-06-27T04:14:42.223Z",
+    "modified": "2023-06-27T04:14:42.223Z",
+    "data": [
+      {
+        "name": "id_comuna",
+        "value": "1022"
+      }
+    ]
+  }
+]
