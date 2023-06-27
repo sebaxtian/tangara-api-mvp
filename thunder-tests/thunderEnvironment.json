@@ -9,7 +9,31 @@
     "data": [
       {
         "name": "id_comuna",
-        "value": "1022"
+        "value": "1031"
+      },
+      {
+        "name": "total_comunas",
+        "value": "22"
+      },
+      {
+        "name": "total_comunas_1",
+        "value": "23"
+      },
+      {
+        "name": "nombre_new_comuna",
+        "value": "New Comuna 1022"
+      },
+      {
+        "name": "codigo_new_comuna",
+        "value": "NEW_1022"
+      },
+      {
+        "name": "nombre_update_comuna",
+        "value": "Update Comuna 1022"
+      },
+      {
+        "name": "codigo_update_comuna",
+        "value": "UPDATE_1022"
       }
     ]
   }

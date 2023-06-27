@@ -4,7 +4,15 @@
     "colName": "Comunas",
     "created": "2023-05-17T04:25:17.653Z",
     "sortNum": 10000,
-    "folders": []
+    "folders": [
+      {
+        "_id": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+        "name": "Scenario 1",
+        "containerId": "",
+        "created": "2023-06-27T04:26:05.362Z",
+        "sortNum": 10000
+      }
+    ]
   },
   {
     "_id": "aac0cfdb-fe30-44ee-9508-811cb0670567",
