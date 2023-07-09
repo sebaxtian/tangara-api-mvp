@@ -1,0 +1,46 @@
+{
+    "_id": "366f980d-a3e0-4270-bf33-540a15334794",
+    "colName": "Scenario1: Comunas",
+    "created": "2023-06-27T06:38:05.668Z",
+    "sortNum": 100000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cb770616-9b39-4f16-a5e6-5b7b532405cb",
+            "colId": "366f980d-a3e0-4270-bf33-540a15334794",
+            "containerId": "",
+            "name": "Comunas",
+            "url": "http://127.0.0.1:8000/comunas/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-09T05:59:57.283Z",
+            "modified": "2023-07-09T06:47:16.567Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "preReq": {
+            "runFilters": [
+                "totalComunas"
+            ]
+        },
+        "scripts": [
+            "filters/scenario1_comunas.js"
+        ]
+    }
+}

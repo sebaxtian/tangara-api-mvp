@@ -127,9 +127,13 @@ $promt> tc2 -h
 # Thunder Client CLI Documentation: https://medium.com/p/d91eb5c71d8e
 ```
 
-> Comunas: Scenario 1
+**Note:**
+
+***Please make sure the commands are run from the root of the project.***
+
+> Scenario1: Comunas
 ```bash
-$promt> tc2 --fol "Scenario 1"
+$promt> tc2 --col "Scenario1: Comunas" --log 8
 ```
 
 ---
