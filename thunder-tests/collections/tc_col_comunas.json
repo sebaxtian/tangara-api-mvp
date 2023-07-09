@@ -1,0 +1,774 @@
+{
+    "_id": "61431353-1d67-434c-b991-d0d43433f6e1",
+    "colName": "Comunas",
+    "created": "2023-05-17T04:25:17.653Z",
+    "sortNum": 10000,
+    "folders": [
+        {
+            "_id": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Scenario 1",
+            "containerId": "",
+            "created": "2023-06-27T04:26:05.362Z",
+            "sortNum": 10000,
+            "settings": {
+                "runOptions": {
+                    "delay": 1000,
+                    "iterations": 2,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        }
+    ],
+    "requests": [
+        {
+            "_id": "29cadf5a-afc9-4bd7-95ce-58127020005b",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Comunas",
+            "url": "http://127.0.0.1:8000/comunas/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-17T04:25:17.656Z",
+            "modified": "2023-06-27T04:54:38.054Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "21",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "Cache-Control",
+                    "action": "contains",
+                    "value": "max-age"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.count",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.skip",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.limit",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.comunas",
+                    "action": "istype",
+                    "value": "array"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.comunas",
+                    "action": "count",
+                    "value": "{{total_comunas}}"
+                }
+            ],
+            "preReq": {
+                "runRequests": [
+                    {
+                        "reqId": "88eb0d28-d5b1-499b-bf29-1abcf353130e",
+                        "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+                        "triggerCondition": "run-always",
+                        "triggerValue": ""
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "f29a12ec-296a-48f3-8158-ff2c5fa3d001",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Comuna by ID",
+            "url": "http://127.0.0.1:8000/comunas/{{id_comuna}}",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-17T04:27:09.065Z",
+            "modified": "2023-06-27T04:52:50.717Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "Cache-Control",
+                    "action": "contains",
+                    "value": "max-age"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.id",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.barrios",
+                    "action": "istype",
+                    "value": "array"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.created",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.updated",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "equal",
+                    "value": "{{nombre_new_comuna}}"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "equal",
+                    "value": "{{codigo_new_comuna}}"
+                }
+            ]
+        },
+        {
+            "_id": "5ac96708-1288-483e-827f-ff1726a3d1fa",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "New Comuna",
+            "url": "http://127.0.0.1:8000/comunas/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-17T04:30:46.654Z",
+            "modified": "2023-06-27T04:58:02.463Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"{{nombre_new_comuna}}\",\n  \"codigo\": \"{{codigo_new_comuna}}\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.id",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.barrios",
+                    "action": "istype",
+                    "value": "array"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.created",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.updated",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "set-env-var",
+                    "custom": "json.id",
+                    "action": "setto",
+                    "value": "{{id_comuna}}"
+                }
+            ]
+        },
+        {
+            "_id": "b63ecb95-791f-4794-9412-bc29f6a2f685",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Update Comuna",
+            "url": "http://127.0.0.1:8000/comunas/{{id_comuna}}",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-05-17T04:31:53.631Z",
+            "modified": "2023-06-27T05:01:21.785Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"{{nombre_update_comuna}}\",\n  \"codigo\": \"{{codigo_update_comuna}}\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.id",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.barrios",
+                    "action": "istype",
+                    "value": "array"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.created",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.updated",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "equal",
+                    "value": "{{nombre_update_comuna}}"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "equal",
+                    "value": "{{codigo_update_comuna}}"
+                }
+            ]
+        },
+        {
+            "_id": "88eb0d28-d5b1-499b-bf29-1abcf353130e",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Delete Comuna",
+            "url": "http://127.0.0.1:8000/comunas/{{id_comuna}}",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-05-17T04:34:31.928Z",
+            "modified": "2023-06-27T04:53:30.120Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "204"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": ""
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                }
+            ]
+        },
+        {
+            "_id": "0d69e081-d9d0-491e-beea-609cd212c8f4",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Barrios",
+            "url": "http://127.0.0.1:8000/comunas/1000/barrios?limit=3&skip=1",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-05-21T07:09:49.234Z",
+            "modified": "2023-06-27T05:07:24.846Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "3",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "Cache-Control",
+                    "action": "contains",
+                    "value": "max-age"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.count",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.skip",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.limit",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.barrios",
+                    "action": "istype",
+                    "value": "array"
+                }
+            ]
+        },
+        {
+            "_id": "cfe3752e-9ea1-4212-88ce-22b660711b94",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Tangaras",
+            "url": "http://127.0.0.1:8000/comunas/1000/tangaras?limit=3&skip=1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-05-21T07:35:53.387Z",
+            "modified": "2023-06-27T05:07:34.244Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "3",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "Cache-Control",
+                    "action": "contains",
+                    "value": "max-age"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.count",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.skip",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.limit",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.tangaras",
+                    "action": "istype",
+                    "value": "array"
+                }
+            ]
+        },
+        {
+            "_id": "7eb4b30b-da98-4e5c-844a-27d7760f1050",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Comunas + 1",
+            "url": "http://127.0.0.1:8000/comunas/",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-06-27T04:33:02.359Z",
+            "modified": "2023-06-27T04:38:07.522Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "21",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "Cache-Control",
+                    "action": "contains",
+                    "value": "max-age"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.count",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.skip",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.limit",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.comunas",
+                    "action": "istype",
+                    "value": "array"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.comunas",
+                    "action": "count",
+                    "value": "{{total_comunas_1}}"
+                }
+            ]
+        },
+        {
+            "_id": "d9162566-64ae-4d3d-8ed9-c260a49cd583",
+            "colId": "61431353-1d67-434c-b991-d0d43433f6e1",
+            "containerId": "9a9ebb70-b11b-4026-9708-86638f644a9b",
+            "name": "Comuna by ID Updated",
+            "url": "http://127.0.0.1:8000/comunas/{{id_comuna}}",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-06-27T04:51:31.596Z",
+            "modified": "2023-06-27T04:52:43.550Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                },
+                {
+                    "type": "Content-Type",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "application/json"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "Cache-Control",
+                    "action": "contains",
+                    "value": "max-age"
+                },
+                {
+                    "type": "res-time",
+                    "custom": "",
+                    "action": "<=",
+                    "value": "500"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.id",
+                    "action": "istype",
+                    "value": "number"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.barrios",
+                    "action": "istype",
+                    "value": "array"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.created",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.updated",
+                    "action": "istype",
+                    "value": "string"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.nombre",
+                    "action": "equal",
+                    "value": "{{nombre_update_comuna}}"
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.codigo",
+                    "action": "equal",
+                    "value": "{{codigo_update_comuna}}"
+                }
+            ]
+        }
+    ]
+}

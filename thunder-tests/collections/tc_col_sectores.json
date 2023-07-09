@@ -1,0 +1,125 @@
+{
+    "_id": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+    "colName": "Sectores",
+    "created": "2023-05-18T21:46:52.137Z",
+    "sortNum": 40000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d32c791b-da63-42bf-a27c-7934e92a3b07",
+            "colId": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+            "containerId": "",
+            "name": "Sectores",
+            "url": "http://127.0.0.1:8000/sectores/?limit=2&skip=84",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-18T21:46:52.140Z",
+            "modified": "2023-06-18T00:06:18.685Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "84",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "a8325ca0-00b4-4bc4-8c17-94fea9d4e4c2",
+            "colId": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+            "containerId": "",
+            "name": "Sector by ID",
+            "url": "http://127.0.0.1:8000/sectores/4085",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-18T21:50:09.653Z",
+            "modified": "2023-06-18T00:07:00.094Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7c48bd29-06e0-41fd-a747-ad5efb1b0aec",
+            "colId": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+            "containerId": "",
+            "name": "New Sector",
+            "url": "http://127.0.0.1:8000/sectores/",
+            "method": "POST",
+            "sortNum": 21250,
+            "created": "2023-05-18T21:52:43.366Z",
+            "modified": "2023-06-18T06:50:25.881Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_vereda\": 3000,\n  \"nombre\": \"New Sector 4085\",\n  \"codigo\": \"NEW_SECTOR_4085\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "64227271-ef65-4a99-91a7-01f97228ec8f",
+            "colId": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+            "containerId": "",
+            "name": "Update Sector",
+            "url": "http://127.0.0.1:8000/sectores/4085",
+            "method": "PUT",
+            "sortNum": 21875,
+            "created": "2023-05-18T21:54:46.454Z",
+            "modified": "2023-06-18T06:50:32.885Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_vereda\": 3000,\n  \"nombre\": \"Update Sector 4085\",\n  \"codigo\": \"UPDATE_SECTOR_4085\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e7cd5aa3-cc9c-4281-9644-0610157d10ae",
+            "colId": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+            "containerId": "",
+            "name": "Delete Sector",
+            "url": "http://127.0.0.1:8000/sectores/4087",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-18T22:02:29.875Z",
+            "modified": "2023-06-18T06:50:21.411Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "40b12e21-c490-4fa0-8a4f-477890699fc5",
+            "colId": "b71ef411-8349-490e-bdd1-aab821a6fdd3",
+            "containerId": "",
+            "name": "Tangaras",
+            "url": "http://127.0.0.1:8000/sectores/4000/tangaras?limit=2&skip=1",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-05-21T06:42:50.654Z",
+            "modified": "2023-06-18T00:11:07.210Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

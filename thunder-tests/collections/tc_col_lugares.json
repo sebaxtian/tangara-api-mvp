@@ -1,0 +1,29 @@
+{
+    "_id": "dfa7ddd5-5ecb-4ee6-bfbc-092bd5fec714",
+    "colName": "Lugares",
+    "created": "2023-05-21T08:47:01.464Z",
+    "sortNum": 80000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "44981b35-681e-41bd-a5f5-b7ab6c789b45",
+            "colId": "dfa7ddd5-5ecb-4ee6-bfbc-092bd5fec714",
+            "containerId": "",
+            "name": "Lugares",
+            "url": "http://127.0.0.1:8000/lugares/?format=csv",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-21T08:47:01.467Z",
+            "modified": "2023-06-18T01:52:32.817Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "format",
+                    "value": "csv",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

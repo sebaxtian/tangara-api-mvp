@@ -1,0 +1,140 @@
+{
+    "_id": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+    "colName": "Barrios",
+    "created": "2023-05-18T18:45:50.089Z",
+    "sortNum": 20000,
+    "folders": [
+        {
+            "_id": "4a26d378-2996-4738-b011-d1e21e19e832",
+            "name": "Scenario 2",
+            "containerId": "",
+            "created": "2023-06-27T05:16:59.967Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "9880aeb3-c593-48d3-8622-f5fda89f46c5",
+            "colId": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+            "containerId": "4a26d378-2996-4738-b011-d1e21e19e832",
+            "name": "Barrios",
+            "url": "http://127.0.0.1:8000/barrios/?limit=2&skip=335",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-18T18:45:50.093Z",
+            "modified": "2023-06-27T05:20:22.366Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "335",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "abe6f5a7-7261-4bf8-bd99-49308637f9b2",
+            "colId": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+            "containerId": "",
+            "name": "Barrio by ID",
+            "url": "http://127.0.0.1:8000/barrios/2336",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-18T18:50:06.154Z",
+            "modified": "2023-06-17T23:54:34.203Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "036fc5e4-13c7-40b2-9dbf-93128f618089",
+            "colId": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+            "containerId": "",
+            "name": "New Barrio",
+            "url": "http://127.0.0.1:8000/barrios/",
+            "method": "POST",
+            "sortNum": 21250,
+            "created": "2023-05-18T18:51:19.661Z",
+            "modified": "2023-06-18T06:48:55.082Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_comuna\": 1000,\n  \"nombre\": \"New Barrio 2337\",\n  \"codigo\": \"NEW_BARRIO_2337\",\n  \"estrato\": \"3\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e10a07f4-dcaf-4919-aa85-ced1143baf57",
+            "colId": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+            "containerId": "",
+            "name": "Update Barrio",
+            "url": "http://127.0.0.1:8000/barrios/2336",
+            "method": "PUT",
+            "sortNum": 21875,
+            "created": "2023-05-18T19:14:21.104Z",
+            "modified": "2023-06-18T06:48:58.256Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_comuna\": 1000,\n  \"nombre\": \"Update Barrio 2336\",\n  \"codigo\": \"UPDATE_BARRIO_2336\",\n  \"estrato\": \"6\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6707b0cb-03c7-4357-bf78-a612bb32c8bb",
+            "colId": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+            "containerId": "",
+            "name": "Delete Barrio",
+            "url": "http://127.0.0.1:8000/barrios/2336",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-18T19:22:17.923Z",
+            "modified": "2023-06-18T06:48:51.049Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5856fcc6-f184-47cf-bb4b-b66e96cdf110",
+            "colId": "aac0cfdb-fe30-44ee-9508-811cb0670567",
+            "containerId": "",
+            "name": "Tangaras",
+            "url": "http://127.0.0.1:8000/barrios/2000/tangaras?limit=1&skip=2",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-05-21T06:33:36.062Z",
+            "modified": "2023-06-17T23:55:37.190Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

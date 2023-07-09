@@ -1,0 +1,100 @@
+{
+    "_id": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+    "colName": "Tangaras",
+    "created": "2023-05-20T23:02:49.915Z",
+    "sortNum": 70000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cc7827bb-86d6-46c6-a0d6-897004d323d3",
+            "colId": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+            "containerId": "",
+            "name": "New Tangara",
+            "url": "http://127.0.0.1:8000/tangaras/",
+            "method": "POST",
+            "sortNum": 22500,
+            "created": "2023-05-20T23:02:49.919Z",
+            "modified": "2023-06-18T06:52:49.420Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mac\": \"NEW:MAC:26\",\n  \"geohash\": \"d926\",\n  \"codigo\": \"NEW_TANGARA_MAC26\",\n  \"latitud\": \"8.43750000\",\n  \"longitud\": \"-61.87500000\",\n  \"id_areapro\": 6000\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef629bd1-c16c-4733-8798-bf8d2bf19a30",
+            "colId": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+            "containerId": "",
+            "name": "Tangaras",
+            "url": "http://127.0.0.1:8000/tangaras/?limit=2&skip=24",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-05-20T23:03:28.992Z",
+            "modified": "2023-06-18T06:52:42.200Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "24",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "70a84035-8150-4b42-8915-b0aa328f8afd",
+            "colId": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+            "containerId": "",
+            "name": "Tangara by ID",
+            "url": "http://127.0.0.1:8000/tangaras/26",
+            "method": "GET",
+            "sortNum": 18750,
+            "created": "2023-05-20T23:11:52.030Z",
+            "modified": "2023-06-18T06:52:56.355Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4f440cf3-fc7f-4b0f-8cb1-457233e799c6",
+            "colId": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+            "containerId": "",
+            "name": "Update Tangara",
+            "url": "http://127.0.0.1:8000/tangaras/26",
+            "method": "PUT",
+            "sortNum": 28750,
+            "created": "2023-05-20T23:19:06.466Z",
+            "modified": "2023-06-18T06:53:01.893Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mac\": \"UPDATE:MAC:26\",\n  \"geohash\": \"d926\",\n  \"codigo\": \"UPDATE_TANGARA_MAC26\",\n  \"latitud\": \"8.43750000\",\n  \"longitud\": \"-61.87500000\",\n  \"id_barrio\": 2000\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "674f85ab-8607-485a-8b10-8d1655ef019e",
+            "colId": "fae099fe-8a1f-40ad-9dc5-7e8c5ce99d37",
+            "containerId": "",
+            "name": "Delete Tangara",
+            "url": "http://127.0.0.1:8000/tangaras/31",
+            "method": "DELETE",
+            "sortNum": 35000,
+            "created": "2023-05-20T23:22:17.012Z",
+            "modified": "2023-05-21T20:27:26.966Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

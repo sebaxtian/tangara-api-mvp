@@ -1,0 +1,125 @@
+{
+    "_id": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+    "colName": "AreasExp",
+    "created": "2023-05-19T03:26:57.336Z",
+    "sortNum": 50000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d23058d2-65af-4119-949e-02daa2b77497",
+            "colId": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+            "containerId": "",
+            "name": "AreasExp",
+            "url": "http://127.0.0.1:8000/areasexp/?limit=2&skip=23",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-19T03:26:57.339Z",
+            "modified": "2023-06-18T00:12:59.304Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "23",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "96ba652b-9c11-46b7-bcc4-215c94c598b1",
+            "colId": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+            "containerId": "",
+            "name": "AreaExp by ID",
+            "url": "http://127.0.0.1:8000/areasexp/5024",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-19T03:28:04.434Z",
+            "modified": "2023-06-17T04:30:03.356Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2744be91-fa7c-414f-b550-bb608e08103a",
+            "colId": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+            "containerId": "",
+            "name": "New AreaExp",
+            "url": "http://127.0.0.1:8000/areasexp/",
+            "method": "POST",
+            "sortNum": 21250,
+            "created": "2023-05-19T03:29:10.573Z",
+            "modified": "2023-06-18T06:51:33.499Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"New Area Expasion 5024\",\n  \"codigo\": \"NEW_AREAEXP_5024\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a23df882-c275-4770-9d65-5291ac84e8e5",
+            "colId": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+            "containerId": "",
+            "name": "Update AreaExp",
+            "url": "http://127.0.0.1:8000/areasexp/5024",
+            "method": "PUT",
+            "sortNum": 21875,
+            "created": "2023-05-19T03:34:13.166Z",
+            "modified": "2023-06-18T06:51:35.903Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Update Area Expasion 5024\",\n  \"codigo\": \"UPDATE_AREAEXP_5024\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f3e6a6e5-1ef5-45c3-a0e3-31885dc2aabf",
+            "colId": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+            "containerId": "",
+            "name": "Delete AreaExp",
+            "url": "http://127.0.0.1:8000/areasexp/5026",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-19T03:43:37.128Z",
+            "modified": "2023-06-18T06:51:30.771Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0d1d62f5-365e-4870-8312-cb30702baf7a",
+            "colId": "65241e5b-f0d5-45ba-9d0f-fd01b2113ab4",
+            "containerId": "",
+            "name": "Tangaras",
+            "url": "http://127.0.0.1:8000/areasexp/5000/tangaras?limit=2&skip=3",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-05-21T06:51:33.262Z",
+            "modified": "2023-06-18T00:16:38.029Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

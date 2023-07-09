@@ -1,0 +1,38 @@
+{
+    "_id": "0cf16e85-5f1a-4b46-a824-868fe29bf45c",
+    "name": "dev",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-06-27T04:14:42.223Z",
+    "modified": "2023-06-27T04:14:42.223Z",
+    "data": [
+        {
+            "name": "id_comuna",
+            "value": "1039"
+        },
+        {
+            "name": "total_comunas",
+            "value": "22"
+        },
+        {
+            "name": "total_comunas_1",
+            "value": "23"
+        },
+        {
+            "name": "nombre_new_comuna",
+            "value": "New Comuna 1022"
+        },
+        {
+            "name": "codigo_new_comuna",
+            "value": "NEW_1022"
+        },
+        {
+            "name": "nombre_update_comuna",
+            "value": "Update Comuna 1022"
+        },
+        {
+            "name": "codigo_update_comuna",
+            "value": "UPDATE_1022"
+        }
+    ]
+}

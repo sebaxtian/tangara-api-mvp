@@ -10,7 +10,15 @@
         "name": "Scenario 1",
         "containerId": "",
         "created": "2023-06-27T04:26:05.362Z",
-        "sortNum": 10000
+        "sortNum": 10000,
+        "settings": {
+          "runOptions": {
+            "delay": 1000,
+            "iterations": 2,
+            "stopOnFail": true,
+            "dataFilePath": ""
+          }
+        }
       }
     ]
   },
@@ -19,7 +27,15 @@
     "colName": "Barrios",
     "created": "2023-05-18T18:45:50.089Z",
     "sortNum": 20000,
-    "folders": []
+    "folders": [
+      {
+        "_id": "4a26d378-2996-4738-b011-d1e21e19e832",
+        "name": "Scenario 2",
+        "containerId": "",
+        "created": "2023-06-27T05:16:59.967Z",
+        "sortNum": 10000
+      }
+    ]
   },
   {
     "_id": "5637da13-4934-4f67-b4b8-b1ca37b6a5df",
@@ -68,6 +84,13 @@
     "colName": "PM25",
     "created": "2023-06-04T04:41:48.899Z",
     "sortNum": 90000,
+    "folders": []
+  },
+  {
+    "_id": "366f980d-a3e0-4270-bf33-540a15334794",
+    "colName": "Scenario 1",
+    "created": "2023-06-27T06:38:05.668Z",
+    "sortNum": 100000,
     "folders": []
   }
 ]

@@ -1,0 +1,125 @@
+{
+    "_id": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+    "colName": "AreasPro",
+    "created": "2023-05-19T04:20:58.497Z",
+    "sortNum": 60000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0ec19825-0c12-4357-90e7-edbf57b3db2d",
+            "colId": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+            "containerId": "",
+            "name": "AreasPro",
+            "url": "http://127.0.0.1:8000/areaspro/?limit=2&skip=2",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-19T04:20:58.499Z",
+            "modified": "2023-06-18T00:18:53.190Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "2afea4d9-fe78-4d3a-a6eb-6e67d479b06e",
+            "colId": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+            "containerId": "",
+            "name": "AreaPro by ID",
+            "url": "http://127.0.0.1:8000/areaspro/6003",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-19T04:21:47.827Z",
+            "modified": "2023-06-17T04:57:20.904Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0cdfde05-d347-4bef-87c2-01fc68c23c71",
+            "colId": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+            "containerId": "",
+            "name": "New AreaPro",
+            "url": "http://127.0.0.1:8000/areaspro/",
+            "method": "POST",
+            "sortNum": 21250,
+            "created": "2023-05-19T04:23:35.047Z",
+            "modified": "2023-06-18T06:51:59.686Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"New Area Productiva 6003\",\n  \"codigo\": \"NEW_AREAPRO_6003\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c35b5863-501f-4d36-9ba2-8676b3c88f13",
+            "colId": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+            "containerId": "",
+            "name": "Update AreaPro",
+            "url": "http://127.0.0.1:8000/areaspro/6003",
+            "method": "PUT",
+            "sortNum": 21875,
+            "created": "2023-05-19T04:25:15.567Z",
+            "modified": "2023-06-18T06:52:02.004Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Update Area Productiva 6003\",\n  \"codigo\": \"UPDATE_AREAPRO_6003\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "52a9d3b7-1412-41fa-ba4b-0cd5400a789f",
+            "colId": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+            "containerId": "",
+            "name": "Delete AreaPro",
+            "url": "http://127.0.0.1:8000/areaspro/6007",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-05-19T04:27:13.527Z",
+            "modified": "2023-06-18T06:51:54.716Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4ac11360-eee3-43d0-86cb-413d615519b2",
+            "colId": "f3ad355c-6e15-4960-8014-77cce2e64a4e",
+            "containerId": "",
+            "name": "Tangaras",
+            "url": "http://127.0.0.1:8000/areaspro/6000/tangaras?limit=2&skip=4",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-05-21T06:59:27.319Z",
+            "modified": "2023-06-18T00:22:24.473Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}
